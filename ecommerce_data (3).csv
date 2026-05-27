@@ -1,0 +1,1001 @@
+Customer_ID,Age,Gender,Location,Product_Category,Product_Price,Quantity,Order_Date,Payment_Method,Discount,Shipping_Cost,Purchase_Amount,Customer_Rating,Order_Status
+CUST0001,56,Male,Christyview,Electronics,167.79,2,6/22/2025,PayPal,28.74,19.65,326.49,3,Returned
+CUST0002,21,Female,Wolfeborough,Beauty,62.8,5,8/2/2025,M-Pesa,7.38,28.35,334.97,4,Completed
+CUST0003,58,Male,Port Jessica,Sports,461.59,5,11/28/2025,Cash on Delivery,90.84,29.16,2246.27,4,Returned
+CUST0004,56,Female,Gonzalezmouth,Books,284.5,1,5/3/2026,Credit Card,23.44,18.34,279.4,2,Returned
+CUST0005,37,Male,Reillyhaven,Fashion,166.87,5,3/9/2026,M-Pesa,11.46,14.31,837.2,5,Pending
+CUST0006,22,Male,Lake Dianefort,Home,408.6,5,2/22/2025,Cash on Delivery,76.63,22.95,1989.32,1,Canceled
+CUST0007,69,Female,New Shannonport,Home,133.82,3,10/3/2025,M-Pesa,5.78,17.03,412.71,1,Returned
+CUST0008,63,Female,Loganside,Home,364.86,3,11/25/2024,Credit Card,69.47,2.13,1027.24,1,Pending
+CUST0009,50,Male,Andrewhaven,Books,42.93,1,4/6/2025,Bank Transfer,9.98,17.34,50.29,4,Returned
+CUST0010,47,Female,Daniellefort,Books,217.74,2,10/4/2024,PayPal,56.37,25.98,405.09,4,Returned
+CUST0011,20,Male,East Judyfort,Beauty,372.95,5,4/6/2026,Bank Transfer,52.73,26.62,1838.64,2,Pending
+CUST0012,59,Male,Codyburgh,Groceries,138.64,4,3/12/2025,PayPal,16.04,15.42,553.94,5,Returned
+CUST0013,38,Female,North Emilyborough,Sports,167.49,4,4/30/2026,M-Pesa,22.27,5.84,653.53,3,Completed
+CUST0014,65,Female,Wagnermouth,Fashion,238.43,4,11/20/2025,M-Pesa,34.25,15.79,935.26,4,Returned
+CUST0015,37,Male,North Benjaminfurt,Home,304.08,3,4/22/2025,Credit Card,40.47,17.15,888.92,4,Canceled
+CUST0016,64,Female,Michellebury,Beauty,280.53,4,8/16/2024,PayPal,8.39,11.72,1125.45,5,Pending
+CUST0017,46,Female,Beardberg,Books,411.73,4,10/31/2024,Credit Card,76,3.46,1574.38,1,Pending
+CUST0018,61,Female,New Catherine,Books,250.29,3,7/9/2024,Bank Transfer,63.54,4.96,692.29,2,Canceled
+CUST0019,33,Male,Rogersport,Electronics,277.84,1,5/24/2025,PayPal,59.02,22.91,241.73,2,Canceled
+CUST0020,37,Female,Port Antonio,Books,103.14,5,6/30/2025,Credit Card,15.71,11.4,511.39,4,Pending
+CUST0021,58,Male,Mcgrathborough,Sports,398.63,3,5/16/2024,M-Pesa,100.79,10.33,1105.43,2,Canceled
+CUST0022,34,Female,North Christopher,Sports,259.72,1,8/20/2025,Credit Card,1.79,6.35,264.28,1,Returned
+CUST0023,42,Female,New Josephside,Sports,241.81,5,6/18/2024,Credit Card,8.25,24.56,1225.36,4,Returned
+CUST0024,40,Male,Edwardshire,Fashion,211.9,3,6/4/2024,Credit Card,50.12,13.37,598.95,5,Pending
+CUST0025,51,Female,New Dominique,Beauty,63.9,3,11/19/2024,PayPal,6.39,9.16,194.47,5,Canceled
+CUST0026,37,Female,Jessicahaven,Fashion,130.63,1,5/23/2025,M-Pesa,29.79,5.23,106.07,4,Completed
+CUST0027,67,Male,Colemanchester,Fashion,247.23,2,4/1/2025,Cash on Delivery,62.16,18.84,451.14,1,Canceled
+CUST0028,48,Female,Kathyport,Books,280.12,1,7/11/2024,Bank Transfer,49,22.33,253.45,5,Pending
+CUST0029,47,Male,South Blake,Electronics,265.5,4,4/23/2025,Bank Transfer,72.84,5.66,994.82,5,Returned
+CUST0030,45,Female,Lindaberg,Fashion,221.43,2,7/9/2025,M-Pesa,11.72,26.34,457.48,4,Pending
+CUST0031,23,Male,West Kristine,Sports,467.52,3,6/6/2025,Cash on Delivery,137.97,11.15,1275.74,5,Completed
+CUST0032,50,Male,North Amyview,Sports,427.86,1,5/15/2024,PayPal,19.2,20.97,429.63,4,Canceled
+CUST0033,23,Female,Nashmouth,Sports,274.82,2,8/21/2025,Cash on Delivery,18.99,4.25,534.9,5,Completed
+CUST0034,49,Male,Jessicafort,Home,445.75,5,5/8/2026,Cash on Delivery,3.08,25.61,2251.28,3,Canceled
+CUST0035,37,Male,Lloydport,Beauty,473.25,2,2/11/2026,Bank Transfer,78.9,6.52,874.12,1,Canceled
+CUST0036,28,Male,Lake Justinmouth,Electronics,236.82,4,7/30/2024,Credit Card,7.45,8.85,948.68,1,Completed
+CUST0037,56,Female,South Benjamin,Beauty,352.47,5,6/24/2025,Bank Transfer,21.97,11.7,1752.08,5,Completed
+CUST0038,29,Female,Michaelport,Electronics,304.48,3,10/19/2025,M-Pesa,23.21,25.19,915.42,5,Completed
+CUST0039,39,Male,Port Meredithview,Fashion,414.79,2,10/15/2024,Credit Card,75.47,8.78,762.89,1,Returned
+CUST0040,63,Female,South Chris,Groceries,426.71,4,10/31/2024,Credit Card,15.96,21.09,1711.97,4,Canceled
+CUST0041,66,Female,New Mark,Home,283.49,1,5/16/2024,M-Pesa,59.69,12.13,235.93,3,Canceled
+CUST0042,21,Female,New Rebeccashire,Electronics,15.65,2,4/24/2026,Cash on Delivery,3.55,2.04,29.79,5,Canceled
+CUST0043,54,Female,South Cheryl,Fashion,100.76,4,7/19/2025,Bank Transfer,18.04,28.65,413.65,4,Pending
+CUST0044,61,Male,Gutierrezstad,Books,79.09,2,10/3/2025,M-Pesa,12.84,29.87,175.21,3,Canceled
+CUST0045,52,Female,Cynthiastad,Fashion,62.21,2,7/27/2024,PayPal,11.08,25.56,138.9,5,Pending
+CUST0046,52,Female,Spearsburgh,Books,44.07,1,5/19/2024,Credit Card,12.03,7.25,39.29,5,Pending
+CUST0047,32,Male,Lake Mary,Sports,290.6,4,12/11/2025,M-Pesa,27.75,16.26,1150.91,2,Returned
+CUST0048,38,Female,Campbellstad,Home,133.74,3,2/1/2026,Bank Transfer,0.26,17.9,418.86,3,Returned
+CUST0049,58,Female,Tammyhaven,Sports,135.18,2,1/3/2025,Bank Transfer,38.09,27.79,260.06,3,Completed
+CUST0050,63,Male,North Chad,Home,274.05,2,12/12/2025,Credit Card,3.2,9.23,554.13,2,Canceled
+CUST0051,32,Male,Lake Wendy,Books,25.8,3,10/29/2025,Bank Transfer,3.58,15.46,89.28,3,Completed
+CUST0052,37,Female,Stevensshire,Books,51.48,2,2/6/2026,Cash on Delivery,11.99,10.54,101.51,2,Pending
+CUST0053,50,Male,North Denise,Beauty,129.68,3,11/21/2024,PayPal,30.42,21.09,379.71,5,Pending
+CUST0054,19,Female,West Jefferyside,Groceries,276.69,1,5/19/2024,PayPal,3.52,23.63,296.8,4,Completed
+CUST0055,32,Male,Gonzalezview,Home,336.57,1,6/26/2025,M-Pesa,44.85,19.9,311.62,2,Pending
+CUST0056,60,Female,Port Martinburgh,Groceries,33.48,4,12/15/2025,M-Pesa,4.91,10.23,139.24,3,Pending
+CUST0057,68,Male,Taylorfort,Fashion,459.23,3,2/25/2025,PayPal,120.55,10.15,1267.29,2,Completed
+CUST0058,60,Female,North Joshua,Sports,373.67,2,9/15/2024,Credit Card,22.53,22.18,746.99,2,Canceled
+CUST0059,38,Male,Martinmouth,Fashion,97.96,5,1/6/2026,Credit Card,26.7,26.73,489.83,4,Canceled
+CUST0060,24,Male,Port Kyleshire,Home,25.81,5,5/10/2025,Cash on Delivery,1.59,16.2,143.66,5,Canceled
+CUST0061,59,Female,Ramirezhaven,Books,221.4,5,6/7/2025,PayPal,53.43,11.51,1065.08,1,Canceled
+CUST0062,21,Male,Mcleanshire,Electronics,482.74,5,2/14/2026,Credit Card,45.06,15.31,2383.95,5,Returned
+CUST0063,49,Female,New Thomas,Groceries,481,5,7/30/2024,Cash on Delivery,91.35,14.28,2327.93,4,Returned
+CUST0064,24,Female,Vickieville,Beauty,416.15,2,3/31/2025,Bank Transfer,119.73,18.91,731.48,1,Canceled
+CUST0065,53,Male,Michaelberg,Groceries,455.4,1,1/31/2026,Cash on Delivery,119.06,7.91,344.25,4,Completed
+CUST0066,62,Male,Port Andrew,Home,294.96,2,12/9/2025,Bank Transfer,0.24,26.74,616.42,2,Returned
+CUST0067,53,Male,Andrewview,Beauty,350.31,3,6/20/2025,PayPal,20.83,26.29,1056.39,4,Completed
+CUST0068,32,Male,Melissatown,Fashion,376.38,3,4/12/2026,Bank Transfer,79.32,20.17,1069.99,3,Canceled
+CUST0069,54,Male,Cruzshire,Electronics,233.82,2,7/16/2025,Credit Card,22.03,27.49,473.1,2,Canceled
+CUST0070,69,Male,Smithchester,Groceries,180.12,5,5/17/2024,Cash on Delivery,30.67,14.42,884.35,4,Returned
+CUST0071,33,Male,North Christineshire,Home,82.5,2,3/26/2026,Bank Transfer,7.65,20.64,177.99,2,Completed
+CUST0072,56,Male,South Marco,Groceries,99.89,4,6/25/2025,Credit Card,2.04,28.78,426.3,1,Canceled
+CUST0073,60,Male,West Geraldberg,Groceries,409.42,3,6/27/2025,Credit Card,118.64,28.42,1138.04,2,Canceled
+CUST0074,30,Female,Christopherville,Electronics,7.69,1,11/12/2024,Cash on Delivery,2.02,29.98,35.65,3,Pending
+CUST0075,26,Male,North Marieshire,Groceries,351.85,2,5/9/2025,Bank Transfer,65.51,28.24,666.43,5,Canceled
+CUST0076,32,Female,Ericfort,Beauty,95.5,2,8/11/2025,PayPal,11.95,18.43,197.48,2,Returned
+CUST0077,24,Male,Lake Georgeville,Books,332.28,5,9/14/2025,Bank Transfer,13.29,18.38,1666.49,4,Pending
+CUST0078,53,Male,Natalieside,Books,409.35,3,4/8/2026,Cash on Delivery,94.26,23.32,1157.11,4,Pending
+CUST0079,29,Male,Markchester,Fashion,403.94,4,3/11/2025,Credit Card,43.85,20.72,1592.63,3,Completed
+CUST0080,27,Male,West Catherine,Sports,409.56,3,11/3/2025,PayPal,7.66,27.91,1248.93,2,Returned
+CUST0081,65,Female,South Joseland,Home,113.8,4,9/13/2024,PayPal,4.89,11.26,461.57,3,Canceled
+CUST0082,46,Female,Jenniferhaven,Electronics,281.63,5,4/6/2025,M-Pesa,9.2,15.9,1414.85,1,Returned
+CUST0083,36,Male,New Kimberlyhaven,Beauty,296.72,2,1/19/2026,M-Pesa,8.78,12.63,597.29,1,Pending
+CUST0084,70,Female,Jonathanchester,Groceries,497.39,2,4/25/2026,PayPal,143.17,28.28,879.89,2,Canceled
+CUST0085,63,Male,Christopherview,Beauty,397.18,1,5/2/2026,PayPal,63.32,7.89,341.75,3,Canceled
+CUST0086,35,Female,Troyville,Books,76.68,5,9/30/2024,Credit Card,17.92,27.92,393.4,3,Returned
+CUST0087,52,Female,West Susan,Fashion,83.87,5,3/12/2026,M-Pesa,3.03,7.11,423.43,4,Completed
+CUST0088,55,Female,Lake Daniellebury,Fashion,119.36,5,6/15/2024,Credit Card,15.91,6.95,587.84,5,Returned
+CUST0089,58,Female,South Brandon,Fashion,150.41,4,1/10/2025,PayPal,33.07,4.56,573.13,4,Canceled
+CUST0090,35,Female,Evelynhaven,Groceries,162.33,2,4/4/2026,PayPal,42.08,5.79,288.37,3,Returned
+CUST0091,42,Male,East Eric,Sports,82.89,1,12/29/2024,Cash on Delivery,15.79,21.83,88.93,4,Completed
+CUST0092,20,Female,East Donna,Beauty,414.7,2,4/26/2026,Cash on Delivery,98.59,14.28,745.09,3,Completed
+CUST0093,52,Male,New Dianemouth,Sports,489.43,2,3/10/2026,PayPal,81.06,25.86,923.66,1,Canceled
+CUST0094,53,Male,Jacksonbury,Electronics,205.83,4,6/24/2024,Cash on Delivery,17.48,22.46,828.3,5,Completed
+CUST0095,61,Female,Port Scott,Fashion,423.1,3,10/10/2025,PayPal,73.2,6.1,1202.2,1,Completed
+CUST0096,69,Female,Ronaldport,Home,223.49,5,2/26/2026,Credit Card,31.7,25.51,1111.26,4,Completed
+CUST0097,42,Male,Daltonfurt,Beauty,135.58,5,5/13/2026,Cash on Delivery,4.62,28.8,702.08,3,Pending
+CUST0098,41,Male,Shawbury,Books,195.2,2,1/23/2025,Bank Transfer,35.08,11.63,366.95,5,Canceled
+CUST0099,31,Female,Port Bethanymouth,Home,357.49,4,10/9/2024,M-Pesa,90.26,20.8,1360.5,4,Canceled
+CUST0100,18,Female,West Rick,Fashion,354.1,4,4/23/2025,Bank Transfer,105.26,19.63,1330.77,4,Completed
+CUST0101,33,Male,West Melissatown,Fashion,363.13,4,10/11/2024,Cash on Delivery,47.52,11.92,1416.92,2,Completed
+CUST0102,47,Female,Garciaview,Groceries,442.6,2,4/13/2025,Cash on Delivery,6.52,9.58,888.26,3,Canceled
+CUST0103,64,Female,New Matthewmouth,Sports,315.88,3,4/3/2025,PayPal,65.66,12.5,894.48,5,Returned
+CUST0104,46,Male,South Davidshire,Books,165.81,3,3/20/2026,Credit Card,4.6,25.68,518.51,1,Completed
+CUST0105,48,Male,East Jessica,Sports,111.12,3,9/25/2024,M-Pesa,23.47,13.45,323.34,4,Returned
+CUST0106,18,Female,Wendychester,Electronics,131.42,1,10/2/2025,Cash on Delivery,36.16,8.23,103.49,3,Pending
+CUST0107,22,Female,Ramosbury,Groceries,242.99,1,8/16/2024,PayPal,65.27,28.68,206.4,4,Canceled
+CUST0108,43,Male,Christopherchester,Sports,196.72,1,9/22/2024,Cash on Delivery,57.37,20.37,159.72,5,Canceled
+CUST0109,30,Female,New Jenniferborough,Electronics,141,5,5/19/2024,Credit Card,12.86,20.96,713.1,4,Completed
+CUST0110,48,Female,Lisamouth,Home,209.96,4,8/4/2025,PayPal,7.82,12.71,844.73,5,Pending
+CUST0111,63,Female,Caitlinburgh,Electronics,319.72,4,11/27/2024,Credit Card,64.59,12.07,1226.36,3,Canceled
+CUST0112,46,Male,Collinsburgh,Books,355.52,3,1/5/2026,M-Pesa,79.94,24.44,1011.06,3,Returned
+CUST0113,49,Male,Beanside,Books,395.6,1,3/8/2026,M-Pesa,52.31,7.1,350.39,2,Returned
+CUST0114,58,Male,Charlesmouth,Home,359.66,2,1/4/2026,Cash on Delivery,33.67,6.87,692.52,2,Pending
+CUST0115,58,Male,Port Katieville,Fashion,334.73,1,6/9/2024,M-Pesa,77.38,13.63,270.98,4,Pending
+CUST0116,20,Female,South Kellyview,Books,281.32,4,7/21/2024,Bank Transfer,78.44,19.82,1066.66,5,Canceled
+CUST0117,28,Female,Jamiefort,Beauty,358.7,3,12/31/2025,Bank Transfer,3.06,9.84,1082.88,5,Pending
+CUST0118,48,Female,Mitchellfurt,Electronics,194.35,5,12/23/2024,Bank Transfer,31.1,3.53,944.18,4,Canceled
+CUST0119,25,Female,West Jeremymouth,Beauty,465.79,5,2/10/2025,Bank Transfer,60.01,2.23,2271.17,3,Canceled
+CUST0120,23,Female,Port Kari,Sports,38.14,1,2/15/2026,Credit Card,7.63,8.66,39.17,5,Completed
+CUST0121,55,Female,Nathanberg,Beauty,375.98,4,10/10/2025,Bank Transfer,19.95,26.24,1510.21,4,Canceled
+CUST0122,59,Male,Mcintyremouth,Fashion,274.35,4,10/10/2025,Cash on Delivery,4.29,6.51,1099.62,5,Returned
+CUST0123,20,Male,Hardyton,Books,19.58,2,12/1/2024,PayPal,1.45,22.68,60.39,4,Pending
+CUST0124,23,Male,Port Christopher,Groceries,29.66,1,4/1/2026,Bank Transfer,5.84,28.71,52.53,2,Returned
+CUST0125,28,Male,North Preston,Home,408.71,2,9/20/2024,Bank Transfer,102.8,16.57,731.19,3,Returned
+CUST0126,33,Female,Mistymouth,Sports,66.1,1,5/8/2026,M-Pesa,10.73,18.85,74.22,4,Completed
+CUST0127,55,Female,Johnstonside,Groceries,281.6,4,11/17/2025,Credit Card,79.79,20.19,1066.8,5,Returned
+CUST0128,63,Male,Nathanielport,Home,455.51,5,9/16/2025,Cash on Delivery,122.59,26.45,2181.41,3,Returned
+CUST0129,69,Male,Lake Ashleychester,Electronics,358.08,1,10/20/2024,Credit Card,47.92,29.43,339.59,2,Pending
+CUST0130,68,Female,Wagnerstad,Beauty,385.05,5,1/19/2026,M-Pesa,35.04,25.55,1915.76,3,Canceled
+CUST0131,35,Female,Lake Ericmouth,Electronics,445.69,4,10/16/2024,Credit Card,104.87,3.04,1680.93,5,Completed
+CUST0132,63,Female,Wardview,Home,229.05,2,2/21/2025,M-Pesa,51.1,11.56,418.56,1,Canceled
+CUST0133,64,Male,East Michaelfort,Groceries,220.39,5,6/1/2024,M-Pesa,4.81,24.58,1121.72,3,Pending
+CUST0134,29,Female,New Timothy,Home,403.84,1,3/10/2025,PayPal,85.8,28.42,346.46,4,Completed
+CUST0135,68,Female,Matthewville,Books,322.55,5,7/17/2024,Credit Card,36.37,29.83,1606.21,1,Pending
+CUST0136,69,Male,Howardview,Groceries,126.14,2,3/3/2025,PayPal,23.23,2.05,231.1,4,Canceled
+CUST0137,63,Male,South Stephanie,Beauty,370.43,2,2/5/2025,Credit Card,68.97,5.37,677.26,5,Returned
+CUST0138,69,Male,North Kim,Books,158.92,4,1/21/2026,Bank Transfer,4.71,4.23,635.2,2,Completed
+CUST0139,62,Female,Sandersshire,Electronics,432.39,5,1/25/2026,PayPal,64.81,25.54,2122.68,4,Canceled
+CUST0140,20,Female,Karenview,Home,282.68,4,10/29/2024,Cash on Delivery,44.29,14.67,1101.1,3,Pending
+CUST0141,24,Female,Lake Caitlin,Sports,189.86,5,8/3/2024,Credit Card,15.56,22.77,956.51,3,Pending
+CUST0142,34,Female,Billyview,Books,158.31,2,9/20/2024,PayPal,18.87,18.62,316.37,3,Pending
+CUST0143,54,Female,Hardinburgh,Groceries,111.08,3,11/8/2025,PayPal,18.99,5.34,319.59,3,Canceled
+CUST0144,45,Female,Doughertyberg,Books,446.17,2,2/27/2026,PayPal,108.77,16.07,799.64,4,Completed
+CUST0145,57,Female,Roberttown,Beauty,82.01,5,7/27/2024,Bank Transfer,23.36,7.19,393.88,1,Returned
+CUST0146,29,Female,Joshuaton,Books,289.05,5,10/31/2024,M-Pesa,26.9,27.58,1445.93,3,Pending
+CUST0147,34,Female,New Scott,Home,103.68,1,10/18/2024,Bank Transfer,11.37,20.23,112.54,3,Canceled
+CUST0148,67,Female,Carolland,Fashion,450.77,1,6/9/2024,PayPal,57.67,16.7,409.8,5,Returned
+CUST0149,46,Female,Port Adrienneborough,Beauty,208.88,2,11/22/2025,M-Pesa,24.1,8.15,401.81,5,Pending
+CUST0150,28,Female,West Elizabeth,Home,177.52,3,5/13/2026,Credit Card,10.03,10.09,532.62,2,Canceled
+CUST0151,68,Female,Allisonport,Beauty,412.67,4,3/23/2026,Credit Card,75.51,17.4,1592.57,4,Canceled
+CUST0152,30,Female,Larsonshire,Sports,416.43,3,12/21/2025,Cash on Delivery,69.87,19.24,1198.66,4,Returned
+CUST0153,30,Female,North Brent,Fashion,411.72,2,7/22/2025,Credit Card,38.02,21.45,806.87,3,Pending
+CUST0154,52,Male,Port Michael,Groceries,82.51,3,12/20/2024,PayPal,15.16,11.62,243.99,2,Completed
+CUST0155,19,Male,Kellyborough,Fashion,18.3,1,2/6/2025,Credit Card,4.96,20.98,34.32,3,Pending
+CUST0156,45,Female,North Joanna,Sports,197.29,3,12/12/2025,Credit Card,46.49,29.39,574.77,3,Returned
+CUST0157,57,Male,Shaunburgh,Sports,67.01,5,1/8/2026,PayPal,18.98,2.15,318.22,5,Returned
+CUST0158,48,Male,Wareport,Electronics,419.38,2,12/24/2024,Cash on Delivery,105.35,3.29,736.7,3,Canceled
+CUST0159,58,Female,Sylviaville,Beauty,40.45,4,6/25/2025,Bank Transfer,11.84,25.68,175.64,1,Pending
+CUST0160,47,Female,East Brandy,Beauty,96.21,1,3/22/2026,Credit Card,19.8,4.62,81.03,3,Pending
+CUST0161,65,Male,East John,Electronics,331.97,2,4/12/2026,Credit Card,63.35,26.35,626.94,4,Returned
+CUST0162,37,Female,North Michaelburgh,Books,203.27,3,9/30/2025,Bank Transfer,58.58,17.67,568.9,4,Returned
+CUST0163,29,Female,Nicholasmouth,Electronics,274.8,3,10/5/2024,Credit Card,17.73,29.7,836.37,2,Returned
+CUST0164,65,Male,South Christopher,Sports,481.84,2,7/5/2025,M-Pesa,50.66,15.25,928.27,2,Pending
+CUST0165,62,Female,Lake Tara,Books,410.88,3,9/25/2025,PayPal,16.78,12.95,1228.81,2,Completed
+CUST0166,67,Female,New Donnatown,Home,226.47,5,4/29/2025,Cash on Delivery,67.74,13.36,1077.97,5,Canceled
+CUST0167,64,Female,Lake Andrew,Books,347.44,3,12/14/2025,Credit Card,66.7,9.73,985.35,1,Completed
+CUST0168,60,Female,Ashleyland,Fashion,16.19,3,11/5/2024,Bank Transfer,1.05,23.78,71.3,3,Pending
+CUST0169,51,Female,Gabrielleport,Books,305.09,2,2/24/2025,PayPal,4.29,21.29,627.18,1,Returned
+CUST0170,45,Female,Leahville,Electronics,423.15,1,12/15/2024,M-Pesa,54.52,27.67,396.3,3,Pending
+CUST0171,41,Male,Port Brandonhaven,Sports,351.14,4,12/5/2025,PayPal,72.56,5.36,1337.36,1,Completed
+CUST0172,26,Female,Mosleybury,Electronics,151.62,5,3/31/2026,Cash on Delivery,13.51,25.08,769.67,4,Pending
+CUST0173,24,Female,New Nicoleton,Groceries,449.33,1,12/19/2024,Credit Card,42.48,10.56,417.41,4,Canceled
+CUST0174,32,Female,West Tonifort,Electronics,260.31,4,7/4/2025,Bank Transfer,41.27,9.58,1009.55,4,Completed
+CUST0175,41,Female,Hoffmanfurt,Groceries,211.01,1,4/8/2025,PayPal,44.74,28.85,195.12,4,Pending
+CUST0176,30,Female,Port Ruth,Books,154.16,3,8/31/2025,PayPal,15.65,2.3,449.13,2,Completed
+CUST0177,53,Female,Christinafurt,Books,376.42,5,7/3/2025,Cash on Delivery,50.66,28.01,1859.45,4,Completed
+CUST0178,51,Male,Olsenport,Home,216.61,2,4/21/2026,Bank Transfer,63.46,10.05,379.81,2,Pending
+CUST0179,63,Male,Port Jeff,Beauty,404.11,3,2/3/2026,PayPal,118.31,10.73,1104.75,1,Pending
+CUST0180,51,Female,New Xavierstad,Electronics,273.82,3,1/28/2025,M-Pesa,68.92,13.62,766.16,3,Pending
+CUST0181,55,Male,Lake Johnhaven,Groceries,50.22,3,6/10/2024,Credit Card,11.37,29.87,169.16,4,Completed
+CUST0182,50,Female,Stokesborough,Electronics,293.97,2,9/1/2024,M-Pesa,7.14,10.53,591.33,4,Returned
+CUST0183,49,Male,Nicholasshire,Books,378.61,1,12/21/2024,Credit Card,11.18,7.24,374.67,5,Pending
+CUST0184,61,Male,Joshuaburgh,Books,149.86,5,4/4/2025,M-Pesa,6.38,19.55,762.47,4,Completed
+CUST0185,32,Female,Lake Tracey,Beauty,177.4,1,2/16/2025,PayPal,50.13,3.19,130.46,4,Canceled
+CUST0186,33,Male,Port Jasonfort,Electronics,184.36,4,11/28/2024,Bank Transfer,9.19,29.88,758.13,4,Returned
+CUST0187,39,Male,New Veronica,Electronics,5.48,5,1/30/2025,Bank Transfer,0.67,22.5,49.23,2,Completed
+CUST0188,22,Female,Novaktown,Home,343.93,3,4/13/2026,PayPal,15.45,20.66,1037,3,Canceled
+CUST0189,64,Female,Becktown,Sports,194.18,1,2/28/2025,M-Pesa,51.6,2.9,145.48,2,Canceled
+CUST0190,51,Male,South Kimberly,Groceries,341.89,5,11/3/2025,Cash on Delivery,14.38,24.92,1719.99,1,Pending
+CUST0191,55,Female,Gomezview,Fashion,91.41,5,3/1/2026,M-Pesa,18.29,16.04,454.8,3,Canceled
+CUST0192,58,Male,Port Monica,Sports,150.95,1,11/23/2024,Bank Transfer,10.12,27.79,168.62,5,Pending
+CUST0193,64,Female,West Amy,Fashion,22.91,5,10/1/2024,Bank Transfer,4.28,4.01,114.28,4,Returned
+CUST0194,20,Female,Jasonland,Electronics,418.13,3,12/14/2024,M-Pesa,101.56,12.97,1165.8,3,Pending
+CUST0195,37,Male,Port Mariahborough,Books,124.99,5,2/28/2026,PayPal,15.3,25.83,635.48,5,Returned
+CUST0196,22,Male,Cruzmouth,Books,316.47,4,11/30/2025,Credit Card,8.7,22.94,1280.12,2,Pending
+CUST0197,47,Female,East Ashleyshire,Beauty,24.19,2,5/27/2025,Bank Transfer,6.5,27.38,69.26,4,Canceled
+CUST0198,20,Male,Lake Robert,Books,254.68,3,12/12/2024,Cash on Delivery,27.63,23.45,759.86,2,Canceled
+CUST0199,44,Female,Villachester,Groceries,12.25,4,11/13/2024,PayPal,1.42,15.97,63.55,3,Completed
+CUST0200,18,Male,New Christopherside,Home,143.49,2,11/6/2025,M-Pesa,12.82,13.9,288.06,2,Pending
+CUST0201,54,Male,Port Lauren,Beauty,390.66,2,3/27/2026,Credit Card,95.36,3.28,689.24,2,Pending
+CUST0202,69,Female,Julieshire,Sports,364.36,2,7/27/2024,Cash on Delivery,35.71,8.26,701.27,3,Completed
+CUST0203,53,Male,Wrightmouth,Sports,194.27,2,4/28/2025,Bank Transfer,55.14,12.18,345.58,1,Returned
+CUST0204,19,Male,Gilbertland,Groceries,86.74,1,10/6/2024,Cash on Delivery,6.25,29.76,110.25,1,Canceled
+CUST0205,32,Female,Port Andreland,Beauty,289.97,3,10/6/2025,M-Pesa,21.1,24.48,873.29,4,Returned
+CUST0206,37,Male,West Ariel,Fashion,482.62,3,11/20/2024,M-Pesa,69.09,25.55,1404.32,4,Returned
+CUST0207,47,Male,Jacksonside,Groceries,349.49,3,4/26/2025,PayPal,34.35,21.87,1035.99,4,Pending
+CUST0208,68,Male,Johnshire,Home,27.38,3,3/30/2026,M-Pesa,6.59,9.59,85.14,5,Canceled
+CUST0209,37,Female,Williamport,Electronics,414.03,3,3/23/2025,Bank Transfer,55.37,12.46,1199.18,3,Completed
+CUST0210,50,Male,Kingbury,Sports,461.9,1,3/25/2026,Bank Transfer,90.61,9.48,380.77,4,Pending
+CUST0211,61,Male,Taylorborough,Fashion,37.94,4,9/19/2025,Cash on Delivery,4.2,18.58,166.14,5,Completed
+CUST0212,34,Female,Lake Samuelburgh,Fashion,105.59,4,10/7/2025,Credit Card,25.52,6.21,403.05,5,Pending
+CUST0213,58,Male,Lamhaven,Home,211.71,5,11/24/2025,PayPal,46.16,7.28,1019.67,3,Returned
+CUST0214,62,Female,North Kathrynburgh,Fashion,241.78,2,6/27/2024,Cash on Delivery,56.66,20.87,447.77,1,Returned
+CUST0215,59,Female,Jasmineland,Fashion,331.47,2,10/11/2024,Credit Card,64.96,3.18,601.16,4,Pending
+CUST0216,54,Female,North Molly,Fashion,129.4,1,2/11/2026,Credit Card,26.14,17.59,120.85,4,Returned
+CUST0217,46,Female,Jacobbury,Electronics,283.73,2,5/14/2026,Bank Transfer,59.9,28.21,535.77,3,Canceled
+CUST0218,62,Male,Joannaborough,Books,264.05,4,1/24/2025,PayPal,42.14,16.31,1030.37,1,Returned
+CUST0219,34,Male,East Tylerton,Fashion,453.8,1,10/7/2025,Bank Transfer,42.06,14.27,426.01,2,Completed
+CUST0220,59,Male,Farmerview,Sports,314.55,2,5/31/2025,Bank Transfer,8.7,24.81,645.21,5,Canceled
+CUST0221,68,Male,Nathantown,Beauty,423.73,3,4/26/2025,Cash on Delivery,80.53,8.51,1199.17,5,Returned
+CUST0222,29,Male,Johnsonport,Fashion,211.69,4,9/30/2024,M-Pesa,8.72,10.63,848.67,5,Canceled
+CUST0223,63,Male,Kleinbury,Fashion,235.41,3,12/1/2024,Bank Transfer,23.35,21.24,704.12,5,Canceled
+CUST0224,37,Female,Burgessstad,Books,302.5,4,11/28/2025,Cash on Delivery,80.42,29.07,1158.65,4,Returned
+CUST0225,64,Male,Port Michael,Books,262.15,3,8/4/2025,M-Pesa,77.76,19.13,727.82,3,Pending
+CUST0226,51,Male,Port Sarah,Home,75.43,5,2/8/2026,Cash on Delivery,20.93,9.92,366.14,2,Completed
+CUST0227,29,Female,New Jason,Fashion,339.17,4,1/25/2025,PayPal,51.22,9.81,1315.27,2,Returned
+CUST0228,44,Male,Smithbury,Home,375.91,4,10/22/2025,PayPal,86.94,15.24,1431.94,4,Completed
+CUST0229,40,Female,West Jeffreymouth,Beauty,66.41,4,12/3/2025,M-Pesa,13.58,14.47,266.53,4,Canceled
+CUST0230,54,Male,Richardmouth,Home,399.63,2,5/7/2026,PayPal,48.72,27.27,777.81,1,Completed
+CUST0231,49,Male,Caseymouth,Home,165.28,3,4/17/2026,PayPal,35.19,21.55,482.2,4,Returned
+CUST0232,61,Female,West Sara,Fashion,310.57,5,8/22/2024,M-Pesa,89.08,5.33,1469.1,1,Pending
+CUST0233,18,Male,Wallacehaven,Sports,345.39,1,6/12/2024,PayPal,32.46,26.04,338.97,3,Canceled
+CUST0234,50,Female,Port Stephanie,Home,322.27,1,5/29/2025,Credit Card,7.93,12.11,326.45,3,Pending
+CUST0235,70,Female,Kelliburgh,Fashion,454.65,4,11/25/2025,M-Pesa,129.54,10.96,1700.02,5,Returned
+CUST0236,32,Female,Yangbury,Sports,311.82,5,11/30/2024,PayPal,53.63,10.41,1515.88,1,Returned
+CUST0237,52,Male,West Jasmineside,Electronics,36.32,5,1/15/2026,M-Pesa,10.4,18.56,189.76,3,Canceled
+CUST0238,46,Male,Robertamouth,Home,188.72,4,1/7/2025,PayPal,56.12,10.52,709.28,4,Completed
+CUST0239,30,Male,East Jefferybury,Electronics,417.89,4,11/9/2024,Credit Card,89.33,3.22,1585.45,4,Canceled
+CUST0240,69,Male,North Lauren,Groceries,75.46,5,5/19/2025,PayPal,1.03,19.49,395.76,5,Canceled
+CUST0241,43,Male,West Jenniferfurt,Electronics,413.97,5,1/23/2025,Bank Transfer,85.27,24.17,2008.75,5,Pending
+CUST0242,62,Male,New Nicolefort,Electronics,69.22,3,9/1/2025,Cash on Delivery,17.09,6.54,197.11,2,Pending
+CUST0243,49,Female,Port Tammybury,Groceries,319.33,2,9/2/2025,Cash on Delivery,88.79,8.1,557.97,3,Pending
+CUST0244,55,Male,Kyliemouth,Groceries,304.52,5,6/20/2024,M-Pesa,74.32,17.12,1465.4,4,Pending
+CUST0245,56,Female,North Melanieville,Electronics,415.79,5,4/18/2026,Cash on Delivery,103.74,5.14,1980.35,1,Returned
+CUST0246,38,Female,West Michaelland,Home,428.75,5,7/12/2025,Cash on Delivery,66.01,25.53,2103.27,4,Completed
+CUST0247,21,Male,Karaview,Beauty,195.07,1,6/9/2025,Credit Card,41.96,4.94,158.05,1,Returned
+CUST0248,44,Female,Harrisstad,Groceries,72.89,4,11/1/2025,PayPal,9.34,9.65,291.87,2,Canceled
+CUST0249,42,Female,New James,Beauty,144.65,4,5/7/2025,Credit Card,0.63,4.18,582.15,2,Completed
+CUST0250,63,Female,Lake Alejandra,Books,146.77,2,5/31/2024,PayPal,21.09,16.47,288.92,5,Pending
+CUST0251,42,Female,Lake Lisaport,Books,61.68,3,1/11/2025,Bank Transfer,6.7,28.82,207.16,4,Canceled
+CUST0252,48,Female,Greenview,Electronics,255.99,3,11/24/2024,PayPal,4.9,7.76,770.83,5,Canceled
+CUST0253,27,Female,Ashleystad,Home,37.58,3,2/21/2025,Bank Transfer,6.7,18.13,124.17,1,Pending
+CUST0254,45,Female,Hendersonside,Home,282.33,2,2/12/2025,Credit Card,7.94,11.77,568.49,3,Pending
+CUST0255,42,Female,Christyborough,Home,63.64,1,8/13/2025,Credit Card,17.83,9.43,55.24,3,Returned
+CUST0256,59,Male,Lake Kelseyside,Electronics,247.45,3,2/24/2025,PayPal,12.76,18.37,747.96,4,Canceled
+CUST0257,52,Female,Ryanland,Home,121.39,3,7/23/2024,Bank Transfer,25.11,2.96,342.02,5,Pending
+CUST0258,57,Male,Dorothyberg,Sports,357.82,1,7/19/2025,M-Pesa,5.17,6.58,359.23,1,Completed
+CUST0259,26,Female,Port Michelle,Books,330.45,5,2/24/2025,Credit Card,85.37,13.18,1580.06,2,Pending
+CUST0260,45,Male,East Jonathanbury,Fashion,95.55,5,12/18/2024,Cash on Delivery,20.1,20.85,478.5,1,Completed
+CUST0261,24,Male,Andrewport,Electronics,236.92,5,7/1/2025,Cash on Delivery,65.68,6.35,1125.27,3,Completed
+CUST0262,53,Female,West Donnamouth,Beauty,79.79,1,7/28/2025,Credit Card,19.4,19.01,79.4,2,Returned
+CUST0263,62,Male,West Terri,Sports,150.53,1,1/29/2026,Bank Transfer,22.66,8.75,136.62,2,Completed
+CUST0264,21,Male,Lopezburgh,Beauty,159.4,1,12/11/2024,M-Pesa,29.63,16.51,146.28,5,Completed
+CUST0265,55,Female,East Kaitlynton,Beauty,11.25,3,11/4/2024,Bank Transfer,0.74,17.36,50.37,4,Returned
+CUST0266,27,Male,New Amberberg,Electronics,294.69,3,4/2/2026,PayPal,46.81,22.6,859.86,1,Canceled
+CUST0267,31,Female,Carrieton,Home,212.65,5,11/15/2024,Bank Transfer,45.47,3.46,1021.24,1,Canceled
+CUST0268,61,Male,West Jeffrey,Electronics,460.16,1,9/26/2025,Credit Card,117.39,16.62,359.39,3,Pending
+CUST0269,22,Male,Santosport,Home,264.38,2,9/4/2025,Bank Transfer,35.91,28.34,521.19,4,Pending
+CUST0270,69,Female,Carterfort,Electronics,138.89,5,10/18/2025,PayPal,36.91,17.27,674.81,5,Returned
+CUST0271,60,Female,Lake Frankfort,Beauty,170.44,1,8/31/2025,Credit Card,12.44,5.8,163.8,2,Returned
+CUST0272,52,Male,West Pamela,Books,92.18,4,11/23/2024,Credit Card,4.45,28.24,392.51,5,Pending
+CUST0273,68,Male,North Brianborough,Electronics,484.92,3,8/23/2025,PayPal,103.73,25.82,1376.85,2,Canceled
+CUST0274,21,Female,Rebeccastad,Beauty,112.21,5,1/18/2026,Cash on Delivery,24.76,29.3,565.59,2,Returned
+CUST0275,60,Male,South Jesus,Fashion,18.07,3,3/1/2026,Credit Card,4.09,28.37,78.49,1,Pending
+CUST0276,20,Female,Wardmouth,Groceries,494.94,4,1/17/2025,M-Pesa,83.41,5.25,1901.6,3,Completed
+CUST0277,53,Male,South Johntown,Groceries,54.42,3,4/14/2026,Bank Transfer,7.87,12.32,167.71,2,Canceled
+CUST0278,51,Male,East Michaelmouth,Books,423.65,2,1/8/2026,M-Pesa,70.72,4.35,780.93,4,Completed
+CUST0279,26,Female,Amandaview,Groceries,69.94,3,2/14/2026,PayPal,9.54,21.54,221.82,2,Returned
+CUST0280,60,Male,North Beverly,Electronics,86.75,3,2/13/2026,PayPal,23.04,5.31,242.52,5,Returned
+CUST0281,23,Male,South Brettshire,Electronics,351.27,5,12/22/2025,M-Pesa,40.1,16.03,1732.28,2,Pending
+CUST0282,60,Female,South Heather,Electronics,257.15,4,3/27/2026,Credit Card,45.27,20.99,1004.32,3,Pending
+CUST0283,42,Male,Toddmouth,Beauty,450.29,1,4/9/2025,Credit Card,8.52,21.22,462.99,3,Completed
+CUST0284,32,Female,Port Nicholas,Home,128.03,1,4/5/2026,Cash on Delivery,8.98,23.73,142.78,5,Pending
+CUST0285,68,Male,New Deborah,Books,425.28,5,5/1/2025,Credit Card,123.46,24.2,2027.14,2,Pending
+CUST0286,43,Male,South Annemouth,Sports,337.11,5,4/23/2026,PayPal,83.19,19.81,1622.17,2,Canceled
+CUST0287,29,Female,Melissaside,Books,303.06,3,2/5/2026,Cash on Delivery,28.15,25.12,906.15,1,Returned
+CUST0288,33,Male,East Terry,Groceries,428.17,3,7/6/2025,PayPal,40.1,2.68,1247.09,5,Canceled
+CUST0289,40,Female,Savageview,Groceries,106.14,2,9/28/2024,PayPal,9.44,6.46,209.3,4,Completed
+CUST0290,40,Male,Kendrafurt,Home,160.7,1,10/12/2025,Credit Card,8.91,18.44,170.23,3,Pending
+CUST0291,19,Female,Port Loribury,Books,305.51,3,1/3/2026,Cash on Delivery,75.2,11.78,853.11,3,Pending
+CUST0292,46,Female,Hebertport,Home,36.01,2,12/30/2025,M-Pesa,6.34,7.88,73.56,3,Returned
+CUST0293,32,Male,Davidshire,Electronics,32.75,1,6/6/2024,M-Pesa,6.11,8.02,34.66,3,Returned
+CUST0294,48,Male,North Kevintown,Groceries,353.42,4,2/3/2025,Credit Card,32.19,21.29,1402.78,5,Returned
+CUST0295,27,Female,Hardystad,Home,170.66,4,5/16/2025,M-Pesa,47.83,22.53,657.34,3,Canceled
+CUST0296,47,Female,South Gregory,Sports,347.03,1,8/12/2024,PayPal,87.39,22.34,281.98,3,Returned
+CUST0297,55,Female,Wagnershire,Home,351.97,4,6/30/2025,Bank Transfer,103.81,15.79,1319.86,1,Pending
+CUST0298,53,Female,Austinborough,Beauty,387.12,3,7/18/2024,M-Pesa,24.85,27.34,1163.85,1,Completed
+CUST0299,66,Female,New Ashleystad,Electronics,441.81,3,12/14/2025,M-Pesa,2.43,28.87,1351.87,1,Returned
+CUST0300,47,Female,Heatherstad,Electronics,422.04,5,2/23/2026,Credit Card,50.71,7.29,2066.78,2,Completed
+CUST0301,63,Male,Lauraland,Groceries,193.39,2,1/4/2025,M-Pesa,26.02,6.66,367.42,2,Returned
+CUST0302,69,Female,Tylertown,Beauty,464.44,4,4/12/2026,PayPal,15.49,13.06,1855.33,4,Pending
+CUST0303,20,Male,Gregorybury,Sports,457.88,3,4/3/2026,Cash on Delivery,80.93,26.85,1319.56,1,Completed
+CUST0304,67,Male,South Craig,Beauty,129.75,1,7/31/2024,Cash on Delivery,32.59,26.93,124.09,5,Canceled
+CUST0305,43,Male,West Susanberg,Books,141.42,4,6/25/2025,Bank Transfer,19.63,15.99,562.04,3,Completed
+CUST0306,43,Female,West Jeffreyport,Home,379.87,4,10/12/2025,M-Pesa,21.81,4.96,1502.63,1,Canceled
+CUST0307,21,Male,East Jesse,Beauty,144.8,1,10/9/2025,Credit Card,30.35,17.38,131.83,3,Canceled
+CUST0308,61,Female,Garciaton,Groceries,316.63,3,10/9/2024,Credit Card,64.45,4.96,890.4,2,Returned
+CUST0309,65,Female,West Marie,Beauty,486.29,4,4/8/2026,Credit Card,107.03,23.61,1861.74,2,Completed
+CUST0310,31,Female,East Oscar,Fashion,374.95,4,7/10/2024,Credit Card,76.55,25.65,1448.9,1,Canceled
+CUST0311,43,Male,East William,Sports,292.61,1,11/3/2025,PayPal,37.98,12.2,266.83,5,Returned
+CUST0312,44,Female,North Lisa,Home,122.92,4,1/1/2026,M-Pesa,12.45,21.25,500.48,4,Canceled
+CUST0313,70,Female,Port Lindsayview,Books,380.24,3,2/4/2025,Credit Card,5.2,25.89,1161.41,2,Pending
+CUST0314,36,Female,Cookstad,Groceries,436.5,1,2/3/2025,M-Pesa,104.28,8.55,340.77,2,Canceled
+CUST0315,50,Male,Jessicamouth,Fashion,404.77,4,9/23/2024,Cash on Delivery,84.9,8.62,1542.8,1,Completed
+CUST0316,44,Male,East Jeffreyland,Fashion,132.36,4,1/24/2026,Bank Transfer,35.87,22.43,516,1,Pending
+CUST0317,69,Male,Padillashire,Fashion,181.13,4,3/13/2026,Bank Transfer,16.38,24.07,732.21,2,Canceled
+CUST0318,41,Male,Lake Meganborough,Beauty,384.99,3,3/30/2026,Credit Card,63.85,26.71,1117.83,2,Returned
+CUST0319,24,Female,Kathleenbury,Books,427.45,1,9/22/2025,Credit Card,62.47,27.39,392.37,3,Completed
+CUST0320,56,Female,Murraytown,Home,301.95,5,3/17/2026,PayPal,3.75,24.64,1530.64,3,Canceled
+CUST0321,38,Male,West Michael,Beauty,125.17,1,6/6/2025,Cash on Delivery,20.45,19.13,123.85,5,Returned
+CUST0322,32,Male,Angelaside,Electronics,204.86,1,1/10/2025,PayPal,35.95,11.52,180.43,4,Pending
+CUST0323,24,Male,South Cynthia,Beauty,76.16,3,3/8/2026,M-Pesa,18.39,12.82,222.91,1,Completed
+CUST0324,46,Female,Lake David,Beauty,51.07,5,3/25/2025,Cash on Delivery,10.31,13.76,258.8,1,Pending
+CUST0325,22,Male,New Kristenborough,Books,19.97,5,5/18/2025,M-Pesa,0.37,23.66,123.14,3,Returned
+CUST0326,20,Female,New Williamport,Books,53.61,1,5/24/2024,Credit Card,11.42,9,51.19,2,Returned
+CUST0327,46,Male,Duffyfort,Electronics,354.99,5,4/28/2026,Cash on Delivery,5.02,17.17,1787.1,4,Pending
+CUST0328,44,Male,Lake Kendrahaven,Books,458.64,1,10/20/2024,Cash on Delivery,24.77,16.77,450.64,5,Returned
+CUST0329,58,Male,Stevenborough,Electronics,487.67,3,9/28/2025,Bank Transfer,65.77,16.49,1413.73,5,Pending
+CUST0330,61,Female,East Dianaberg,Books,190.51,4,12/21/2025,M-Pesa,45.65,28.22,744.61,2,Completed
+CUST0331,35,Female,Amandamouth,Fashion,353.27,2,10/11/2025,PayPal,25.04,15.28,696.78,1,Returned
+CUST0332,36,Male,New David,Home,264.3,3,11/21/2025,Credit Card,69.66,15.86,739.1,2,Returned
+CUST0333,49,Male,Leeview,Electronics,157.31,5,2/3/2026,Credit Card,15.61,21.94,792.88,5,Canceled
+CUST0334,27,Female,Griffithburgh,Electronics,8.82,1,3/11/2026,PayPal,0.02,13.44,22.24,1,Completed
+CUST0335,63,Female,South Jade,Sports,302.26,5,6/9/2024,Cash on Delivery,78.54,22.99,1455.75,4,Canceled
+CUST0336,38,Female,Lake Dawn,Electronics,106.04,2,12/17/2025,M-Pesa,30.72,26.58,207.94,5,Pending
+CUST0337,59,Male,West Bradley,Sports,414.66,1,11/5/2024,M-Pesa,49,11.71,377.37,5,Pending
+CUST0338,19,Female,Benjaminville,Beauty,389.48,5,10/23/2024,M-Pesa,52.13,3.12,1898.39,3,Pending
+CUST0339,46,Female,East Kimberly,Fashion,103.73,2,5/11/2026,Credit Card,8.16,18.12,217.42,1,Canceled
+CUST0340,28,Female,North Kelseyton,Groceries,137.54,3,6/5/2025,Cash on Delivery,17.19,12.6,408.03,2,Returned
+CUST0341,38,Male,Lake Tanner,Sports,45.89,5,9/19/2025,PayPal,4.96,25.16,249.65,5,Returned
+CUST0342,43,Female,North Victorchester,Groceries,89.93,5,1/15/2026,Credit Card,11.97,28.55,466.23,4,Completed
+CUST0343,58,Male,Josephfurt,Books,51.91,3,7/6/2024,Credit Card,8.5,28.51,175.74,4,Pending
+CUST0344,31,Female,East Nicoleland,Sports,338.5,5,7/11/2024,Credit Card,95.59,12.49,1609.4,2,Completed
+CUST0345,63,Female,Joshuaville,Groceries,368.61,5,3/22/2025,M-Pesa,4.51,8.8,1847.34,1,Returned
+CUST0346,37,Male,Port Anthonyburgh,Books,205.29,1,12/12/2024,PayPal,1.93,26.98,230.34,5,Pending
+CUST0347,24,Male,South Victoriatown,Sports,414.54,4,10/18/2025,M-Pesa,103.03,6.53,1561.66,4,Pending
+CUST0348,49,Male,Millsstad,Groceries,408.72,3,11/5/2024,PayPal,98.85,17.21,1144.52,1,Completed
+CUST0349,40,Female,South Trevorport,Groceries,278.03,2,11/12/2024,PayPal,80.79,22.49,497.76,5,Pending
+CUST0350,43,Male,Christopherland,Home,196.77,2,2/28/2025,Credit Card,2.69,29.94,420.79,1,Pending
+CUST0351,38,Male,West Christopher,Beauty,245.06,5,1/26/2025,M-Pesa,13.61,13.04,1224.73,1,Pending
+CUST0352,51,Male,New Tracyport,Beauty,230.1,3,4/28/2026,PayPal,38.32,4.57,656.55,4,Returned
+CUST0353,24,Female,Lake Pamelachester,Fashion,244.85,4,3/10/2025,Bank Transfer,2.69,15.16,991.87,1,Completed
+CUST0354,25,Female,Thomasfort,Groceries,126.86,1,8/21/2024,PayPal,31.12,2.56,98.3,5,Completed
+CUST0355,64,Male,New Josephmouth,Groceries,94.87,2,2/6/2025,Cash on Delivery,7.67,15.67,197.74,2,Completed
+CUST0356,42,Male,New Terri,Electronics,52.96,5,5/27/2025,M-Pesa,12.67,23.94,276.07,3,Returned
+CUST0357,32,Female,Debraborough,Electronics,327.88,3,8/10/2024,Credit Card,91.83,25.74,917.55,5,Returned
+CUST0358,64,Female,Kimland,Fashion,280.7,1,6/12/2025,Credit Card,29.03,3.45,255.12,3,Canceled
+CUST0359,43,Female,Lake Laurahaven,Fashion,398.77,2,7/23/2025,Credit Card,119.28,28.66,706.92,5,Completed
+CUST0360,62,Male,South Paul,Fashion,228.41,3,2/26/2026,Bank Transfer,58.73,9.34,635.84,3,Returned
+CUST0361,50,Male,Martinezstad,Beauty,196.5,3,7/22/2024,Cash on Delivery,21.9,13.53,581.13,1,Pending
+CUST0362,51,Female,Port Barryfurt,Home,78.55,4,1/5/2026,Bank Transfer,13.3,15.1,316,5,Completed
+CUST0363,34,Female,West Kellymouth,Groceries,403.07,3,7/13/2024,M-Pesa,88.46,24.6,1145.35,3,Canceled
+CUST0364,60,Female,East Sarahchester,Beauty,183.48,5,12/25/2025,Cash on Delivery,41.17,24.78,901.01,2,Canceled
+CUST0365,63,Female,Erikbury,Books,378.47,4,11/16/2025,M-Pesa,63.9,13.14,1463.12,2,Canceled
+CUST0366,45,Male,Port Melissastad,Books,203.63,2,5/31/2024,Bank Transfer,33.61,8.83,382.48,2,Pending
+CUST0367,38,Male,North Kathrynberg,Sports,58.15,4,8/1/2024,PayPal,4.82,4.6,232.38,4,Completed
+CUST0368,34,Female,Port Melissa,Books,29.88,3,8/9/2024,Bank Transfer,6.2,9.45,92.89,1,Returned
+CUST0369,32,Female,Jessicafort,Electronics,337.6,2,2/3/2025,Bank Transfer,60.51,15.59,630.28,2,Returned
+CUST0370,51,Male,Kyleshire,Home,126.32,1,7/26/2025,Bank Transfer,3.19,14.9,138.03,2,Canceled
+CUST0371,40,Female,Jenniferborough,Home,187.99,5,6/8/2025,PayPal,21.65,29.28,947.58,1,Completed
+CUST0372,61,Male,Lake Jeffery,Groceries,289.43,3,10/20/2025,Cash on Delivery,48.07,23.64,843.86,1,Pending
+CUST0373,41,Female,Lake Kevin,Books,283.37,5,7/3/2025,Credit Card,70.32,18.91,1365.44,4,Pending
+CUST0374,63,Female,New Valeriefort,Sports,484.2,1,9/28/2025,Cash on Delivery,90.57,6.02,399.65,1,Returned
+CUST0375,56,Male,Lambburgh,Sports,225.52,3,5/31/2025,Bank Transfer,3.24,7.72,681.04,1,Returned
+CUST0376,26,Female,Mikaylatown,Home,200.41,4,1/20/2026,Credit Card,14.94,22.62,809.32,3,Returned
+CUST0377,42,Female,Cathyville,Home,272.2,2,12/18/2025,Credit Card,77.28,22.1,489.22,4,Returned
+CUST0378,61,Male,Adamfort,Home,115.23,4,12/25/2024,Cash on Delivery,5.94,15.22,470.2,1,Canceled
+CUST0379,40,Male,Sextonstad,Electronics,395.45,4,1/14/2025,Cash on Delivery,68.78,8.86,1521.88,5,Completed
+CUST0380,61,Female,Lake Linda,Beauty,173.96,3,8/24/2024,Credit Card,15.19,14.15,520.84,3,Returned
+CUST0381,34,Female,Cruzstad,Home,339.39,1,9/15/2024,Bank Transfer,66.8,3.76,276.35,3,Returned
+CUST0382,50,Female,New Timothy,Beauty,119.69,3,7/18/2024,Credit Card,2.05,9.05,366.07,2,Returned
+CUST0383,67,Female,Davidchester,Books,499.52,1,10/20/2024,Credit Card,72,26.21,453.73,4,Pending
+CUST0384,34,Female,South Jason,Books,393.16,1,9/5/2025,Credit Card,103.89,27.65,316.92,3,Canceled
+CUST0385,54,Female,Port Walter,Sports,438.15,5,3/30/2026,Bank Transfer,31.67,29.97,2189.05,4,Returned
+CUST0386,60,Male,Cooperstad,Sports,298.91,4,5/4/2026,Bank Transfer,62.58,10.02,1143.08,4,Completed
+CUST0387,51,Female,Watsonland,Books,228.33,4,12/25/2025,Credit Card,53.91,28.98,888.39,2,Completed
+CUST0388,50,Female,Howellside,Beauty,476.95,1,9/12/2025,Credit Card,18.26,10.72,469.41,1,Pending
+CUST0389,27,Female,New Sandraland,Groceries,7.79,5,3/11/2026,M-Pesa,1.28,8.05,45.72,1,Returned
+CUST0390,45,Male,North Jasonchester,Sports,102.62,4,6/24/2025,PayPal,28.44,12.22,394.26,4,Pending
+CUST0391,67,Male,Howellfort,Sports,396.63,2,3/21/2026,PayPal,27.14,5.22,771.34,5,Canceled
+CUST0392,62,Female,Smithfort,Electronics,48.68,4,2/9/2026,Cash on Delivery,12.58,9.59,191.73,2,Returned
+CUST0393,20,Male,South Shariview,Electronics,283.53,5,11/10/2024,Bank Transfer,55.12,24.41,1386.94,1,Pending
+CUST0394,29,Male,Garciaton,Electronics,218.97,2,3/8/2025,M-Pesa,36.44,13.38,414.88,4,Completed
+CUST0395,63,Male,Matthewberg,Books,17.16,1,2/13/2025,Bank Transfer,2.59,29.31,43.88,1,Completed
+CUST0396,33,Male,Gregoryside,Beauty,492.65,4,8/21/2025,Credit Card,142.68,4.11,1832.03,1,Pending
+CUST0397,38,Female,Stephensonville,Sports,24.79,2,2/27/2026,Credit Card,1.16,18.51,66.93,3,Returned
+CUST0398,66,Female,West Scottshire,Home,231.36,4,8/28/2025,Credit Card,61.33,2.05,866.16,4,Returned
+CUST0399,21,Female,South Joshuamouth,Home,173.69,1,5/19/2024,Credit Card,46.37,9.73,137.05,4,Canceled
+CUST0400,63,Male,Heathertown,Home,102.96,5,4/18/2026,M-Pesa,25.52,12.74,502.02,1,Returned
+CUST0401,49,Female,Jessicaview,Beauty,193.85,5,11/14/2025,Bank Transfer,44.8,28.35,952.8,5,Completed
+CUST0402,60,Female,South Ambertown,Fashion,149.87,2,2/25/2025,Bank Transfer,27.06,26.55,299.23,1,Completed
+CUST0403,70,Female,New Tiffany,Sports,108.78,1,10/2/2024,Bank Transfer,14.56,4.05,98.27,1,Canceled
+CUST0404,66,Female,East Lisa,Fashion,69.31,4,7/9/2025,PayPal,13.74,29.07,292.57,4,Canceled
+CUST0405,60,Male,South Robertstad,Fashion,105.53,1,6/29/2024,Credit Card,16.45,7.24,96.32,2,Completed
+CUST0406,37,Female,Collinborough,Books,387.33,4,4/29/2025,PayPal,42.08,11.66,1518.9,5,Canceled
+CUST0407,48,Male,Duncanfort,Fashion,214.07,2,9/21/2024,Credit Card,58.28,20.75,390.61,1,Canceled
+CUST0408,32,Female,Georgemouth,Beauty,386.65,3,10/9/2024,Credit Card,91.13,23.76,1092.58,5,Canceled
+CUST0409,34,Male,Port Tiffanyside,Home,378.33,3,2/3/2026,Credit Card,68.92,12.67,1078.74,3,Completed
+CUST0410,22,Male,Rebeccamouth,Books,394.8,4,8/15/2025,PayPal,96.4,19.32,1502.12,2,Completed
+CUST0411,40,Female,Schwartzmouth,Home,334.61,4,10/25/2024,Credit Card,72.74,4.81,1270.51,5,Returned
+CUST0412,34,Female,East Jenniferview,Electronics,399.49,1,7/7/2024,Bank Transfer,59.1,24.33,364.72,1,Completed
+CUST0413,52,Male,Lake Jennifer,Electronics,42.16,4,9/6/2024,Bank Transfer,11.86,14.71,171.49,5,Canceled
+CUST0414,59,Female,West Haileyville,Beauty,414.42,4,3/1/2026,M-Pesa,77.1,12.04,1592.62,1,Canceled
+CUST0415,32,Female,West Nicholasfort,Books,114.98,1,7/17/2024,Cash on Delivery,18.69,8.19,104.48,5,Pending
+CUST0416,19,Male,North Scott,Sports,20.16,3,8/1/2024,Bank Transfer,5.65,15.38,70.21,1,Completed
+CUST0417,44,Male,Mcguireton,Groceries,228.21,1,8/24/2024,Credit Card,17.25,25.1,236.06,4,Pending
+CUST0418,63,Male,West Jefferyland,Sports,178.51,5,2/28/2025,Credit Card,32.41,9.88,870.02,2,Pending
+CUST0419,38,Female,North Amandahaven,Home,100.95,3,9/6/2025,Bank Transfer,7.31,8.54,304.08,2,Pending
+CUST0420,37,Female,Lake Holly,Sports,384.86,4,7/29/2024,Bank Transfer,46.51,29.56,1522.49,5,Pending
+CUST0421,30,Female,Jamieton,Books,327.35,3,8/5/2025,M-Pesa,49.82,28.86,961.09,2,Canceled
+CUST0422,63,Male,Rosefurt,Fashion,128.89,5,4/23/2026,Bank Transfer,31.15,27.66,640.96,2,Returned
+CUST0423,58,Female,Valerieton,Beauty,483.52,2,8/22/2025,Bank Transfer,101.63,14.13,879.54,4,Canceled
+CUST0424,19,Female,Grimeshaven,Home,322.64,4,3/22/2025,Credit Card,12.92,17.91,1295.55,3,Pending
+CUST0425,57,Female,North Garymouth,Sports,78.85,2,10/13/2024,Bank Transfer,13.49,20.24,164.45,5,Completed
+CUST0426,57,Male,Smithton,Beauty,241.27,4,7/21/2025,M-Pesa,18.64,6.69,953.13,1,Pending
+CUST0427,41,Female,Williamborough,Home,285.56,3,10/10/2024,PayPal,31.54,12.67,837.81,5,Returned
+CUST0428,50,Female,Port Patriciaton,Groceries,50.76,1,8/3/2024,M-Pesa,3.72,18.38,65.42,5,Completed
+CUST0429,19,Male,Port Andrew,Beauty,291.41,2,2/24/2025,M-Pesa,33.8,12.72,561.74,1,Canceled
+CUST0430,60,Female,Johnsmouth,Beauty,332.4,1,9/9/2024,Bank Transfer,6.77,24.61,350.24,1,Returned
+CUST0431,68,Male,New Julieland,Fashion,354.92,1,1/19/2026,M-Pesa,55.38,11.27,310.81,4,Pending
+CUST0432,40,Male,South Kimberly,Electronics,119.56,5,10/7/2025,Credit Card,35.21,28.11,590.7,2,Canceled
+CUST0433,21,Female,Gomezshire,Beauty,249.17,1,10/30/2024,Credit Card,8.81,3.66,244.02,1,Completed
+CUST0434,48,Male,North Sheila,Home,373.08,2,3/28/2026,Cash on Delivery,91.19,26.65,681.62,1,Returned
+CUST0435,39,Male,New Stephanie,Groceries,320.42,3,6/6/2025,Cash on Delivery,93.56,3.03,870.73,1,Canceled
+CUST0436,29,Male,South Henry,Electronics,119.48,5,7/19/2025,M-Pesa,27.85,3.88,573.43,1,Pending
+CUST0437,46,Male,Rileyfort,Electronics,276.57,2,10/28/2025,PayPal,68.69,22.31,506.76,1,Canceled
+CUST0438,50,Female,Daltonbury,Electronics,373.76,3,9/20/2025,M-Pesa,96.75,11.23,1035.76,3,Returned
+CUST0439,44,Female,North Katherinestad,Sports,481.48,1,10/22/2025,Cash on Delivery,133.72,4.93,352.69,5,Pending
+CUST0440,68,Female,Kristinberg,Fashion,318.17,5,4/17/2026,PayPal,37.66,9.38,1562.57,3,Completed
+CUST0441,56,Female,West Annaberg,Books,77.07,3,3/13/2025,M-Pesa,19.28,3.77,215.7,3,Completed
+CUST0442,68,Male,North Calvinville,Sports,313.1,2,10/17/2024,Credit Card,80.92,8.93,554.21,1,Pending
+CUST0443,29,Male,Danielside,Fashion,211.93,2,6/27/2025,Cash on Delivery,35.24,19.92,408.54,5,Completed
+CUST0444,48,Female,Mannchester,Fashion,35.67,2,10/20/2024,PayPal,0.62,13.74,84.46,3,Canceled
+CUST0445,66,Male,Port Jenniferberg,Electronics,273.07,1,11/21/2025,PayPal,65.99,2.35,209.43,1,Completed
+CUST0446,30,Female,North Davidberg,Home,145.96,3,12/15/2025,Credit Card,39.09,10.73,409.52,1,Canceled
+CUST0447,34,Female,Deniseburgh,Electronics,147.83,2,7/11/2024,PayPal,41.57,29.24,283.33,3,Returned
+CUST0448,36,Male,Matthewchester,Books,26.7,5,9/13/2025,Credit Card,0.09,18.58,151.99,4,Returned
+CUST0449,48,Female,North Laurenmouth,Beauty,298.5,1,1/11/2025,Credit Card,81.51,26.21,243.2,3,Pending
+CUST0450,44,Female,Floreston,Books,348.73,1,6/26/2024,PayPal,0.77,16.47,364.43,1,Completed
+CUST0451,62,Male,Nicoleton,Sports,269.32,3,4/3/2025,Cash on Delivery,80.18,27.36,755.14,2,Pending
+CUST0452,47,Female,Stuartland,Beauty,270.31,2,10/20/2025,PayPal,71.9,7.12,475.84,2,Pending
+CUST0453,66,Female,West Kevinshire,Electronics,194.9,4,12/19/2025,Cash on Delivery,55.93,16.04,739.71,3,Completed
+CUST0454,52,Female,New Christine,Fashion,76.06,3,1/29/2026,Cash on Delivery,16.04,7.11,219.25,5,Canceled
+CUST0455,27,Male,Michelleberg,Fashion,51.99,1,9/5/2025,PayPal,0.44,17.41,68.96,3,Completed
+CUST0456,39,Male,West Gerald,Home,240.78,5,8/17/2025,PayPal,45.33,14.9,1173.47,2,Completed
+CUST0457,57,Female,West Jasmine,Beauty,36.64,4,9/20/2024,Cash on Delivery,6.52,8.93,148.97,3,Completed
+CUST0458,28,Male,Williamland,Electronics,258.27,5,7/27/2025,M-Pesa,11.62,28.03,1307.76,2,Pending
+CUST0459,44,Female,Meganburgh,Electronics,395.55,4,7/26/2025,Credit Card,0.62,14.39,1595.97,5,Canceled
+CUST0460,26,Male,Port Noah,Books,272.93,1,9/9/2025,M-Pesa,17.58,5.8,261.15,2,Returned
+CUST0461,68,Female,West Wayneland,Fashion,357.86,2,9/4/2024,M-Pesa,105.02,13.57,624.27,1,Canceled
+CUST0462,44,Female,South Johnny,Sports,159.87,4,9/25/2025,Bank Transfer,4.3,12.66,647.84,1,Returned
+CUST0463,19,Female,South Marieton,Electronics,431.98,5,4/27/2026,Credit Card,112.2,27.38,2075.08,4,Canceled
+CUST0464,59,Male,New Scott,Books,405.81,1,11/22/2024,PayPal,46.47,6.4,365.74,1,Returned
+CUST0465,18,Male,Williamsberg,Sports,118.55,2,1/12/2025,PayPal,5.02,27.78,259.86,2,Returned
+CUST0466,59,Male,East Tammychester,Sports,461.6,4,4/11/2025,Bank Transfer,60.76,6.47,1792.11,1,Returned
+CUST0467,50,Male,Howeton,Home,401.17,2,5/18/2025,Credit Card,72.31,9.24,739.27,1,Canceled
+CUST0468,37,Male,Brentville,Electronics,74.7,1,8/3/2024,Cash on Delivery,16.03,10.05,68.72,2,Canceled
+CUST0469,41,Female,Briggsberg,Home,215.33,4,3/2/2025,PayPal,62.92,2.74,801.14,4,Completed
+CUST0470,50,Male,Lake Alex,Sports,199.76,3,1/11/2026,Cash on Delivery,54.04,9.18,554.42,3,Pending
+CUST0471,57,Male,Port Nancyberg,Home,261.83,2,1/6/2025,Bank Transfer,69.7,4.65,458.61,5,Completed
+CUST0472,23,Male,South Edward,Books,320.23,4,7/16/2025,M-Pesa,2.88,14.39,1292.43,4,Completed
+CUST0473,37,Male,Williamview,Groceries,476.55,5,6/3/2025,PayPal,25.9,10.46,2367.31,2,Completed
+CUST0474,52,Male,Christopherbury,Books,371.37,5,5/26/2024,Bank Transfer,11.48,5.55,1850.92,2,Canceled
+CUST0475,34,Male,Jonesside,Groceries,333.07,3,11/27/2024,M-Pesa,81.02,13.47,931.66,3,Pending
+CUST0476,69,Male,New Alexisshire,Groceries,428.02,1,7/14/2024,Cash on Delivery,78.7,23.99,373.31,5,Canceled
+CUST0477,63,Male,New Randy,Electronics,346.89,2,5/16/2024,M-Pesa,20.54,21.36,694.6,4,Pending
+CUST0478,37,Male,Robinsonfurt,Beauty,410.27,4,6/29/2025,M-Pesa,67.92,5.88,1579.04,5,Pending
+CUST0479,39,Female,Evansbury,Electronics,481.53,5,4/16/2026,PayPal,70.68,14.04,2351.01,1,Pending
+CUST0480,51,Male,Reeveshaven,Beauty,25.64,3,4/24/2026,Cash on Delivery,4.29,13.97,86.6,3,Canceled
+CUST0481,28,Female,Tamaraport,Electronics,137.22,3,10/23/2025,Cash on Delivery,40.12,23.1,394.64,4,Returned
+CUST0482,63,Male,Lake Russellshire,Electronics,53.32,4,7/20/2025,PayPal,14.58,11.74,210.44,3,Completed
+CUST0483,55,Female,Paulton,Beauty,263.56,4,5/15/2024,PayPal,0.62,17.04,1070.66,4,Completed
+CUST0484,52,Female,South Kayla,Sports,215.06,3,4/30/2025,Bank Transfer,61.73,11.71,595.16,3,Returned
+CUST0485,32,Male,North Nancyhaven,Electronics,320.12,2,12/19/2024,Cash on Delivery,23.2,24.45,641.49,1,Canceled
+CUST0486,38,Female,Lake Charles,Sports,323.16,5,4/18/2026,Bank Transfer,81.15,23.86,1558.51,3,Pending
+CUST0487,30,Male,Brianfort,Beauty,221.22,3,5/26/2025,Credit Card,58.62,13.82,618.86,3,Canceled
+CUST0488,30,Female,North Jaclynfurt,Electronics,283.64,4,8/30/2024,Bank Transfer,59.31,15.36,1090.61,5,Pending
+CUST0489,70,Male,East Brenttown,Groceries,121.96,2,5/29/2024,PayPal,30.72,5.37,218.57,4,Canceled
+CUST0490,48,Male,Port Karen,Books,426.93,1,11/25/2024,Bank Transfer,37.52,12.14,401.55,5,Completed
+CUST0491,40,Female,West Michael,Sports,86.49,1,9/5/2025,PayPal,21.29,12.38,77.58,2,Pending
+CUST0492,31,Female,Pricemouth,Electronics,310.34,2,1/23/2025,Bank Transfer,31.16,11.3,600.82,1,Completed
+CUST0493,61,Male,New Matthew,Sports,43.05,4,1/3/2026,Bank Transfer,1.77,10.41,180.84,3,Pending
+CUST0494,32,Male,North Brianport,Books,157.74,5,6/19/2024,M-Pesa,23.34,10.34,775.7,1,Canceled
+CUST0495,44,Male,Bondshire,Electronics,194.64,1,8/10/2024,PayPal,14.32,23.01,203.33,2,Pending
+CUST0496,57,Male,New Carrieburgh,Groceries,278.61,1,8/6/2024,Bank Transfer,56.77,16.75,238.59,3,Canceled
+CUST0497,24,Male,Kennethtown,Books,200.14,5,10/25/2024,Credit Card,26.15,29.65,1004.2,2,Canceled
+CUST0498,31,Female,Raymondfort,Fashion,429.56,1,1/27/2025,Cash on Delivery,70.3,11.03,370.29,3,Pending
+CUST0499,58,Female,North Rachel,Books,71.36,3,5/31/2025,PayPal,6.25,16.81,224.64,2,Canceled
+CUST0500,36,Female,Baxterfurt,Electronics,467.3,3,6/24/2024,Bank Transfer,35.55,20.32,1386.67,3,Completed
+CUST0501,22,Male,Lewisburgh,Sports,231.7,4,9/22/2024,Credit Card,39.28,7.27,894.79,2,Returned
+CUST0502,58,Male,Lake Keithborough,Sports,211.56,5,7/4/2025,Credit Card,58.56,14.6,1013.84,5,Completed
+CUST0503,62,Female,South Scottside,Fashion,57.18,3,6/1/2025,Credit Card,10.89,25.15,185.8,5,Returned
+CUST0504,26,Female,Jonesville,Electronics,468.05,2,8/9/2025,Credit Card,52.87,14.56,897.79,2,Completed
+CUST0505,69,Male,South Brandy,Electronics,236.93,5,5/5/2026,Cash on Delivery,4.13,10.89,1191.41,3,Completed
+CUST0506,68,Male,Baileystad,Groceries,344.84,3,10/23/2025,Bank Transfer,19.37,15.62,1030.77,4,Completed
+CUST0507,59,Female,Lake Saratown,Beauty,70.78,2,5/9/2025,PayPal,15.99,25.83,151.4,1,Canceled
+CUST0508,33,Female,Sethside,Sports,338.67,5,10/21/2024,PayPal,22.91,22.48,1692.92,2,Completed
+CUST0509,26,Male,Port Nicole,Sports,127.07,2,11/30/2024,Cash on Delivery,0.63,27.8,281.31,3,Returned
+CUST0510,45,Male,South Susanview,Fashion,115.91,3,3/9/2025,PayPal,16.02,10.47,342.18,3,Pending
+CUST0511,68,Female,Hutchinsonfort,Fashion,58.41,5,7/9/2025,M-Pesa,0.39,5.37,297.03,1,Completed
+CUST0512,21,Female,Raymondbury,Electronics,156.03,3,5/31/2024,M-Pesa,34.7,12.04,445.43,4,Completed
+CUST0513,34,Male,Port Elizabethborough,Fashion,295.49,4,8/28/2024,PayPal,61.89,11.75,1131.82,1,Canceled
+CUST0514,35,Male,West Jessica,Sports,259.14,4,7/28/2024,Cash on Delivery,73.22,29.29,992.63,4,Pending
+CUST0515,32,Male,Martinezfurt,Electronics,124.21,4,6/3/2024,M-Pesa,32.56,12.59,476.87,1,Completed
+CUST0516,31,Male,East Suzanne,Books,16.58,5,1/23/2025,Cash on Delivery,4.83,27.59,105.66,1,Completed
+CUST0517,38,Male,Brandonport,Beauty,203.87,5,12/26/2024,Cash on Delivery,47.42,23.37,995.3,4,Completed
+CUST0518,41,Female,Lisatown,Electronics,490.85,2,6/10/2024,M-Pesa,27.57,18.37,972.5,3,Canceled
+CUST0519,66,Male,Lawrenceport,Home,65.45,5,12/4/2024,Credit Card,11.05,22.28,338.48,3,Canceled
+CUST0520,45,Female,Port Rachaelside,Beauty,447.14,3,1/22/2025,Credit Card,48.87,24.18,1316.73,3,Returned
+CUST0521,20,Female,Morrisonview,Books,432.92,4,8/13/2024,M-Pesa,1.64,25.69,1755.73,2,Pending
+CUST0522,22,Male,New Marissa,Electronics,179.85,1,11/23/2024,Bank Transfer,5.33,13.48,188,2,Canceled
+CUST0523,24,Female,Michellebury,Books,39.58,4,12/12/2025,Bank Transfer,6.36,10.93,162.89,3,Canceled
+CUST0524,30,Female,Christinaland,Beauty,96.13,5,4/7/2026,M-Pesa,11.69,13.43,482.39,3,Canceled
+CUST0525,39,Female,Johnbury,Books,328.27,5,6/27/2025,M-Pesa,23.87,8.66,1626.14,2,Completed
+CUST0526,35,Female,East Richardville,Fashion,228.74,4,5/25/2025,M-Pesa,31.98,24,906.98,2,Canceled
+CUST0527,67,Male,Larsonfurt,Books,43,1,2/16/2026,Credit Card,2.58,29.74,70.16,4,Canceled
+CUST0528,39,Female,Foxchester,Groceries,19.38,3,11/18/2024,PayPal,2.71,27.19,82.62,4,Canceled
+CUST0529,47,Female,Christopherfort,Sports,81.26,4,8/18/2025,M-Pesa,7.11,23.43,341.36,1,Canceled
+CUST0530,25,Female,Lake Reginatown,Books,254.06,2,6/9/2025,Cash on Delivery,54.04,13.42,467.5,2,Pending
+CUST0531,24,Female,Jennifertown,Sports,83.29,1,4/3/2025,M-Pesa,20.68,14.55,77.16,1,Pending
+CUST0532,50,Male,South Ericborough,Sports,409.36,4,3/13/2026,Bank Transfer,90.98,29.68,1576.14,5,Pending
+CUST0533,27,Male,North Brandi,Groceries,356.23,3,11/15/2025,Cash on Delivery,29.46,23.6,1062.83,2,Returned
+CUST0534,46,Female,Markside,Books,441.32,3,4/18/2025,Cash on Delivery,34.63,9.58,1298.91,4,Canceled
+CUST0535,51,Female,East Tammytown,Electronics,319.93,1,9/5/2025,PayPal,13.88,13,319.05,4,Returned
+CUST0536,20,Male,South Victoriaberg,Electronics,300.41,4,4/18/2025,M-Pesa,16.66,18.72,1203.7,2,Completed
+CUST0537,28,Male,Pamelahaven,Sports,31.05,3,1/15/2025,M-Pesa,3.68,25.98,115.45,2,Pending
+CUST0538,25,Female,Heatherborough,Sports,96.76,1,4/6/2025,Cash on Delivery,0.79,20.18,116.15,3,Pending
+CUST0539,37,Male,Harrisonland,Sports,280.55,4,12/22/2025,Bank Transfer,14.54,6.61,1114.27,5,Completed
+CUST0540,36,Female,Smithland,Books,156.34,3,2/5/2026,Cash on Delivery,32.5,23.93,460.45,3,Returned
+CUST0541,43,Female,Cooperburgh,Books,346.22,4,6/25/2024,PayPal,66.76,11.51,1329.63,3,Returned
+CUST0542,19,Male,East Benjamin,Beauty,79.35,1,11/21/2025,PayPal,9,8.59,78.94,4,Pending
+CUST0543,23,Female,New Josephshire,Sports,295.87,1,11/2/2025,M-Pesa,32.81,5.54,268.6,3,Canceled
+CUST0544,46,Female,South Mark,Groceries,255.11,3,6/27/2025,Bank Transfer,61.5,26.06,729.89,3,Canceled
+CUST0545,61,Male,Savannahtown,Home,226.62,4,2/16/2026,Bank Transfer,5.75,16.94,917.67,5,Returned
+CUST0546,37,Male,Knoxborough,Groceries,223.95,3,6/16/2025,PayPal,40.89,25.32,656.28,1,Canceled
+CUST0547,27,Male,Jacksonhaven,Groceries,493.86,5,1/19/2025,Bank Transfer,77.86,20.65,2412.09,2,Pending
+CUST0548,25,Female,Lake Andreaville,Electronics,482.43,2,6/23/2025,PayPal,94.41,19.86,890.31,5,Canceled
+CUST0549,40,Male,Evanstown,Beauty,149.37,4,10/24/2025,Bank Transfer,5.5,11.01,602.99,4,Returned
+CUST0550,26,Female,East Janeville,Books,141.05,3,5/15/2025,Bank Transfer,7.57,19.81,435.39,3,Completed
+CUST0551,30,Female,Port Jenniferton,Sports,370.78,3,3/26/2025,M-Pesa,51.21,2.96,1064.09,5,Canceled
+CUST0552,52,Female,Lake Tammyside,Electronics,107.64,1,5/23/2025,Cash on Delivery,2.67,29.39,134.36,5,Returned
+CUST0553,46,Male,Tommybury,Books,301.14,4,8/5/2025,Credit Card,19.74,16.66,1201.48,3,Canceled
+CUST0554,29,Female,Baileyview,Sports,468.97,3,11/21/2025,Credit Card,2.02,21.16,1426.05,1,Pending
+CUST0555,25,Male,Millerton,Fashion,486.08,3,9/15/2024,M-Pesa,74.34,20.11,1404.01,4,Completed
+CUST0556,24,Female,Erictown,Groceries,211,4,5/7/2026,Cash on Delivery,8.98,12.01,847.03,3,Canceled
+CUST0557,62,Female,Ronaldville,Home,480.84,5,2/6/2025,PayPal,87.71,7.71,2324.2,4,Returned
+CUST0558,59,Male,Anthonyhaven,Beauty,128.64,1,4/2/2026,PayPal,33.52,9.89,105.01,2,Pending
+CUST0559,22,Male,Michelleport,Books,166.27,3,2/28/2026,PayPal,43.91,11.47,466.37,2,Canceled
+CUST0560,27,Female,Yangport,Groceries,355.4,1,10/31/2025,Credit Card,41.94,25.98,339.44,3,Pending
+CUST0561,70,Female,East Tyler,Sports,74.53,3,5/9/2025,Bank Transfer,6.38,23.96,241.17,4,Canceled
+CUST0562,64,Female,Danielborough,Home,238.87,4,8/21/2024,Bank Transfer,5.55,12.92,962.85,3,Completed
+CUST0563,24,Female,New Devinmouth,Fashion,273.74,4,10/24/2025,M-Pesa,34.75,29.6,1089.81,3,Returned
+CUST0564,47,Male,East Reginaldmouth,Books,215.55,5,4/15/2025,Credit Card,62.98,4.54,1019.31,2,Canceled
+CUST0565,36,Male,New Steven,Groceries,202.17,5,5/7/2026,Bank Transfer,7.84,16.62,1019.63,5,Returned
+CUST0566,46,Male,Port Abigail,Books,278.82,4,10/9/2025,Cash on Delivery,21.58,13.76,1107.46,1,Completed
+CUST0567,57,Male,Jordanstad,Electronics,471.44,2,6/15/2024,M-Pesa,34.11,17.17,925.94,1,Returned
+CUST0568,37,Female,South Jeremy,Groceries,59.87,5,10/16/2025,Cash on Delivery,4.16,28.69,323.88,5,Canceled
+CUST0569,35,Male,South Monicastad,Beauty,311.02,5,5/15/2025,Bank Transfer,91.34,5.21,1468.97,3,Canceled
+CUST0570,58,Male,Huffmouth,Fashion,187.74,2,3/27/2026,M-Pesa,35.63,7.22,347.07,2,Canceled
+CUST0571,20,Female,West Keith,Home,291.67,2,1/4/2026,Bank Transfer,27.92,15.59,571.01,2,Canceled
+CUST0572,25,Male,Tylerside,Electronics,105.4,3,9/8/2025,Bank Transfer,30.86,3.23,288.57,5,Returned
+CUST0573,49,Female,North Wayneland,Home,96.07,2,3/25/2025,Bank Transfer,7.78,15.04,199.4,4,Pending
+CUST0574,56,Male,West Pamelaside,Fashion,118.36,4,4/12/2026,Cash on Delivery,34.28,7.4,446.56,3,Canceled
+CUST0575,55,Male,Ambershire,Beauty,120.84,1,7/19/2025,M-Pesa,25.44,8.65,104.05,4,Completed
+CUST0576,47,Male,Lake John,Groceries,311.23,2,8/24/2024,Cash on Delivery,43.05,26.73,606.14,5,Returned
+CUST0577,37,Female,South Angela,Fashion,83.49,5,9/20/2024,Bank Transfer,4.34,27.48,440.59,4,Completed
+CUST0578,52,Male,Johnbury,Electronics,491.55,1,3/12/2026,Credit Card,29.41,15.69,477.83,4,Canceled
+CUST0579,56,Female,Hayeshaven,Books,43.18,1,8/21/2025,Credit Card,0.81,25.71,68.08,3,Completed
+CUST0580,25,Female,Johnsonfurt,Sports,119.66,1,3/23/2026,Credit Card,2.86,22.51,139.31,4,Completed
+CUST0581,48,Female,South Julie,Fashion,73.2,3,5/17/2025,Cash on Delivery,15.78,5.92,209.74,1,Completed
+CUST0582,37,Female,Smithborough,Electronics,170.36,5,10/18/2025,M-Pesa,38.72,18.89,831.97,3,Returned
+CUST0583,62,Male,Shaneborough,Beauty,62.35,1,9/25/2024,Credit Card,3.38,21.3,80.27,2,Returned
+CUST0584,26,Female,New Davidport,Home,84.96,5,2/19/2025,Bank Transfer,11.11,23.06,436.75,1,Canceled
+CUST0585,25,Female,Bakerborough,Beauty,227.07,4,11/11/2025,PayPal,36.85,2.57,874,2,Pending
+CUST0586,23,Male,Morenochester,Beauty,165.07,3,3/20/2025,PayPal,35.01,19.66,479.86,4,Completed
+CUST0587,66,Female,New Adam,Groceries,440.82,2,9/13/2024,Bank Transfer,57.61,29.22,853.25,1,Completed
+CUST0588,39,Female,Julieborough,Fashion,251.97,5,12/2/2025,M-Pesa,11.54,17.07,1265.38,3,Completed
+CUST0589,25,Male,Matthewburgh,Fashion,325.55,1,11/7/2024,Cash on Delivery,26.74,17.43,316.24,3,Returned
+CUST0590,32,Female,Jorgeport,Beauty,111.86,4,3/5/2025,M-Pesa,5.5,5.79,447.73,1,Pending
+CUST0591,55,Female,North Paul,Groceries,263.88,4,9/22/2024,Cash on Delivery,59.89,5.9,1001.53,5,Canceled
+CUST0592,42,Male,South Annaburgh,Fashion,371.4,4,12/19/2024,Bank Transfer,20.4,3.78,1468.98,3,Returned
+CUST0593,40,Female,Billytown,Electronics,357.42,4,5/23/2024,M-Pesa,42.16,5.59,1393.11,2,Pending
+CUST0594,67,Female,Brandonshire,Beauty,100.34,4,7/11/2025,M-Pesa,17.83,24.71,408.24,4,Pending
+CUST0595,35,Male,Port Alexaside,Home,247.56,3,5/1/2025,M-Pesa,13.44,3.64,732.88,5,Returned
+CUST0596,40,Female,Warnerstad,Beauty,357.28,4,11/25/2024,PayPal,89.41,24.9,1364.61,4,Pending
+CUST0597,66,Male,East Karen,Electronics,465.23,1,6/11/2024,PayPal,59,18.42,424.65,5,Pending
+CUST0598,56,Female,East Dianastad,Home,6.61,3,5/11/2025,Bank Transfer,1.38,23.35,41.8,5,Completed
+CUST0599,31,Male,Spearsborough,Groceries,412.04,4,10/22/2024,Cash on Delivery,75.88,9.62,1581.9,2,Returned
+CUST0600,44,Female,Port Tina,Sports,172.26,1,6/6/2024,M-Pesa,4.02,14.73,182.97,5,Canceled
+CUST0601,53,Female,West Jeanberg,Electronics,380.14,5,2/3/2026,M-Pesa,50.74,14.15,1864.11,1,Returned
+CUST0602,32,Female,Duncanmouth,Home,30.12,2,8/27/2025,Credit Card,2.76,15.53,73.01,3,Returned
+CUST0603,18,Male,Jamiemouth,Groceries,16.07,1,2/10/2025,Cash on Delivery,2.12,17.4,31.35,1,Canceled
+CUST0604,26,Male,Port Randall,Beauty,37.43,3,5/6/2025,Cash on Delivery,10.48,22.68,124.49,3,Canceled
+CUST0605,66,Female,Kellyside,Electronics,373.87,3,9/12/2025,PayPal,91.29,28.18,1058.5,3,Returned
+CUST0606,65,Male,Shelbyburgh,Fashion,24.06,3,10/14/2024,Bank Transfer,6.55,13.44,79.07,3,Returned
+CUST0607,47,Female,Edwardshaven,Books,31.9,5,1/30/2026,PayPal,5.06,19.43,173.87,4,Returned
+CUST0608,69,Female,North Timothytown,Groceries,360.09,5,3/22/2026,Cash on Delivery,0.67,26.8,1826.58,5,Completed
+CUST0609,42,Female,Hunterside,Books,413.94,3,12/16/2025,Credit Card,1.95,3.34,1243.21,5,Completed
+CUST0610,36,Female,Michellemouth,Sports,173.29,2,8/21/2024,Cash on Delivery,14.63,29.64,361.59,5,Completed
+CUST0611,69,Female,South Nicoleborough,Home,469.2,5,6/26/2024,Bank Transfer,90.07,15.01,2270.94,5,Canceled
+CUST0612,56,Female,Housestad,Groceries,233.95,3,3/19/2026,M-Pesa,3.96,13.99,711.88,1,Canceled
+CUST0613,20,Male,Barbarashire,Groceries,138.16,2,9/21/2025,Cash on Delivery,28.23,17.62,265.71,4,Returned
+CUST0614,26,Female,North Sarahport,Books,37.79,2,5/6/2025,Cash on Delivery,10.45,5.73,70.86,5,Canceled
+CUST0615,59,Male,Kevintown,Beauty,345.1,4,5/28/2024,PayPal,92.22,16.54,1304.72,4,Pending
+CUST0616,65,Male,West Shirley,Fashion,27.88,5,11/11/2025,PayPal,2.17,7.78,145.01,1,Pending
+CUST0617,28,Female,Nicolasport,Books,437.33,4,2/18/2025,PayPal,12.46,27.33,1764.19,2,Completed
+CUST0618,50,Female,New Christopher,Fashion,317.8,1,6/1/2025,Bank Transfer,44.21,5.3,278.89,2,Pending
+CUST0619,34,Male,Thomasside,Books,274.43,2,10/15/2024,Bank Transfer,35.92,11.71,524.65,4,Pending
+CUST0620,65,Male,Mcintyreport,Fashion,431.79,1,7/23/2025,Bank Transfer,62.09,23.77,393.47,2,Returned
+CUST0621,70,Female,Reneeborough,Home,157.68,3,4/28/2025,Cash on Delivery,3.96,2.29,471.37,1,Canceled
+CUST0622,21,Female,Marietown,Books,331.39,1,9/20/2025,Credit Card,52.34,3.85,282.9,5,Canceled
+CUST0623,43,Male,South Stephenside,Books,385,3,10/30/2024,Bank Transfer,45,16.2,1126.2,4,Completed
+CUST0624,62,Male,Thompsontown,Home,485.73,4,9/30/2025,Bank Transfer,101.93,19.6,1860.59,1,Canceled
+CUST0625,30,Female,West Matthew,Beauty,170.77,1,8/24/2025,Cash on Delivery,37.48,13.75,147.04,2,Pending
+CUST0626,56,Male,North Amyton,Fashion,283.31,5,12/16/2025,Bank Transfer,53.36,28.01,1391.2,2,Returned
+CUST0627,51,Male,Aaronhaven,Sports,178.36,2,1/16/2026,M-Pesa,19.72,16.14,353.14,3,Completed
+CUST0628,24,Female,Myersville,Electronics,304.18,3,3/15/2025,Cash on Delivery,0.88,21.53,933.19,5,Pending
+CUST0629,52,Male,Lake Ronald,Electronics,196.57,5,1/14/2026,Bank Transfer,46.94,9.5,945.41,5,Canceled
+CUST0630,47,Male,South Tonyburgh,Sports,73.14,1,3/27/2025,Cash on Delivery,21.09,9.84,61.89,3,Pending
+CUST0631,49,Female,Edwardland,Groceries,64.18,4,8/16/2024,M-Pesa,11.2,17.04,262.56,1,Canceled
+CUST0632,56,Male,Lake Barbaraside,Books,258.19,3,8/14/2024,Cash on Delivery,67.45,26.99,734.11,4,Canceled
+CUST0633,20,Male,North Taylor,Electronics,60.11,1,4/30/2026,Bank Transfer,0.96,16.48,75.63,3,Canceled
+CUST0634,44,Male,Terryfurt,Home,374.07,3,2/16/2026,PayPal,21.6,5.47,1106.08,4,Completed
+CUST0635,69,Male,Johnburgh,Sports,210.09,5,9/27/2025,Credit Card,13.18,4.33,1041.6,1,Completed
+CUST0636,69,Male,South Nathanstad,Books,463.39,4,7/16/2025,Cash on Delivery,137.73,9.23,1725.06,1,Canceled
+CUST0637,18,Female,Tapiaview,Home,188.09,1,4/9/2026,Cash on Delivery,31.67,14.23,170.65,5,Completed
+CUST0638,30,Male,New David,Fashion,344.63,4,1/28/2026,M-Pesa,39.47,19.35,1358.4,1,Returned
+CUST0639,34,Female,Romerofurt,Electronics,360.25,3,1/20/2025,Bank Transfer,18.37,17.69,1080.07,3,Completed
+CUST0640,45,Male,Griffinmouth,Books,112.43,3,5/20/2024,M-Pesa,21.8,9.49,324.98,3,Pending
+CUST0641,28,Female,Paulaview,Home,237.31,4,11/3/2025,Bank Transfer,20.32,11.38,940.3,5,Pending
+CUST0642,48,Female,Lake Mollyfort,Books,199.12,2,9/27/2025,PayPal,2.18,3.22,399.28,4,Pending
+CUST0643,57,Female,Vincentchester,Sports,17.68,3,8/24/2025,Cash on Delivery,4.71,11.19,59.52,1,Completed
+CUST0644,49,Male,West Janebury,Home,409.69,2,3/12/2025,M-Pesa,3.36,27.37,843.39,5,Canceled
+CUST0645,21,Female,Lake Angela,Home,280.69,4,6/8/2025,PayPal,77.05,14.12,1059.83,5,Returned
+CUST0646,70,Male,Perryport,Books,159.61,2,1/26/2025,Cash on Delivery,29.93,17,306.29,5,Returned
+CUST0647,33,Male,North Gerald,Electronics,270.82,2,2/18/2025,M-Pesa,34.96,17.28,523.96,4,Pending
+CUST0648,46,Male,West Carlborough,Sports,410.65,4,11/30/2024,Bank Transfer,48,28.5,1623.1,1,Returned
+CUST0649,41,Female,North Frank,Home,106.72,4,11/26/2024,Bank Transfer,25.27,24.18,425.79,3,Pending
+CUST0650,24,Male,West Ashley,Groceries,85.7,3,9/1/2024,Cash on Delivery,14.29,6.87,249.68,5,Completed
+CUST0651,60,Female,Shellyberg,Electronics,417.44,3,6/13/2025,Bank Transfer,65.63,24.97,1211.66,5,Completed
+CUST0652,20,Male,Brittanyton,Groceries,102.31,4,4/19/2025,Cash on Delivery,19.23,16.86,406.87,3,Completed
+CUST0653,30,Female,Leefort,Beauty,36.24,3,12/23/2025,PayPal,7.33,9.89,111.28,2,Pending
+CUST0654,46,Male,Cobbstad,Groceries,415.21,2,8/19/2024,Bank Transfer,53.81,22.23,798.84,4,Canceled
+CUST0655,29,Male,Port Mistyburgh,Electronics,351.67,5,5/13/2026,PayPal,38.79,5.09,1724.65,2,Completed
+CUST0656,55,Female,North Olivia,Fashion,113,5,12/15/2024,Credit Card,26.85,5.55,543.7,1,Canceled
+CUST0657,50,Female,West Peter,Fashion,337.59,5,6/19/2024,PayPal,95.47,17.43,1609.91,1,Pending
+CUST0658,61,Male,Hodgesmouth,Books,299.78,2,3/27/2026,Bank Transfer,62.55,13.09,550.1,2,Completed
+CUST0659,36,Female,North Christinamouth,Electronics,305.4,3,1/17/2026,Cash on Delivery,86.72,21.81,851.29,2,Completed
+CUST0660,46,Male,South Roberttown,Fashion,420.03,3,5/23/2024,Cash on Delivery,4.52,5.77,1261.34,2,Canceled
+CUST0661,19,Female,Jordanmouth,Electronics,455.22,5,9/23/2025,Credit Card,110.28,3.32,2169.14,5,Completed
+CUST0662,61,Female,Lisatown,Home,68.68,2,4/29/2025,PayPal,7.59,22.72,152.49,2,Returned
+CUST0663,50,Female,Patrickberg,Books,284.63,3,5/30/2025,Bank Transfer,84.11,25.7,795.48,3,Pending
+CUST0664,23,Female,West Emily,Beauty,328.6,3,11/15/2024,Credit Card,0.22,27.47,1013.05,2,Completed
+CUST0665,19,Male,South Robertland,Home,334.12,4,1/5/2026,Cash on Delivery,93.98,19.69,1262.19,5,Completed
+CUST0666,66,Female,Lake Rebeccamouth,Electronics,388.62,4,3/9/2026,Bank Transfer,83.59,10.18,1481.07,2,Completed
+CUST0667,42,Male,Santosmouth,Books,20.59,1,4/2/2025,Bank Transfer,2.81,24.09,41.87,4,Returned
+CUST0668,21,Female,West Timothy,Groceries,241.64,3,4/24/2025,Cash on Delivery,62.99,13.9,675.83,1,Returned
+CUST0669,54,Female,New Amber,Beauty,455.9,1,6/7/2024,Bank Transfer,54.47,7.93,409.36,5,Pending
+CUST0670,30,Male,Ramirezstad,Electronics,73.8,3,3/15/2025,PayPal,12.52,26.51,235.39,4,Returned
+CUST0671,52,Male,Port Jessicahaven,Books,356.67,2,7/19/2024,Credit Card,39.56,20.4,694.18,5,Pending
+CUST0672,22,Male,Cassandraborough,Groceries,281,3,11/1/2024,Cash on Delivery,77.3,11.44,777.14,1,Pending
+CUST0673,45,Male,South Kathleenborough,Beauty,357.41,2,12/21/2024,Bank Transfer,81.75,22.48,655.55,4,Pending
+CUST0674,63,Male,Lake Sarah,Electronics,96.96,3,7/23/2024,Cash on Delivery,23.31,4.37,271.94,5,Canceled
+CUST0675,59,Male,West Kevin,Books,188,3,10/25/2025,Credit Card,50.29,16.95,530.66,5,Canceled
+CUST0676,44,Female,Michaelport,Fashion,67.48,2,12/18/2024,Cash on Delivery,18.67,5.3,121.59,3,Completed
+CUST0677,26,Male,Isaacside,Sports,467.06,4,1/18/2025,M-Pesa,125.96,3.28,1745.56,4,Returned
+CUST0678,51,Male,Youngland,Beauty,143.99,1,2/16/2025,M-Pesa,34.12,22.38,132.25,3,Pending
+CUST0679,29,Female,Wilkersonview,Sports,148.03,1,5/7/2025,Credit Card,34.62,14.8,128.21,2,Pending
+CUST0680,57,Male,Victoriaborough,Electronics,241.55,3,5/14/2024,Bank Transfer,25.87,8.59,707.37,5,Completed
+CUST0681,67,Male,West Kimberly,Groceries,181.38,1,6/25/2024,Credit Card,49.49,26.29,158.18,2,Pending
+CUST0682,58,Male,New Mariaton,Fashion,392.96,1,11/29/2025,PayPal,60.81,3.09,335.24,3,Completed
+CUST0683,61,Female,Bestshire,Beauty,22.25,5,1/15/2025,Bank Transfer,3.88,16.93,124.3,1,Completed
+CUST0684,51,Male,Port Cody,Fashion,43.15,4,10/25/2024,PayPal,3.84,20.18,188.94,1,Completed
+CUST0685,43,Male,Lake Johnnymouth,Books,51.25,4,8/13/2024,M-Pesa,8.5,11.81,208.31,1,Canceled
+CUST0686,52,Female,Shannonborough,Fashion,68.9,1,9/27/2025,Bank Transfer,11.57,28.72,86.05,4,Pending
+CUST0687,32,Male,New David,Groceries,25.61,4,10/9/2025,PayPal,2.17,25.01,125.28,1,Canceled
+CUST0688,37,Male,East Nicholas,Beauty,164.23,2,11/19/2024,Credit Card,29.45,22.04,321.05,5,Pending
+CUST0689,37,Male,Jayside,Electronics,356.97,3,4/18/2025,M-Pesa,23.6,5.38,1052.69,3,Returned
+CUST0690,44,Female,Patelview,Home,369.85,5,3/12/2026,M-Pesa,64.39,3.38,1788.24,5,Completed
+CUST0691,44,Female,West Jessica,Electronics,386.78,4,6/5/2025,M-Pesa,6.75,7.9,1548.27,1,Pending
+CUST0692,20,Male,North Leahfort,Books,487.21,3,2/19/2026,PayPal,114.35,8.23,1355.51,1,Completed
+CUST0693,40,Female,Leahfort,Groceries,123.52,5,1/26/2026,PayPal,1.86,8.67,624.41,2,Canceled
+CUST0694,63,Male,Sierrahaven,Beauty,85.17,1,7/18/2024,Bank Transfer,9.4,25.49,101.26,2,Pending
+CUST0695,29,Female,Morganshire,Fashion,10.39,3,9/12/2024,Credit Card,1.47,27.25,56.95,1,Canceled
+CUST0696,46,Male,Melissaside,Electronics,348.75,3,12/10/2025,PayPal,45.42,10.82,1011.65,3,Pending
+CUST0697,69,Male,West Donnahaven,Electronics,367.18,1,12/18/2025,M-Pesa,36.19,10.42,341.41,3,Returned
+CUST0698,55,Female,Mirandafurt,Sports,59.13,1,8/31/2024,Cash on Delivery,16.9,17.03,59.26,4,Canceled
+CUST0699,26,Male,East Jason,Beauty,144.86,2,2/21/2025,PayPal,0.85,11.52,300.39,1,Completed
+CUST0700,37,Female,Hensonport,Beauty,380.57,4,12/9/2024,Cash on Delivery,16.45,10.43,1516.26,2,Canceled
+CUST0701,34,Female,New Benjamin,Home,318.44,4,4/23/2026,Cash on Delivery,3.61,20.73,1290.88,2,Returned
+CUST0702,51,Male,Gomezport,Home,406.76,1,3/4/2025,M-Pesa,109.86,10.46,307.36,4,Completed
+CUST0703,31,Male,North Christopher,Beauty,393.36,3,1/17/2025,Credit Card,106.83,28.54,1101.79,5,Returned
+CUST0704,27,Female,North Matthewton,Books,59.68,4,7/3/2025,Bank Transfer,15.34,25.21,248.59,2,Completed
+CUST0705,48,Male,Annettefort,Electronics,7.33,2,10/15/2025,M-Pesa,0.3,16.24,30.6,5,Completed
+CUST0706,51,Male,North Janice,Groceries,241.81,2,6/17/2025,Cash on Delivery,49.72,27.56,461.46,4,Canceled
+CUST0707,43,Male,Hillmouth,Books,13.11,1,6/2/2024,M-Pesa,0.75,16.76,29.12,5,Returned
+CUST0708,69,Male,Sotoville,Books,64.17,2,2/12/2025,Cash on Delivery,14.58,8.29,122.05,1,Returned
+CUST0709,48,Female,West Sabrina,Fashion,497.4,2,3/31/2025,PayPal,97.33,19.72,917.19,5,Pending
+CUST0710,53,Male,Bakermouth,Sports,479.23,2,6/17/2025,M-Pesa,4.72,4.31,958.05,2,Returned
+CUST0711,45,Male,West Rhondaview,Sports,144.36,5,2/6/2025,Bank Transfer,41.4,12.36,692.76,4,Pending
+CUST0712,63,Female,Wigginshaven,Beauty,110.77,2,6/22/2025,Credit Card,26.51,13.1,208.13,4,Completed
+CUST0713,63,Female,East Donaldton,Sports,124.72,4,6/19/2024,Credit Card,21.76,4.35,481.47,5,Canceled
+CUST0714,23,Female,West Christopherfort,Fashion,368.48,5,2/24/2026,Credit Card,16.81,3.18,1828.77,3,Canceled
+CUST0715,57,Male,Nicoleville,Home,111.77,5,12/30/2025,Credit Card,6.56,22.51,574.8,1,Returned
+CUST0716,64,Female,Kristinemouth,Beauty,73.96,3,3/7/2025,PayPal,16.34,5.39,210.93,4,Completed
+CUST0717,61,Female,Lake Rachel,Sports,488.39,4,3/14/2025,Bank Transfer,100.17,11.81,1865.2,5,Returned
+CUST0718,66,Male,Ashleyfort,Books,460.4,4,1/12/2026,M-Pesa,46.22,15.27,1810.65,2,Canceled
+CUST0719,39,Female,Jamesport,Sports,221.64,5,3/29/2026,PayPal,3.46,7.26,1112,2,Completed
+CUST0720,60,Female,Lynchfort,Beauty,403.3,4,11/7/2024,Bank Transfer,18.65,2.96,1597.51,4,Returned
+CUST0721,66,Male,Watsonfurt,Sports,378.56,3,1/2/2025,M-Pesa,26.92,23.07,1131.83,1,Canceled
+CUST0722,37,Female,Smithhaven,Books,79.05,3,6/29/2025,M-Pesa,21.77,10.23,225.61,5,Returned
+CUST0723,47,Male,Tiffanymouth,Home,495.06,1,11/18/2025,Credit Card,89.61,25.63,431.08,4,Completed
+CUST0724,44,Female,South Dillonmouth,Beauty,72.85,5,7/27/2024,Cash on Delivery,16.24,29.84,377.85,2,Pending
+CUST0725,32,Male,Jonesmouth,Sports,343.61,3,2/24/2025,Cash on Delivery,0.91,7.63,1037.55,1,Returned
+CUST0726,35,Male,Brittanyberg,Electronics,171.93,3,5/1/2025,Cash on Delivery,37.45,20.6,498.94,5,Canceled
+CUST0727,27,Male,East Matthew,Sports,125.98,1,1/1/2026,Cash on Delivery,18.58,17.35,124.75,4,Pending
+CUST0728,34,Female,Meltonville,Groceries,194.19,5,2/10/2025,Bank Transfer,34.35,4.05,940.65,5,Pending
+CUST0729,19,Male,Roseside,Books,372.6,5,12/6/2024,PayPal,75.38,15.23,1802.85,4,Pending
+CUST0730,35,Male,South Bradley,Electronics,287.15,2,4/28/2026,Cash on Delivery,69.36,7.88,512.82,4,Completed
+CUST0731,44,Female,South Sierra,Books,394.05,1,1/3/2026,M-Pesa,61.42,2.42,335.05,4,Completed
+CUST0732,67,Female,Port Jenniferville,Fashion,32.49,2,5/5/2026,Bank Transfer,7.29,9.61,67.3,3,Returned
+CUST0733,61,Male,New Angelamouth,Beauty,149.82,1,6/23/2025,Bank Transfer,14.54,14.7,149.98,3,Returned
+CUST0734,48,Female,South Taylor,Electronics,409.84,2,11/17/2025,PayPal,70.7,25.03,774.01,5,Completed
+CUST0735,57,Male,Laurenburgh,Groceries,329.36,3,8/27/2025,Credit Card,34.84,13.1,966.34,5,Pending
+CUST0736,25,Male,Lake Bonnie,Home,455.3,4,11/25/2024,Credit Card,87.01,7.91,1742.1,1,Completed
+CUST0737,33,Male,Port Gary,Home,323.75,1,9/17/2024,PayPal,39.45,8.09,292.39,5,Canceled
+CUST0738,68,Female,Port Codymouth,Home,166.04,4,1/13/2025,Bank Transfer,49.34,6.86,621.68,1,Returned
+CUST0739,27,Male,Zavalaburgh,Books,488.7,1,4/1/2026,PayPal,81.22,2.48,409.96,3,Completed
+CUST0740,66,Male,Simpsonton,Electronics,472.28,5,1/21/2026,Cash on Delivery,46.53,5.08,2319.95,3,Canceled
+CUST0741,69,Female,New Rebecca,Fashion,180.1,5,10/22/2024,PayPal,46.83,12.78,866.45,3,Pending
+CUST0742,68,Male,Susanmouth,Fashion,404.49,5,12/2/2024,M-Pesa,77.72,9.93,1954.66,1,Returned
+CUST0743,44,Male,Andrewsland,Books,18.14,2,5/2/2025,Cash on Delivery,1.35,24.19,59.12,2,Pending
+CUST0744,69,Male,Lake Sarahport,Fashion,109.89,4,11/25/2025,M-Pesa,9.81,14.43,444.18,5,Returned
+CUST0745,67,Female,Lake Andreamouth,Beauty,194.63,2,12/2/2025,M-Pesa,10.81,12.1,390.55,2,Canceled
+CUST0746,41,Female,Port Rachelside,Books,154.14,5,5/17/2025,M-Pesa,28.46,24.01,766.25,5,Completed
+CUST0747,67,Female,Nicolechester,Beauty,150.21,4,8/9/2025,M-Pesa,4.06,29.94,626.72,2,Canceled
+CUST0748,31,Female,West Wayneborough,Groceries,206.95,2,3/29/2025,Bank Transfer,43.8,7.63,377.73,3,Returned
+CUST0749,40,Female,Port Johnmouth,Sports,282.51,2,4/27/2025,Bank Transfer,43.81,9.76,530.97,3,Pending
+CUST0750,42,Male,Schultzborough,Books,441.51,2,12/17/2025,Bank Transfer,5.89,19.1,896.23,4,Returned
+CUST0751,60,Male,Adamsfurt,Books,216.84,2,10/30/2024,Credit Card,22.2,11.74,423.22,1,Returned
+CUST0752,64,Male,Matafurt,Beauty,186.5,4,9/10/2024,PayPal,9.76,7.59,743.83,4,Returned
+CUST0753,22,Female,New Stacyville,Sports,234.98,3,6/17/2024,M-Pesa,64.76,17.34,657.52,1,Completed
+CUST0754,26,Female,Nelsonfurt,Fashion,417.49,2,11/17/2025,M-Pesa,35.29,4.76,804.45,1,Completed
+CUST0755,66,Female,Lake Amberborough,Books,310.28,1,4/12/2026,Bank Transfer,31.31,28.81,307.78,2,Pending
+CUST0756,30,Male,Lake Coltonborough,Books,428.61,1,9/2/2025,M-Pesa,53.17,18.15,393.59,1,Returned
+CUST0757,70,Male,Carlside,Books,361.91,5,1/29/2026,Cash on Delivery,2.96,5.5,1812.09,5,Returned
+CUST0758,43,Male,Garciaton,Fashion,256.94,4,11/23/2025,Cash on Delivery,9.07,17.7,1036.39,2,Returned
+CUST0759,58,Female,Waynemouth,Fashion,115.41,5,9/12/2025,Bank Transfer,1.35,4.14,579.84,3,Canceled
+CUST0760,32,Female,North Matthew,Sports,96.63,4,11/7/2024,M-Pesa,10.19,12.82,389.15,3,Returned
+CUST0761,24,Male,Port Katherinestad,Home,363.92,5,5/24/2025,M-Pesa,107.22,25.52,1737.9,5,Completed
+CUST0762,44,Male,Obrienview,Beauty,435.71,2,12/12/2024,Bank Transfer,128.99,4.2,746.63,3,Pending
+CUST0763,41,Female,Port Julia,Beauty,28.53,3,3/25/2026,Cash on Delivery,2.26,11.35,94.68,5,Completed
+CUST0764,42,Female,New Jason,Books,343.2,1,2/21/2026,Bank Transfer,24.71,4.01,322.5,1,Pending
+CUST0765,57,Female,East Steven,Fashion,458.43,4,12/4/2024,Cash on Delivery,83.9,9.91,1759.73,2,Pending
+CUST0766,70,Female,South Lauren,Books,37.22,2,1/16/2025,PayPal,4.95,16.92,86.41,2,Completed
+CUST0767,62,Male,East Davidview,Home,195.58,5,10/30/2025,M-Pesa,40.62,15.2,952.48,1,Canceled
+CUST0768,48,Male,Dustinland,Groceries,134.65,3,10/4/2024,Credit Card,36.24,8.3,376.01,1,Canceled
+CUST0769,39,Female,Ellisland,Home,431.44,5,3/5/2025,M-Pesa,107.25,10.66,2060.61,2,Completed
+CUST0770,19,Female,South Emily,Fashion,458.64,4,7/3/2024,Cash on Delivery,53.02,23.56,1805.1,5,Canceled
+CUST0771,53,Female,Michaelview,Home,367.74,3,7/25/2025,Credit Card,107.34,24.64,1020.52,5,Completed
+CUST0772,21,Male,North Michael,Beauty,149.51,4,12/14/2024,Credit Card,10.69,3.7,591.05,5,Completed
+CUST0773,38,Male,Watkinsport,Fashion,418.23,5,2/27/2025,M-Pesa,28.64,29.31,2091.82,3,Canceled
+CUST0774,42,Male,Johnsonfurt,Books,348.02,2,4/5/2026,Cash on Delivery,60.19,28.16,664.01,3,Pending
+CUST0775,57,Female,Catherineside,Fashion,186.42,2,4/20/2026,Bank Transfer,12.96,22.6,382.48,2,Completed
+CUST0776,21,Male,Ryanview,Sports,434.36,3,12/19/2025,PayPal,119.3,5.46,1189.24,2,Completed
+CUST0777,44,Female,Henrybury,Sports,285.89,2,10/20/2025,Bank Transfer,51.96,14.51,534.33,5,Canceled
+CUST0778,61,Male,North Thomasfort,Groceries,455.36,4,4/6/2026,Credit Card,55.83,26.36,1791.97,1,Canceled
+CUST0779,39,Male,Lindsayville,Fashion,354.61,5,5/1/2026,Bank Transfer,8.44,25.44,1790.05,5,Canceled
+CUST0780,43,Male,Danielmouth,Beauty,417.03,5,7/6/2025,M-Pesa,8.24,9.82,2086.73,1,Canceled
+CUST0781,45,Male,West Jasmineburgh,Sports,457.14,5,4/8/2025,Cash on Delivery,24.01,13.06,2274.75,4,Canceled
+CUST0782,32,Male,Gonzalezshire,Electronics,163.63,3,4/16/2025,Credit Card,44.11,16.18,462.96,5,Canceled
+CUST0783,31,Male,South Susan,Electronics,455.03,5,7/27/2025,Cash on Delivery,133.61,21.45,2162.99,4,Returned
+CUST0784,20,Male,Swansonton,Electronics,281.4,1,11/6/2025,Bank Transfer,63.72,14.94,232.62,3,Returned
+CUST0785,65,Male,Matthewmouth,Groceries,280.52,2,5/16/2025,Bank Transfer,42.76,20.9,539.18,1,Canceled
+CUST0786,49,Female,Watsonhaven,Fashion,171.66,2,10/12/2024,Credit Card,19.61,18.6,342.31,5,Completed
+CUST0787,22,Male,Taraborough,Books,144.23,2,8/2/2025,Cash on Delivery,26.54,19.18,281.1,4,Returned
+CUST0788,27,Male,South Frankmouth,Beauty,263.92,3,7/22/2025,PayPal,72.36,9.6,729,3,Completed
+CUST0789,60,Male,Dillonton,Beauty,151.64,2,4/3/2026,Cash on Delivery,6.33,28.75,325.7,5,Canceled
+CUST0790,47,Female,New Michele,Electronics,449.93,5,9/1/2025,M-Pesa,118.58,27.2,2158.27,2,Returned
+CUST0791,66,Female,Michaelland,Books,254.03,1,4/24/2026,Credit Card,3.31,2.41,253.13,2,Completed
+CUST0792,68,Male,New Sheilahaven,Fashion,402.95,2,11/15/2025,Cash on Delivery,51.32,19.96,774.54,1,Returned
+CUST0793,37,Female,West Susanmouth,Home,431.5,1,8/4/2024,Bank Transfer,64.7,24.47,391.27,2,Canceled
+CUST0794,34,Male,Hernandezmouth,Books,116.24,3,8/28/2024,PayPal,15.97,6.47,339.22,2,Returned
+CUST0795,51,Male,Josephfort,Electronics,382.8,5,6/5/2025,Cash on Delivery,14.08,4.31,1904.23,4,Canceled
+CUST0796,24,Male,Rosemouth,Home,140.03,4,7/30/2025,PayPal,17.45,25.07,567.74,5,Completed
+CUST0797,42,Male,Grantborough,Sports,10.1,4,8/24/2024,Bank Transfer,2.73,14,51.67,5,Pending
+CUST0798,54,Female,Simmonston,Beauty,320.95,2,11/13/2024,Credit Card,91.98,7.32,557.24,2,Canceled
+CUST0799,30,Male,Jonesfurt,Groceries,384.74,1,2/11/2025,PayPal,61.41,19.71,343.04,1,Completed
+CUST0800,34,Male,North Dawn,Fashion,252.39,5,9/22/2024,Cash on Delivery,55.98,17.38,1223.35,1,Returned
+CUST0801,63,Male,East Jeanette,Electronics,185.92,3,9/18/2025,PayPal,17.76,18.12,558.12,4,Completed
+CUST0802,25,Male,Port Sandrabury,Books,424.13,5,7/5/2025,Cash on Delivery,30.24,5.99,2096.4,1,Pending
+CUST0803,23,Female,Port Alyssatown,Home,129.22,3,7/23/2025,Bank Transfer,11.88,27.56,403.34,5,Returned
+CUST0804,66,Male,Dustinville,Beauty,334.58,2,7/19/2024,PayPal,82.01,24.75,611.9,2,Completed
+CUST0805,62,Male,Jonesview,Home,454.89,2,9/23/2024,PayPal,23.08,25.56,912.26,4,Pending
+CUST0806,48,Male,Jessicafort,Electronics,404.92,2,4/9/2025,PayPal,92.3,27.17,744.71,3,Returned
+CUST0807,56,Female,Port Omar,Beauty,196.84,1,3/27/2026,PayPal,11.6,19.88,205.12,4,Completed
+CUST0808,33,Male,New Stacybury,Electronics,89.6,3,6/3/2025,Credit Card,6.93,10.55,272.42,1,Completed
+CUST0809,20,Female,Melindaport,Sports,416.22,3,7/20/2025,Credit Card,121.94,10.95,1137.67,3,Returned
+CUST0810,59,Male,Patrickshire,Groceries,146.21,4,2/9/2025,Cash on Delivery,30.47,11.94,566.31,1,Pending
+CUST0811,48,Male,Lewisview,Beauty,128.75,4,12/14/2024,Credit Card,32.44,17.68,500.24,5,Completed
+CUST0812,44,Male,New Jessicaport,Books,450.97,1,12/14/2025,Bank Transfer,115.66,29.94,365.25,1,Canceled
+CUST0813,66,Female,Billborough,Electronics,263.24,1,8/28/2025,PayPal,6.22,23.34,280.36,3,Returned
+CUST0814,25,Male,Foxfurt,Books,413.12,3,5/28/2025,Cash on Delivery,13.75,15.57,1241.18,2,Canceled
+CUST0815,67,Male,North Jessicashire,Groceries,483.29,3,6/7/2024,Cash on Delivery,56.29,6.4,1399.98,4,Pending
+CUST0816,63,Female,Port Elizabethborough,Beauty,487.62,5,11/18/2025,M-Pesa,44.97,9.78,2402.91,5,Pending
+CUST0817,55,Male,New Karen,Home,469.4,1,10/13/2024,M-Pesa,92.37,12.11,389.14,2,Completed
+CUST0818,60,Female,East Bethchester,Beauty,412.97,1,10/26/2024,Credit Card,42.18,10.93,381.72,1,Returned
+CUST0819,57,Female,East Ryanside,Fashion,36.12,2,3/1/2026,M-Pesa,10.36,17.98,79.86,2,Canceled
+CUST0820,59,Male,West Catherineburgh,Sports,479,5,6/20/2024,Bank Transfer,139.36,25.5,2281.14,1,Returned
+CUST0821,66,Male,Meyerport,Electronics,404.61,5,1/9/2026,Bank Transfer,69.28,4.94,1958.71,3,Returned
+CUST0822,59,Female,Solomonmouth,Groceries,486.95,3,10/28/2025,M-Pesa,49.69,15.4,1426.56,2,Pending
+CUST0823,66,Male,South Joshua,Groceries,393.93,5,12/6/2025,PayPal,36.89,4.53,1937.29,2,Completed
+CUST0824,47,Female,West Kendra,Beauty,423.97,3,5/29/2025,PayPal,36.32,17.72,1253.31,5,Completed
+CUST0825,66,Male,East Joshuatown,Fashion,327.83,5,11/14/2024,Bank Transfer,32.16,6.42,1613.41,2,Completed
+CUST0826,67,Male,Jamesmouth,Books,79.62,3,9/9/2024,Cash on Delivery,8.14,9.47,240.19,4,Returned
+CUST0827,39,Female,South Emmafort,Home,355.76,2,10/20/2025,PayPal,70,8.42,649.94,2,Canceled
+CUST0828,63,Male,Wilsonside,Sports,130.46,5,5/1/2026,Bank Transfer,28.91,18.68,642.07,4,Returned
+CUST0829,39,Female,Adamsburgh,Groceries,487.1,3,5/24/2024,M-Pesa,50.29,8.15,1419.16,2,Returned
+CUST0830,65,Female,New Davidstad,Electronics,314.94,4,8/1/2025,Bank Transfer,43.89,26.78,1242.65,3,Completed
+CUST0831,55,Female,South Denise,Sports,387.24,2,1/21/2025,Credit Card,63.3,28.92,740.1,2,Canceled
+CUST0832,66,Male,New Rebecca,Home,70.7,1,1/14/2025,Credit Card,9.55,6.41,67.56,5,Completed
+CUST0833,28,Male,Nathanielstad,Electronics,20.68,2,9/12/2024,Bank Transfer,0.94,16.54,56.96,5,Returned
+CUST0834,60,Female,Port Jon,Groceries,50.11,1,8/6/2024,Credit Card,5.38,25.85,70.58,5,Canceled
+CUST0835,46,Female,Brownton,Electronics,447.32,5,2/1/2025,Credit Card,3.24,24.75,2258.11,4,Returned
+CUST0836,23,Male,South Sierrafurt,Home,249.36,2,4/17/2026,Cash on Delivery,5.01,15.26,508.97,3,Canceled
+CUST0837,55,Female,Hendersonside,Groceries,335.28,3,2/14/2025,M-Pesa,90.09,11.68,927.43,3,Canceled
+CUST0838,33,Male,Harrishaven,Beauty,445.17,3,3/13/2025,M-Pesa,65.93,8.7,1278.28,2,Pending
+CUST0839,68,Female,Petersmouth,Home,382.39,2,2/28/2026,PayPal,108.28,9.57,666.07,1,Canceled
+CUST0840,39,Female,New Kristinemouth,Fashion,125.57,3,4/17/2026,Bank Transfer,20.85,19.74,375.6,3,Pending
+CUST0841,55,Female,Wallaceville,Books,444.1,2,4/5/2025,PayPal,102.55,29.26,814.91,4,Returned
+CUST0842,57,Female,Michelleview,Fashion,496.29,3,1/16/2025,M-Pesa,75.4,17.19,1430.66,2,Canceled
+CUST0843,27,Female,Martinview,Groceries,431.95,3,11/20/2025,Credit Card,33.77,20.73,1282.81,3,Pending
+CUST0844,70,Male,Michaelside,Books,86.82,4,3/1/2026,Cash on Delivery,10.76,25.53,362.05,5,Returned
+CUST0845,35,Male,Lake Andrewburgh,Beauty,409.55,5,11/28/2025,Credit Card,34.63,5.09,2018.21,2,Returned
+CUST0846,38,Female,New Scottfurt,Sports,290.69,1,10/16/2025,Cash on Delivery,28.99,21.46,283.16,1,Pending
+CUST0847,25,Male,Alyssaland,Fashion,208.28,2,3/11/2026,M-Pesa,46.46,15.44,385.54,5,Returned
+CUST0848,47,Female,Lake Allenton,Groceries,18.04,1,3/28/2025,Cash on Delivery,3.35,3.2,17.89,5,Pending
+CUST0849,63,Female,Rogersfort,Fashion,79.4,1,6/2/2024,PayPal,19.81,28.57,88.16,2,Returned
+CUST0850,68,Female,Lake Chadbury,Beauty,224.12,5,9/11/2025,Bank Transfer,57.37,14.34,1077.57,1,Canceled
+CUST0851,24,Female,West Toniburgh,Beauty,48.92,1,12/29/2024,M-Pesa,11.54,22.51,59.89,1,Returned
+CUST0852,43,Male,North Jamesland,Fashion,176.41,4,7/16/2025,Bank Transfer,32.43,3.58,676.79,4,Pending
+CUST0853,48,Male,Christinaport,Electronics,405.93,1,1/19/2025,M-Pesa,87.03,4.2,323.1,5,Completed
+CUST0854,42,Male,East Judith,Electronics,492.89,3,1/31/2025,Bank Transfer,30.29,19.53,1467.91,4,Pending
+CUST0855,25,Male,Spencerberg,Electronics,187.22,1,5/28/2024,Credit Card,10.23,4.26,181.25,2,Returned
+CUST0856,57,Female,Barnettside,Books,207.3,3,7/18/2025,Credit Card,62.13,7.96,567.73,1,Returned
+CUST0857,59,Female,Alexanderside,Books,122.47,1,5/9/2026,Bank Transfer,11.53,5.01,115.95,1,Canceled
+CUST0858,31,Female,New Danielmouth,Books,227.06,3,5/31/2024,Bank Transfer,67.84,12.77,626.11,5,Canceled
+CUST0859,52,Male,West Lori,Beauty,356.44,2,2/28/2025,Cash on Delivery,77.21,6.77,642.44,4,Canceled
+CUST0860,43,Male,Meltonton,Books,27.7,4,10/28/2025,M-Pesa,7.27,4.16,107.69,3,Pending
+CUST0861,26,Male,Port Nicholasmouth,Sports,192.35,1,10/10/2024,Bank Transfer,27.22,2.07,167.2,5,Canceled
+CUST0862,53,Female,North Hector,Home,340.14,4,10/14/2024,Cash on Delivery,31.04,9.54,1339.06,3,Pending
+CUST0863,31,Male,West Joseburgh,Home,476.53,5,8/13/2024,PayPal,79.06,4.3,2307.89,3,Canceled
+CUST0864,25,Male,East Josephview,Fashion,451.94,1,9/18/2025,Cash on Delivery,32.01,25.83,445.76,3,Pending
+CUST0865,35,Female,Phillipstown,Electronics,356.21,2,11/27/2024,PayPal,95.87,8.39,624.94,2,Pending
+CUST0866,48,Male,East Lisa,Books,112.17,1,3/23/2026,PayPal,27.7,25.44,109.91,3,Pending
+CUST0867,29,Female,Port Melanie,Beauty,200.38,5,11/11/2024,Credit Card,18.18,9.73,993.45,3,Pending
+CUST0868,32,Female,Knightland,Beauty,230.48,1,12/4/2025,PayPal,67.23,21.43,184.68,4,Pending
+CUST0869,39,Male,Joshuaton,Books,386.16,5,1/9/2026,Cash on Delivery,88.62,10.87,1853.05,4,Completed
+CUST0870,41,Female,East Anthonyborough,Electronics,85.95,1,12/13/2025,Credit Card,5.99,3.71,83.67,4,Pending
+CUST0871,38,Female,East Derek,Groceries,236.95,1,10/6/2025,Cash on Delivery,39.08,8.43,206.3,1,Pending
+CUST0872,35,Male,Tylerville,Electronics,250.9,4,8/10/2024,Cash on Delivery,51.57,26.52,978.55,3,Returned
+CUST0873,37,Male,Cohenstad,Groceries,310.75,1,12/1/2024,Cash on Delivery,33.15,9.75,287.35,5,Returned
+CUST0874,70,Female,Jordanshire,Electronics,303.81,1,4/18/2025,PayPal,64.86,19.23,258.18,1,Pending
+CUST0875,21,Male,Lake Kennethmouth,Fashion,378.86,2,9/21/2024,Cash on Delivery,99,4.98,663.7,5,Completed
+CUST0876,32,Male,Andersonville,Fashion,295.47,4,7/3/2024,PayPal,78.07,6.25,1110.06,1,Returned
+CUST0877,27,Male,North Anna,Groceries,381.44,5,3/28/2025,Cash on Delivery,95.93,27.08,1838.35,3,Completed
+CUST0878,46,Male,North Nichole,Groceries,452.74,5,10/28/2025,PayPal,134.91,25.93,2154.72,3,Canceled
+CUST0879,69,Female,Parkerhaven,Electronics,300.61,4,1/28/2026,M-Pesa,85.02,3.79,1121.21,2,Canceled
+CUST0880,20,Male,Johnsburgh,Home,173.87,1,1/9/2025,PayPal,50.6,20.03,143.3,5,Returned
+CUST0881,18,Female,Racheltown,Electronics,168.58,1,1/10/2026,Credit Card,7.93,20.53,181.18,2,Canceled
+CUST0882,61,Male,Johnstad,Books,264.54,2,1/24/2026,Credit Card,67.06,2.65,464.67,2,Completed
+CUST0883,55,Female,South Laura,Fashion,76.49,3,9/26/2025,PayPal,11.17,5.22,223.52,1,Canceled
+CUST0884,26,Female,New Francisco,Beauty,422.62,1,9/4/2024,M-Pesa,87.24,11.09,346.47,5,Pending
+CUST0885,43,Male,Danielton,Home,493.35,4,4/14/2026,M-Pesa,147.86,8.82,1834.36,1,Canceled
+CUST0886,41,Female,Cooperborough,Groceries,390.85,5,4/8/2025,M-Pesa,77.6,16.36,1893.01,4,Returned
+CUST0887,35,Male,Obrienmouth,Electronics,124.96,2,12/4/2025,Cash on Delivery,20.28,2.14,231.78,3,Completed
+CUST0888,64,Male,Taylorberg,Beauty,209.95,1,10/31/2024,Bank Transfer,28.83,10.83,191.95,3,Canceled
+CUST0889,68,Male,Timothyborough,Books,101.5,2,1/2/2025,Cash on Delivery,7.93,2.97,198.04,3,Canceled
+CUST0890,59,Male,New James,Beauty,58.28,2,7/30/2025,PayPal,15.82,15.45,116.19,1,Returned
+CUST0891,61,Male,Johnmouth,Groceries,387.22,1,2/24/2026,Credit Card,47.12,20.34,360.44,5,Returned
+CUST0892,49,Female,New David,Groceries,375.35,1,3/3/2026,Cash on Delivery,94.73,29.74,310.36,2,Pending
+CUST0893,33,Male,West Debra,Books,208.83,3,10/25/2025,M-Pesa,5.15,4.32,625.66,4,Returned
+CUST0894,32,Female,Valentineland,Groceries,215.09,4,3/13/2026,PayPal,20.9,6.86,846.32,1,Canceled
+CUST0895,52,Male,South Jillburgh,Sports,142.04,2,5/12/2026,Bank Transfer,34.81,24.07,273.34,5,Completed
+CUST0896,52,Male,Lake Patriciaport,Electronics,451.1,4,11/30/2025,M-Pesa,110.56,22.02,1715.86,4,Completed
+CUST0897,29,Male,Teresaborough,Fashion,326.7,1,11/28/2025,PayPal,32.75,11.11,305.06,5,Canceled
+CUST0898,32,Male,Schneiderborough,Fashion,311.09,4,7/10/2025,Cash on Delivery,30.95,8.46,1221.87,3,Returned
+CUST0899,28,Male,Charlottechester,Groceries,151.79,2,2/4/2025,PayPal,25.62,28.95,306.91,5,Canceled
+CUST0900,20,Male,Stevensberg,Home,452.85,3,11/13/2025,PayPal,116.32,24.31,1266.54,3,Returned
+CUST0901,23,Male,Mcintyremouth,Groceries,389.94,4,7/3/2024,Credit Card,68.99,3.33,1494.1,3,Pending
+CUST0902,21,Male,Barajasborough,Beauty,303.71,2,6/25/2024,M-Pesa,34.04,25.88,599.26,2,Completed
+CUST0903,55,Male,New Samuel,Beauty,452.18,3,5/6/2026,PayPal,60.6,9.5,1305.44,4,Completed
+CUST0904,20,Male,Donaldshire,Groceries,131.56,1,4/28/2026,M-Pesa,2.12,17.27,146.71,1,Returned
+CUST0905,18,Female,New Victoriaside,Books,134.24,1,4/15/2026,M-Pesa,29.42,5.75,110.57,3,Completed
+CUST0906,68,Male,Warrenmouth,Home,285.25,4,1/9/2025,Bank Transfer,12.24,23.59,1152.35,3,Pending
+CUST0907,70,Male,Dianemouth,Electronics,10.68,5,1/30/2026,Credit Card,0.65,23.81,76.56,5,Pending
+CUST0908,20,Male,Andreafurt,Groceries,37.33,3,6/13/2024,Credit Card,8.88,24.72,127.83,5,Canceled
+CUST0909,67,Male,Port Andrew,Groceries,481.04,1,10/16/2024,Bank Transfer,69.65,26.67,438.06,2,Canceled
+CUST0910,70,Female,Fritzmouth,Fashion,21.88,1,8/4/2024,Bank Transfer,2.55,27.42,46.75,3,Pending
+CUST0911,34,Male,New Michael,Home,172.55,4,12/8/2024,Bank Transfer,46.53,11.72,655.39,4,Returned
+CUST0912,44,Male,Michaelhaven,Beauty,62.71,2,4/27/2026,PayPal,12.36,26.38,139.44,4,Pending
+CUST0913,64,Female,Lake Markberg,Groceries,431.27,4,6/27/2024,M-Pesa,17.65,9.15,1716.58,1,Canceled
+CUST0914,56,Male,Port Eric,Electronics,323.53,1,3/9/2026,PayPal,63.93,5.79,265.39,2,Pending
+CUST0915,46,Female,Bauerchester,Sports,193.39,2,9/14/2025,Credit Card,12.13,22.14,396.79,4,Canceled
+CUST0916,61,Female,Port Jamesside,Fashion,269.56,3,3/12/2026,Bank Transfer,38.36,20.37,790.69,1,Pending
+CUST0917,55,Female,Port Larrymouth,Electronics,411.47,2,11/7/2025,PayPal,5.86,15.45,832.53,5,Completed
+CUST0918,67,Female,Ruthport,Groceries,466.95,3,10/4/2025,Credit Card,117.39,17.87,1301.33,2,Returned
+CUST0919,22,Female,Port Alexandraside,Fashion,388.25,5,7/27/2024,PayPal,0.62,20.76,1961.39,4,Returned
+CUST0920,18,Male,Allisonside,Fashion,259.14,2,6/20/2025,M-Pesa,50.37,28.73,496.64,4,Pending
+CUST0921,53,Male,Lake Margaretfort,Beauty,217.23,3,10/27/2024,Bank Transfer,55,26.18,622.87,1,Pending
+CUST0922,69,Female,West Todd,Home,16.36,1,4/28/2025,Cash on Delivery,4.25,15.94,28.05,1,Completed
+CUST0923,36,Female,Hunterstad,Groceries,199.6,1,3/17/2025,Cash on Delivery,35.41,13.06,177.25,4,Pending
+CUST0924,23,Male,South Johnmouth,Electronics,480.13,5,10/23/2025,Cash on Delivery,71.07,8.8,2338.38,2,Completed
+CUST0925,47,Female,North Mario,Electronics,102.07,4,6/22/2025,Cash on Delivery,6.15,5.94,408.07,1,Pending
+CUST0926,42,Male,Lake Timothyberg,Books,400.3,3,12/7/2025,Bank Transfer,27.9,29.22,1202.22,2,Pending
+CUST0927,22,Male,Sosaton,Electronics,246.88,4,8/18/2024,Cash on Delivery,55.9,15.52,947.14,3,Returned
+CUST0928,55,Male,South Michaelstad,Groceries,235.24,3,6/23/2025,PayPal,50.43,11.63,666.92,3,Canceled
+CUST0929,30,Male,South James,Home,428.75,2,7/23/2025,PayPal,124.41,12.5,745.59,2,Returned
+CUST0930,32,Male,Gibsonbury,Electronics,326.29,2,10/9/2024,PayPal,22.48,11.09,641.19,2,Canceled
+CUST0931,25,Female,West Steven,Home,231.19,2,7/1/2025,Cash on Delivery,64.56,15.73,413.55,4,Returned
+CUST0932,65,Female,Frederickmouth,Home,220.55,3,9/17/2024,Credit Card,63.68,7.56,605.53,4,Canceled
+CUST0933,47,Female,Rickystad,Sports,159.68,1,8/24/2024,PayPal,9.36,8.1,158.42,5,Completed
+CUST0934,52,Female,Hayesview,Beauty,352.28,3,3/13/2025,Cash on Delivery,76.89,9.34,989.29,5,Returned
+CUST0935,49,Male,Lake Christopherhaven,Books,82.55,5,1/30/2025,Cash on Delivery,13.26,20.2,419.69,2,Returned
+CUST0936,65,Male,Coltonside,Sports,311.01,5,9/10/2024,Bank Transfer,65.77,4.71,1493.99,4,Completed
+CUST0937,65,Female,South Desiree,Beauty,136.31,5,4/28/2025,M-Pesa,12.28,23.32,692.59,5,Pending
+CUST0938,28,Male,Morganhaven,Sports,212.68,5,12/8/2024,Bank Transfer,54.05,29.34,1038.69,1,Pending
+CUST0939,20,Female,Port Michelle,Books,494.21,5,10/11/2025,Credit Card,100.05,8.77,2379.77,2,Completed
+CUST0940,57,Male,New Neil,Fashion,122.89,2,12/10/2025,PayPal,31.6,14.15,228.33,2,Returned
+CUST0941,31,Male,Lake Rebecca,Home,346.82,3,8/28/2025,Bank Transfer,42.34,19.23,1017.35,1,Pending
+CUST0942,32,Male,North Amanda,Electronics,24.55,4,10/6/2025,Credit Card,7.25,15.7,106.65,3,Completed
+CUST0943,51,Female,Bryanmouth,Groceries,460.24,1,8/20/2024,Bank Transfer,104.06,8.64,364.82,4,Canceled
+CUST0944,31,Female,Paulbury,Beauty,11.65,5,6/7/2024,Credit Card,1.92,23.01,79.34,1,Completed
+CUST0945,31,Male,Port Christopherhaven,Electronics,221.29,2,9/17/2024,Cash on Delivery,26.82,9.1,424.86,1,Completed
+CUST0946,70,Female,Heatherfurt,Groceries,396.51,1,5/28/2024,M-Pesa,21.83,13.51,388.19,1,Canceled
+CUST0947,27,Female,North Dakota,Books,274.8,1,9/1/2024,Cash on Delivery,76.01,12.81,211.6,1,Canceled
+CUST0948,60,Female,Brianville,Home,37.68,1,10/4/2024,Bank Transfer,4.09,26.49,60.08,5,Pending
+CUST0949,34,Male,Randallshire,Beauty,302.26,2,1/19/2026,M-Pesa,11.32,11.67,604.87,4,Returned
+CUST0950,67,Male,New Richard,Fashion,497.78,2,1/6/2026,PayPal,127.27,12.54,880.83,5,Canceled
+CUST0951,22,Female,Longville,Books,130.07,4,1/23/2026,PayPal,0.74,17,536.54,1,Completed
+CUST0952,67,Male,Andrewland,Beauty,437.9,3,1/28/2025,Credit Card,122.83,24.92,1215.79,1,Returned
+CUST0953,28,Male,North Frankborough,Books,161.99,2,5/20/2025,M-Pesa,32.27,28.73,320.44,3,Pending
+CUST0954,56,Female,Lake Johnchester,Electronics,411.64,1,2/7/2026,Cash on Delivery,26.79,11.76,396.61,3,Returned
+CUST0955,40,Male,South Jennifershire,Beauty,335.29,4,8/27/2024,Cash on Delivery,64.32,12.27,1289.11,4,Completed
+CUST0956,41,Female,Michaelmouth,Groceries,177.18,3,2/4/2026,Bank Transfer,33.09,6.35,504.8,1,Pending
+CUST0957,39,Female,New Christopher,Fashion,449.05,4,2/3/2025,PayPal,81.27,28.4,1743.33,3,Returned
+CUST0958,62,Male,East Lauraton,Books,264.87,4,1/3/2025,M-Pesa,68.43,9.36,1000.41,2,Completed
+CUST0959,18,Female,Julieton,Electronics,113.98,3,10/21/2025,Cash on Delivery,27.49,22.1,336.55,2,Canceled
+CUST0960,49,Female,North Samanthabury,Electronics,267.72,2,4/16/2025,PayPal,42.78,8.55,501.21,1,Returned
+CUST0961,45,Female,Port Robert,Groceries,498.72,1,12/6/2024,Credit Card,58.17,6.89,447.44,1,Completed
+CUST0962,35,Male,Ericbury,Books,186.4,5,8/14/2024,M-Pesa,9.24,14.83,937.59,1,Completed
+CUST0963,34,Male,New Zachary,Electronics,434.53,4,2/26/2025,Cash on Delivery,33.66,13.44,1717.9,5,Canceled
+CUST0964,51,Male,South Martinshire,Fashion,229.14,5,7/12/2025,PayPal,30.07,3.78,1119.41,2,Canceled
+CUST0965,59,Male,Sharonmouth,Groceries,175.07,5,7/11/2024,PayPal,51.1,26.9,851.15,5,Returned
+CUST0966,32,Male,New Brianna,Beauty,312.92,5,8/27/2024,Credit Card,86.5,11.44,1489.54,4,Returned
+CUST0967,65,Female,Dustinmouth,Sports,319.56,2,1/7/2025,Credit Card,83.62,7.47,562.97,2,Completed
+CUST0968,46,Female,Port Guyberg,Beauty,209.55,1,2/26/2025,M-Pesa,7.76,13.71,215.5,5,Pending
+CUST0969,32,Male,Bruceshire,Books,283.85,2,9/28/2024,Bank Transfer,56.27,21,532.43,2,Pending
+CUST0970,30,Female,New Nicoleborough,Fashion,331.09,4,4/22/2025,Cash on Delivery,12.89,29.56,1341.03,2,Returned
+CUST0971,46,Female,Nelsonton,Sports,371.78,3,3/8/2025,M-Pesa,8.84,8.51,1115.01,3,Canceled
+CUST0972,28,Female,Hillport,Fashion,109.98,2,11/6/2024,M-Pesa,7.3,10.21,222.87,4,Returned
+CUST0973,56,Male,Joshuabury,Home,99.46,5,10/17/2024,M-Pesa,25.92,22.42,493.8,4,Canceled
+CUST0974,55,Male,Johnberg,Beauty,16.29,1,1/8/2026,Credit Card,1.3,29.72,44.71,4,Returned
+CUST0975,32,Male,Lake Michelle,Books,222.44,4,3/2/2026,Credit Card,17.7,7.56,879.62,5,Returned
+CUST0976,39,Male,Petersonfurt,Groceries,182.06,5,2/5/2026,PayPal,42.06,14.4,882.64,4,Pending
+CUST0977,33,Male,Lake Donaldmouth,Sports,189.02,4,8/28/2025,Bank Transfer,5.79,12.42,762.71,2,Returned
+CUST0978,47,Male,West Susanbury,Books,446.51,1,7/15/2024,M-Pesa,118.45,28.11,356.17,1,Canceled
+CUST0979,52,Female,Simmonsmouth,Fashion,76.34,4,9/4/2024,M-Pesa,3.02,15.39,317.73,2,Completed
+CUST0980,43,Female,Toddview,Fashion,296.44,1,12/14/2025,PayPal,61.76,10.85,245.53,3,Pending
+CUST0981,44,Female,West Jeffreybury,Sports,389.8,3,12/2/2025,Cash on Delivery,106.78,23.83,1086.45,3,Pending
+CUST0982,36,Female,Lake Bridget,Fashion,29.9,4,5/11/2026,Cash on Delivery,3.01,7.55,124.14,4,Pending
+CUST0983,63,Male,Lake Megan,Sports,249.73,4,9/10/2025,PayPal,43.17,5.28,961.03,4,Canceled
+CUST0984,60,Female,Edwardland,Books,386.09,3,9/30/2025,Credit Card,73.81,22.34,1106.8,1,Canceled
+CUST0985,65,Female,West Mark,Home,371.31,1,1/16/2026,Cash on Delivery,64.25,25.69,332.75,4,Returned
+CUST0986,58,Male,Lake Shane,Home,431.59,4,8/6/2025,Cash on Delivery,90.08,19.17,1655.45,4,Completed
+CUST0987,70,Female,Masseybury,Books,182.36,3,9/3/2024,Cash on Delivery,32.68,5.62,520.02,2,Canceled
+CUST0988,42,Male,South Douglasstad,Books,279.72,5,9/10/2025,Bank Transfer,72.11,21.41,1347.9,3,Completed
+CUST0989,52,Male,North Chasebury,Electronics,434.38,3,2/25/2025,Credit Card,6.88,12.08,1308.34,2,Pending
+CUST0990,58,Male,Ivanchester,Electronics,371.23,2,5/19/2025,PayPal,32.08,27.93,738.31,2,Completed
+CUST0991,32,Male,Kaitlynstad,Books,17.1,4,7/2/2024,Bank Transfer,2.85,29.99,95.54,4,Completed
+CUST0992,30,Female,West Marie,Sports,61.96,1,4/25/2025,Credit Card,6.35,28.68,84.29,4,Canceled
+CUST0993,40,Female,East Richardmouth,Beauty,36.61,1,3/6/2025,Credit Card,4.64,7.99,39.96,2,Canceled
+CUST0994,56,Female,New Diana,Electronics,347.35,5,11/19/2025,Credit Card,41.18,28.7,1724.27,1,Canceled
+CUST0995,64,Male,South Jamie,Fashion,296.46,2,3/15/2025,Cash on Delivery,66.4,24.82,551.34,3,Canceled
+CUST0996,20,Male,North Sherryfort,Home,32.49,3,3/3/2025,Cash on Delivery,9.58,23.71,111.6,5,Pending
+CUST0997,21,Male,New Anthony,Electronics,250.3,5,11/29/2025,Bank Transfer,68.98,28.82,1211.34,2,Pending
+CUST0998,31,Female,Bensonchester,Beauty,370.52,3,9/8/2025,PayPal,71.14,3.33,1043.75,2,Completed
+CUST0999,49,Male,North Mariafort,Beauty,339.34,5,4/16/2026,PayPal,99.84,9.76,1606.62,5,Returned
+CUST1000,33,Male,Thomasburgh,Groceries,6.35,5,4/9/2026,Credit Card,1.2,25.07,55.62,3,Completed

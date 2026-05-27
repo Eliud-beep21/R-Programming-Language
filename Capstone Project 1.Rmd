@@ -1,0 +1,542 @@
+---
+title: 'Capstone Project: Customer Behaviour and Retention Analytics'
+author: "Eliud Mule"
+date: "`r Sys.Date()`"
+output:
+  html_document: default
+  word_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, comment = NA, message = FALSE, warning = FALSE,
+                      fig.width = 7, fig.height = 5)
+```
+
+
+# Set Working Directory
+```{r}
+  # setwd("C:/Users/ADMIN/OneDrive/Desktop/Eliud/R")
+```
+
+
+## **Phase1:Data Understanding and Cleaning**
+```{r}
+# Load necessary libraries
+library(dplyr)
+library(tidyverse)
+library(rio)
+library(psych)
+# Load the dataset
+data <- read.csv("customerData.csv")
+head(data)
+```
+
+### **Data Structure and Summary Statistics**  
+```{r}
+  str(data)
+  describe(data)
+ 
+```
+
+Conclusion: The dataset contains 10000 observations and 15 variables, i.e eight numerical variables and nine categorical variables. 
+
+
+### **Checking for Missing Values, Duplicates, and Data Inconsistencies** 
+```{r}
+# Check for missing values
+missing_values <- colSums(is.na(data))
+print(missing_values)
+
+```
+  > There are no missing values in the dataset, which indicates that the data is complete and ready for analysis.
+  
+  
+
+```{r}
+# Check for duplicates
+duplicates <- data[duplicated(data), ]
+print(duplicates)
+ 
+
+```
+  > There are no duplicate records in the dataset, which ensures that each observation is unique and contributes to the analysis without redundancy.
+  
+  
+```{r}
+# Check for Data Inconsistencies
+inconsistent_data <- data %>%
+  filter(age < 18 | age > 100 | annual_spending < 0 |loyalty_years < 0 |gender =="male" |gender == "female" )
+print(inconsistent_data)
+```
+  > There are no data inconsistencies in the dataset, which indicates that the data is clean and adheres to expected ranges and categories for the variables.
+  
+
+### **Detecting Outliers using Boxplot**
+```{r}
+# Boxplot for annual_spending 
+boxplot(data$annual_spending, main = "Boxplot of Annual Spending", ylab = "Annual Spending")
+```
+ > The boxplot for annual spending reveals the presence of outliers, as indicated by the points that fall outside the whiskers of the boxplot.
+
+```{r}
+# Boxplot for Credit Score
+boxplot(data$credit_score, main = "Boxplot of Credit Score", ylab = "Credit Score")
+```
+ > The boxplot for credit score also indicates the presence of outliers, as there are points that lie outside the whiskers of the boxplot.
+ 
+ 
+### **Handling Outliers**
+```{r}
+# Applying IQR method to remove outliers from annual_spending
+Q1 <- quantile(data$annual_spending, 0.25)
+Q3 <- quantile(data$annual_spending, 0.75)
+IQR <- Q3 - Q1
+
+lower_bound <- Q1 - 1.5 * IQR
+upper_bound <- Q3 + 1.5 * IQR
+data_cleaned <- data %>%
+  filter(annual_spending >= lower_bound & annual_spending <= upper_bound)
+
+
+
+```
+
+```{r}
+# Applying IQR method to remove outliers from credit_score
+Q1_cs <- quantile(data$credit_score, 0.25)
+Q3_cs <- quantile(data$credit_score, 0.75)
+IQR_cs <- Q3_cs - Q1_cs
+
+lower_bound_cs <- Q1_cs - 1.5 * IQR_cs
+upper_bound_cs <- Q3_cs + 1.5 * IQR_cs
+data_cleaned <- data_cleaned %>%
+  filter(credit_score >= lower_bound_cs & credit_score <= upper_bound_cs)
+```
+
+### **Visualize  after removing outliers**
+```{r}
+boxplot(data_cleaned$credit_score, main = "Boxplot of Credit Score (Cleaned Data)", ylab = "Credit Score")
+```
+
+
+```{r}
+# Boxplot of cleaned data
+boxplot(data_cleaned$annual_spending, main = "Boxplot of Annual Spending (Cleaned Data)", ylab = "Annual Spending")
+```
+
+
+## **Phase 2: Preprocessing and Feature Engineering**
+### **Feature Engineering**
+```{r}
+# Create  new features: Spending _to_income ratio,Customer Tenure,Financial_stability_score
+data_cleaned <-data_cleaned %>%  mutate( spending_to_income_ratio = annual_spending / annual_income, customer_tenure = loyalty_years*12, financial_stability_score = credit_score / annual_income)
+head(data_cleaned)
+```
+
+
+### **Encoding Categorical Variables**
+```{r}
+# One-hot encoding for categorical variables
+encoded_data <- model.matrix(~ . - 1, data = data_cleaned)
+
+# Convert the encoded data to a data frame
+encoded_data <- as.data.frame(encoded_data)
+head(encoded_data)
+```
+
+
+## **Phase 3: Exploratory Data Analysis (EDA)**
+### **Univariate Analysis**
+```{r}
+# Histogram for annual_spending
+ggplot(encoded_data, aes(x = annual_spending)) +
+  geom_histogram(binwidth = 500, fill = "steelblue", color = "black") +
+  labs(title = "Distribution of Annual Spending", x = "Annual Spending", y = "Frequency") +
+  theme_minimal()
+```
+Interpretation: The histogram of annual spending shows a right-skewed distribution, indicating that most customers have lower annual spending, while a smaller number of customers have higher annual spending.
+
+
+```{r}
+# Density plot for credit_score
+ggplot(encoded_data, aes(x = credit_score)) +
+  geom_density(fill = "lightblue", color = "black") +
+  labs(title = "Density Plot of Credit Score", x = "Credit Score", y = "Density") +
+  theme_bw()
+```
+
+Interpretation: The density plot of credit score shows a unimodal distribution, with most customers having credit scores around the mean, and fewer customers having very low or very high credit scores.
+
+
+```{r}
+# Frequency table for annual_income
+#table(encoded_data$annual_income)
+#prop.table(table(encoded_data$annual_income))
+```
+Interpretation: The frequency table for annual income shows that the majority of customers fall within the lower income brackets, with a smaller proportion of customers in the higher income brackets. This suggests that the customer base is predominantly composed of individuals with lower to moderate annual incomes.
+
+
+### **Multivariate Analysis**
+```{r}
+# Boxplot of Spending by Region
+ggplot(data_cleaned, aes(x = region, y = annual_spending)) +
+  geom_boxplot(fill = "lightgreen", color = "black") +
+  labs(title = "Boxplot of Annual Spending by Region", x = "Region", y = "Annual Spending") +
+  theme_classic()
+```
+Interpretation:From the boxplot of annual spending by region above, we observe that there are no significant differences in annual spending across the different regions. The median annual spending and interquartile ranges appears to be relatively similar across all regions.However, there are some outliers in suburban and urban regions, indicating that there are a few customers with significantly higher or lower annual spending compared to the majority of customers in each region.
+
+```{r}
+# Boxplot of Spending by employment_status
+ggplot(data_cleaned, aes(x = employment_status, y = annual_spending)) +
+  geom_boxplot(fill = "lightcoral", color = "black") +
+  labs(title = "Boxplot of Annual Spending by Employment Status", x = "Employment Status", y = "Annual Spending") +
+  theme_classic()
+```
+Interpretation: The boxplot of annual spending by employment status shows that there are significant differences in annual spending across different employment statuses.Self_Employed customers tend to have higher median annual spending compared to employed,student,unemployed and retired customers. Additionally, the interquartile range for employed customers is wider, indicating greater variability in annual spending among this group. Unemployed and student customers have lower median annual spending and narrower interquartile ranges, suggesting that they generally spend less annually compared to employed customers.Also, there are some outliers in the student, employed and unemployed categories, indicating that there are a few customers with significantly higher or lower annual spending compared to the majority of customers in each employment status.
+
+
+
+```{r}
+#Scatterplot of income vs credit score by churn
+ggplot(data_cleaned, aes(x = annual_income, y = credit_score, color = churn)) +
+  geom_point(size = 2) +
+  labs(title = "Scatterplot of Annual Income vs Credit Score by Churn", x = "Annual Income", y = "Credit Score") +
+  theme_minimal()
+```
+Interpretation: There is a moderate positive correlation between annual income and credit score, as customers with higher annual incomes tend to have higher credit scores. Additionally, non-churned customers generally have higher credit scores compared to churned customers, regardless of their annual income. This suggests that credit score may be a more important factor in customer retention than annual income.However,there is an overlap in the scatterplot, indicating that there are some churned customers with high credit scores and some non-churned customers with low credit scores, suggesting that income and credit score alone may not fully explain customer churn, and other factors may also play a role in customer retention.
+
+
+```{r}
+#Scatterplot of income vs credit score by churn
+ggplot(data_cleaned, aes(x = annual_income, y = credit_score, )) +
+  geom_point(size = 2,color ="yellow") +
+  facet_wrap(~churn) +
+  labs(title = "Scatterplot of Annual Income vs Credit Score by Churn", x = "Annual Income", y = "Credit Score") +
+  
+  theme_minimal()
+```
+Interpretation: The scatterplot shows a positive correlation between annual income and credit score for both churned and non-churned customers. However, non-churned customers generally have higher credit scores compared to churned customers across all income levels. This suggests that credit score may be a more important factor in customer retention than annual income. Additionally, there is an overlap in the scatterplot, indicating that there are some churned customers with high credit scores and some non-churned customers with low credit scores, suggesting that income and credit score alone are not strong predictors of customer churn, and other factors may also play a role in customer retention.
+
+
+```{r}
+# Correlation matrix for numerical variables
+numeric_data <- data_cleaned %>%
+  select_if(is.numeric)
+cor_matrix <- cor(numeric_data, use = "complete.obs")
+print(cor_matrix)
+
+```
+
+ 
+```{r}
+# Heatmap of correlation matrix
+library(corrplot)
+corrplot(cor_matrix, 
+         #title = "Pairwise Correlation Plot",
+         method = "color", 
+        # type = "upper",
+         addCoef.col = "white",
+         tl.col = "black", 
+         tl.srt = 45)
+
+```
+Interpretation: The correlation matrix and heatmap reveal several significant correlations among the numerical variables. Annual spending has a strong positive correlation with annual income (r = 0.83), indicating that customers with higher incomes tend to spend more annually. Additionally, there is a moderate positive correlation between credit score and annual spending (r = 0.63), suggesting that customers with higher spendings also tend to have better credit scores. However, there is a weak negative correlation between loyalty years and annual spending (r = -0.0028), indicating that customers who have been loyal for longer periods may spend slightly less annually. Overall, these correlations suggest that income and credit score are important factors influencing annual spending, while loyalty years  have a less significant impact on spending behavior.
+
+
+## **Phase 4: Descrriptive Statistics and Inference**
+### **Summary Statistics for spending across groups**
+```{r}
+# Summary statistics for annual_spending by region
+data_cleaned %>%
+  group_by(region) %>%
+  summarise(mean_spending = mean(annual_spending),
+            median_spending = median(annual_spending),
+            sd_spending = sd(annual_spending),
+            IQR_spending = IQR(annual_spending))
+```
+```{r}
+# Summary statistics for annual_spending by employment_status
+data_cleaned %>%
+  group_by(employment_status) %>%
+  summarise(mean_spending = mean(annual_spending),
+            median_spending = median(annual_spending),
+            sd_spending = sd(annual_spending),
+            IQR_spending = IQR(annual_spending))
+```
+
+
+```{r}
+# Summary statistics for annual_spending by education_level
+data_cleaned %>%
+  group_by(education) %>%
+  summarise(mean_spending = mean(annual_spending),
+            median_spending = median(annual_spending),
+            sd_spending = sd(annual_spending),
+            IQR_spending = IQR(annual_spending))
+```
+
+
+### **Confidence Intervals**
+```{r}
+conf_int <- t.test(data_cleaned$annual_spending)
+print(conf_int)
+```
+- The mean annual spending is estimated to be approximately 14880.91 with a 95% confidence interval ranging from 14703.63 to 15058.19. The interval does not include zero,indicating statistical significance at the 5% level. In addition, the confidence interval is relatively narrow, suggesting a precise estimate of the mean annual spending for the customer base. This information can be valuable for business decision-making and strategic planning related to customer spending behavior.
+
+
+## **Phase 5: Hypothesis Testing**
+### **Parametric Tests**
+#### **Two-sample t-test**
+##### **State the null and alternative hypotheses**
+- Null Hypothesis (H0): There is no significant difference in mean annual spending between churned and non-churned customers.
+- Alternative Hypothesis (H1): There is a significant difference in mean annual spending between churned and non-churned customers.
+
+> Assumptions for the two-sample t-test and A:
+1. Independence: The observations in each group (churned and non-churned) are independent of each other.
+2. Normality: The annual spending variable is approximately normally distributed within each group.
+3. Homogeneity of Variances: The variances of annual spending are equal across the two groups.
+
+```{r}
+# Two-sample t-test for annual_spending by churn
+t_test_result <- t.test(annual_spending ~ churn, data = data_cleaned)
+print(t_test_result)
+```
+ The two-sample t-test results indicate that there is a statistically significant difference in mean annual spending between churned and non-churned customers (p-value = 0.00001196). The mean annual spending for non-churned customers is higher than that of churned customers, suggesting that customers who do not churn tend to spend more annually compared to those who do churn. This finding can provide valuable insights for customer retention strategies, as it highlights the importance of targeting non-churned customers who have higher spending potential.
+
+
+#### **ANOVA with post-hoc Analysis**
+> Assumptions for ANOVA:
+1. Independence: The observations in each group (regions) are independent of each other.
+2. Normality: The annual spending variable is approximately normally distributed within each group.
+3. Homogeneity of Variances: The variances of annual spending are equal across the different regions.
+
+##### **State the null and alternative hypotheses**
+- Null Hypothesis (H0): There mean annual spendingis the same across different regions.
+- Alternative Hypothesis (H1): At least one region has a different mean annual spending compared to the others.
+
+```{r}
+model_aov <- aov(annual_spending ~ region, data = data_cleaned)
+summary(model_aov)
+```
+The reults above with an F-value of 3.105 and a p-value of 0.045 indicate that there is a  statistically significant difference in mean annual spending across different regions although small. Therefore, we   reject the null hypothesis, suggesting that regional location does  have a  small significant impact on customers' annual spending behavior in this dataset.
+
+```{r}
+# Effect size calculation (Eta Squared)
+library(effectsize)
+eta_squared_result <- eta_squared(model_aov)
+print(eta_squared_result)
+```
+The effectsize(Eta2) of 0.00063 indicates that only 0.063% of the variance in annual spending can be explained by the region variable, suggesting a very small effect size. This implies that while there is a statistically significant difference in mean annual spending across regions, the practical significance of this difference is minimal, and other factors may play a more substantial role in influencing customers' annual spending behavior.
+
+
+```{r}
+# Post-hoc analysis using Tukey's HSD test
+tukey_result <- TukeyHSD(model_aov)
+print(tukey_result)
+
+```
+From the Tukey's HSD test results, we can see that there is no statistically significant difference in mean annual spending between any pair of regions, as all p-values are greater than 0.05. This suggests that while the ANOVA indicated a significant difference across regions, the post-hoc analysis does not identify any specific pairs of regions that differ significantly from each other in terms of annual spending. Therefore, we can conclude that regional location does not have a significant impact on customers' annual spending behavior in this dataset when comparing specific regions to each other. 
+
+
+#### **Plot the post-hoc results**
+```{r}
+plot(tukey_result, las = 1, col = "blue", )
+
+```
+
+
+
+
+### **Non-Parametric Tests**
+#### **Mann-Whitney U Test**
+> Assumptions for Mann-Whitney U Test:
+1. Independence: The observations in each group (marital statuses) are independent of each other.
+2. Ordinal or Continuous Data: The dependent variable (annual spending) should be measured at an ordinal or continuous level.
+3. Non-Normal Distribution: The Mann-Whitney U test does not assume normality of the data, making it suitable for non-normally distributed data or when the sample size is small.
+
+##### **State the null and alternative hypotheses**
+- Null Hypothesis (H0): There is no significant difference in the median annual spending between different marital statuses since the distibution of the two groups is identical.
+- Alternative Hypothesis (H1): There is a significant difference in the median annual spending between different marital statuses since the distribution of the two groups is not identical.
+
+```{r}
+# Mann-Whitney U test for annual_spending by churn
+mann_whitney_result <- wilcox.test(annual_spending ~ marital_status, data = data_cleaned)
+print(mann_whitney_result)
+                                   
+```
+The results  with a p-value of 0.3673 indicate that there is no statistically significant difference in median annual spending between different marital statuses. Therefore, we fail to reject the null hypothesis, suggesting that marital status does not have a significant impact on customers' annual spending behavior in this dataset.
+
+
+#### **Kruskal-Wallis Test**
+> Assumptions for Kruskal-Wallis Test:
+1. Independence: The observations in each group (regions) are independent of each other.
+2. Ordinal or Continuous Data: The dependent variable (annual spending) should be measured at an ordinal or continuous level.
+3. Non-Normal Distribution: The Kruskal-Wallis test does not assume normality of the data, making it suitable for non-normally distributed data or when the sample size is small.
+
+##### **State the null and alternative hypotheses**
+- Null Hypothesis (H0): There is no significant difference in the median annual spending across different regions since the distribution of annual spending is identical across all regions.
+- Alternative Hypothesis (H1): There is a significant difference in the median annual spending across different regions since the distribution of annual spending is not identical across all regions.
+
+```{r}
+# Kruskal-Wallis test for annual_spending by region
+kruskal_result <- kruskal.test(annual_spending ~ region, data = data_cleaned)
+print(kruskal_result)
+```
+The results with a p-value of 0.0575 indicate that there is no statistically significant difference in median annual spending across different regions at the 5% significance level. Therefore, we fail to reject the null hypothesis, suggesting that regional location does not have a significant impact on customers' annual spending behavior in this dataset.
+
+
+#### **Chi-Square Test for Categorical Variables**
+> Assumptions for Chi-Square Test:
+1. Independence: The observations in the contingency table are independent of each other.
+2. Expected Frequency: The expected frequency for each cell in the contingency table should be at least 5 to ensure the validity of the test.
+3. Categorical Variables: Both variables being analyzed should be categorical in nature.
+4.Sufficient Sample Size: The sample size should be sufficiently large to provide reliable results, typically with at least 20 observations per cell in the contingency table.
+
+##### **State the null and alternative hypotheses**
+- Null Hypothesis (H0): There is no association between customer churn and region, meaning that the distribution of churn is the same across all regions.
+- Alternative Hypothesis (H1): There is an association between customer churn and region, meaning that the distribution of churn differs across regions.
+
+```{r}
+# Create contingency table for churn and region
+contingency_table <- table(data_cleaned$churn, data_cleaned$region)
+contingency_table
+```
+
+```{r}
+# Perform Chi-Square test
+chi_square_result <- chisq.test(contingency_table)
+print(chi_square_result)
+```
+ The results above with a p-value of 0.5805 indicate that there is no statistically significant association between customer churn and region. Therefore, we fail to reject the null hypothesis, suggesting that the distribution of churn is similar across all regions in this dataset. This implies that regional location does not have a significant impact on customer churn behavior.
+
+
+## **Phase 6 :Regression Modelling**
+### **Simple Linear Regression**
+##### **State the null and alternative hypotheses**
+- Null Hypothesis (H0): There is no statistically significant effect of annual income on annual spending, meaning that the slope of the regression line is equal to zero.
+- Alternative Hypothesis (H1): There is a statistically significant effect of annual income on annual spending, meaning that the slope of the regression line is not equal to zero.
+```{r}
+# Simple linear regression for annual_spending by annual_income
+model1 <- lm(annual_spending ~ annual_income, data = encoded_data)
+summary(model1)
+
+```
+
+#### **The Equation of the SLR Model**
+$$
+\hat{AnnualSpending} =805.4 + 0.3285 \times AnnualIncome
+$$
+Interpretation: The simple linear regression model indicates that for every one unit increase in annual income, the annual spending is expected to increase by approximately 0.3285 units, holding all else constant. The intercept of 805.4 represents the estimated annual spending when annual income is zero, although this may not be a meaningful value in practice. The model is statistically significant (p-value = 2e-16), suggesting that annual income is a significant predictor of annual spending in this dataset. However, the R-squared value of 0.6827 indicates that approximately 68.27% of the variance in annual spending can be explained by annual income while the adjusted R-squared value of 0.6827 suggests that the model has a good fit to the data, accounting for the number of predictors included in the model. Overall, this simple linear regression model provides valuable insights into the relationship between annual income and annual spending among customers in this dataset.
+
+#### **Residual Diagnostics**
+
+
+```{r, fig.height=8, fig.width=10}
+# Generate diagnostic plots
+par(mfrow =c(2 ,2))
+plot(model1)
+par(mfrow =c(1 ,1))
+```
+
+
+
+##### **State the null and alternative hypotheses for linearity**
+- Null Hypothesis (H0): The relationship between the independent variable (annual income) and the dependent variable (annual spending) is linear.
+- Alternative Hypothesis (H1): The relationship between the independent variable (annual income) and the dependent variable (annual spending) is not linear.
+```{r}
+# Linearity Test
+library(car)
+linear_test <- linearHypothesis(model1, "annual_income = 0")
+print(linear_test)
+
+
+    
+
+
+```
+The results with a p-value of < 0.05 indicate that we reject the null hypothesis, suggesting that there is non linearity in the relationship between annual income and annual spending. 
+
+
+
+#####  **State the null and alternative hypotheses for normality of residuals**
+- Null Hypothesis (H0): The residuals from the regression model are normally distributed.
+- Alternative Hypothesis (H1): The residuals from the regression model are not normally distributed.
+
+```{r}
+#Anderson-Darling test for normality of residuals
+library(nortest)
+ad_test_result <- ad.test(model1$residuals)
+print(ad_test_result)
+
+```
+The results with a p-value of < 0.0001 indicate that we reject the null hypothesis, suggesting that the residuals from the regression model are not normally distributed. 
+
+
+```{r}
+# Normality of Residuals
+qqnorm(model1$residuals, main = "Q-Q Plot of Residuals")
+qqline(model1$residuals, col = "red")
+
+```
+
+
+##### **State the null and alternative hypotheses for homoscedasticity**
+- Null Hypothesis (H0): The residuals from the regression model have constant variance 
+- Alternative Hypothesis (H1): The residuals from the regression model do not have constant variance, meaning that there is heteroscedasticity in the residuals.
+
+```{r}
+# Breusch-Pagan test for homoscedasticity
+library(lmtest)
+bp_test_result <- bptest(model1)
+print(bp_test_result)
+```
+The results with a p-value of < 0.05 indicate that we reject the null hypothesis, suggesting that there is heteroscedasticity in the residuals of the regression model, meaning that the variance of the residuals is not constant across all levels of the independent variable (annual income). 
+
+```{r}
+# Homoscedasticity
+plot(model1,which=3 )
+```
+
+
+
+```{r}
+# Outliers and Influential Points
+plot(model1, which = 4)
+```
+From the plot of residuals vs leverage, we can identify potential outliers and influential points in the regression model. Points that fall outside the dashed lines (Cook's distance) may be considered influential, as they have a significant impact on the regression coefficients. 
+
+
+
+
+
+
+
+### **Multiple Linear Regression**
+##### **State the null and alternative hypotheses**
+- Null Hypothesis (H0): There is no statistically significant effect of the independent variables (annual income, credit score, loyalty years, age, region, employment status, and online shopper status) on annual spending, meaning that the coefficients of all independent variables are equal to zero.
+- Alternative Hypothesis (H1): There is a statistically significant effect of at least one of the independent variables (annual income, credit score, loyalty years, age, region, employment status, and online shopper status) on annual spending, meaning that the coefficient of at least one independent variable is not equal to
+```{r}
+model2 <- lm(annual_spending ~ annual_income + credit_score + loyalty_years + age + region + employment_status + online_shopper, data = data_cleaned)
+summary(model2)
+```
+Interpretation: The multiple linear regression model indicates that only annual income is a statistically significant predictor of annual spending (p-value < 0.001), while credit score, loyalty years, age, region, employment status, and online shopper status do not have a statistically significant effect on annual spending (p-values > 0.05). The coefficient for annual income suggests that for every one unit increase in annual income, the annual spending is expected to increase by approximately 0.3289 units, holding all other variables constant.  The R-squared value of 0.6829 indicates that approximately 68.29% of the variance in annual spending can be explained by the independent variables included in the model, while the adjusted R-squared value of 0.6826 suggests that 68.26% of the variance in annual spending can be explained by annual income,credit score, loyalty years, age, region, employment status, and online shopper status, after adjusting for the number of predictors in the model. Overall, this multiple linear regression model provides insights into the factors influencing annual spending among customers in this dataset, with annual income being the most significant predictor.
+
+### **Checking for Multicollinearity**
+```{r}
+library(car)
+vif(model2)
+```
+Interpretation: The VIF values for all predictors in the multiple linear regression model are below the commonly used threshold of 5, indicating that there is no significant multicollinearity among the independent variables. This suggests that the predictors are not highly correlated with each other, and the model can provide reliable estimates of the coefficients without concerns of inflated standard errors due to multicollinearity
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,736 @@
+---
+title: "Capstone Project : E-commerce Data Analysis Project"
+author: "ELiud Mule"
+date: "`r Sys.Date()`"
+output:
+  word_document: default
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Set Working Directory
+```{r}
+  setwd("C:/Users/user/Desktop/DATA SCIENTIST MULE/R/PROJECTS")
+```
+
+
+## **Phase 1 : Data Collection and Loading**
+### **Load Necessary Libraries**
+```{r}
+library(dplyr)
+library(rio)
+library(caret)
+library(class)
+library(pROC)
+library(randomForest)
+library(e1071)
+library(tidyverse)
+```
+
+
+
+
+
+
+
+```{r}
+# Load the Dataset
+data <- read.csv("ecommerce_data (3).csv")
+head(data)
+```
+
+
+### **Data Structure and Summary Statistics**
+```{r}
+str(data)
+describe(data)
+```
+
+> The dataset contains **1,000 observations and 14 variables** covering customer demographics (Age, Gender), transaction details (Purchase_Amount, Product_Price, Quantity, Discount, Shipping_Cost), product and payment information (Product_Category, Payment_Method), order metadata (Order_Date, Order_Status, Location), and feedback (Customer_Rating). Most numeric variables have plausible ranges, and no immediate structural anomalies are apparent from the summary.
+
+
+
+### **Checking for Missing Values and Duplicates**
+```{r}
+# Missing values per column
+missing_summary <- data.frame(
+  column       = names(data),
+  missing_count = colSums(is.na(data)),
+  missing_pct  = round(colMeans(is.na(data)) * 100, 2)
+)
+missing_summary
+
+# Duplicate rows
+sum(duplicated(data))          # total duplicate count
+data[duplicated(data), ]       # view duplicate rows
+```
+
+> There were no missing values and no duplicate rows in the dataset. The data is complete and ready for preprocessing without imputation or deduplication steps.
+
+
+## **Phase 2 : Data Cleaning and Preprocessing**
+
+```{r}
+# Select numeric data
+numeric_data <- data |>
+  select(where(is.numeric))
+
+names(numeric_data)
+```
+
+```{r}
+# Checking for Outliers
+outlier_summary <-numeric_data|>
+  pivot_longer(everything(), names_to = "column", values_to = "value") |>
+  group_by(column) |>
+  summarise(
+    Q1          = quantile(value, 0.25, na.rm = TRUE),
+    Q3          = quantile(value, 0.75, na.rm = TRUE),
+    IQR         = IQR(value, na.rm = TRUE),
+    lower_bound = Q1 - 1.5 * IQR,
+    upper_bound = Q3 + 1.5 * IQR,
+    n_outliers  = sum(value < lower_bound | value > upper_bound, na.rm = TRUE),
+    pct_outliers = round(n_outliers / n() * 100, 2)
+  )
+
+outlier_summary
+```
+
+> Only two variables contain IQR-detected outliers: `Purchase_Amount` has 10 outliers (1.0%) and `Discount` has 3 outliers (0.3%). All other numeric variables — Age, Customer_Rating, Product_Price, Quantity, and Shipping_Cost — are outlier-free. Overall, the dataset is remarkably clean with respect to extreme values.
+
+```{r}
+# Visualizing the no. of outliers
+outlier_summary |>
+  filter(n_outliers > 0) |>
+  mutate(column = fct_reorder(column, pct_outliers)) |>
+  ggplot(aes(x = pct_outliers, y = column)) +
+  geom_col() +
+  geom_text(aes(label = paste0(n_outliers, " (", pct_outliers, "%)")),
+            hjust = -0.1, size = 3) +
+  scale_x_continuous(expand = expansion(mult = c(0, 0.25))) +
+  labs(
+    title = "Outliers by Column (IQR Rule)",
+    x = "Outliers (%)",
+    y = NULL
+  )
+```
+
+> The bar chart confirms the outlier findings: `Purchase_Amount` accounts for the majority of outliers (1%), while `Discount` has a negligible 0.3%. Since both percentages are very small, the outliers are unlikely to distort the analysis significantly, but they will be capped via winsorization as a precaution.
+
+### **Handling Outliers**
+```{r}
+winsorize_col <- function(x) {
+  Q1 <- quantile(x, 0.25, na.rm = TRUE)
+  Q3 <- quantile(x, 0.75, na.rm = TRUE)
+  lb <- Q1 - 1.5 * (Q3 - Q1)
+  ub <- Q3 + 1.5 * (Q3 - Q1)
+  pmax(pmin(x, ub), lb)
+}
+
+ecom_data <- data |>
+  mutate(across(c(Purchase_Amount, Discount), winsorize_col))
+
+# Verify
+ecom_data |>
+  select(Purchase_Amount, Discount) |>
+  pivot_longer(everything(), names_to = "column", values_to = "value") |>
+  group_by(column) |>
+  summarise(
+    lower_bound = quantile(value, 0.25) - 1.5 * IQR(value),
+    upper_bound = quantile(value, 0.75) + 1.5 * IQR(value),
+    n_outliers  = sum(value < lower_bound | value > upper_bound)
+  )
+  
+```
+
+> After winsorization, both `Purchase_Amount` and `Discount` now have **zero outliers**. Values that previously fell outside the IQR boundaries have been capped at their respective lower and upper bounds. The underlying distributions are preserved while extreme values no longer risk distorting model estimates.
+
+
+```{r}
+# Parse Order_Date and extract features
+ecom_data <- ecom_data |>
+  mutate(
+    Order_Date  = mdy(Order_Date),
+    order_year  = year(Order_Date),
+    order_month = month(Order_Date),
+    order_dow   = wday(Order_Date, label = FALSE),  # 1 = Sunday ... 7 = Saturday
+    order_quarter = quarter(Order_Date)
+  )
+
+ecom_data |> select(Order_Date, order_year, order_month, order_dow, order_quarter) |> head()
+```
+
+> The `Order_Date` column was successfully parsed from character to a proper date format. Four temporal features were extracted — year, month, day-of-week (1 = Sunday, 7 = Saturday), and quarter — enabling time-based analysis in subsequent EDA and feature engineering phases.
+
+```{r}
+# Check distinct values for each categorical column
+ecom_data |> count(Gender)
+ecom_data |> count(Product_Category)
+ecom_data |> count(Payment_Method)
+ecom_data |> count(Order_Status)
+```
+
+> The dataset contains two gender categories (Male/Female), **seven product categories** (Electronics, Books, Beauty, Home, Fashion, Sports, Groceries), five payment methods, and four order statuses (Canceled, Completed, Pending, Returned). Category counts are broadly balanced, with no single level dominating, which supports reliable group-level comparisons.
+
+
+```{r}
+ecom_model_data <- ecom_data |>
+  # Drop raw date and ID columns
+  select(-Customer_ID, -Order_Date, -Location) |>
+
+  # Binary encode Gender
+  mutate(Gender = if_else(Gender == "Male", 1L, 0L)) |>
+
+  # One-hot encode Product_Category (drop "Books" as reference)
+  mutate(dummy = 1L) |>
+  pivot_wider(names_from = Product_Category, values_from = dummy,
+              names_prefix = "cat_", values_fill = 0L) |>
+  select(-cat_Books) |>
+
+  # One-hot encode Payment_Method (drop "Bank Transfer" as reference)
+  mutate(dummy = 1L) |>
+  pivot_wider(names_from = Payment_Method, values_from = dummy,
+              names_prefix = "pay_", values_fill = 0L) |>
+  rename_with(~str_replace_all(., " ", "_")) |>
+  select(-`pay_Bank_Transfer`) |>
+
+  # One-hot encode Order_Status (drop "Canceled" as reference)
+  mutate(dummy = 1L) |>
+  pivot_wider(names_from = Order_Status, values_from = dummy,
+              names_prefix = "status_", values_fill = 0L) |>
+  select(-status_Canceled)
+
+glimpse(ecom_model_data)
+```
+
+> The processed modeling dataset retains all 1,000 rows and has been expanded with dummy-encoded columns: 6 dummies for `Product_Category` (Books as reference), 4 dummies for `Payment_Method` (Bank Transfer as reference), and 3 dummies for `Order_Status` (Canceled as reference). `Gender` is binary-encoded (Male = 1). This wide format is suitable for direct use in machine learning algorithms that require numeric inputs.
+
+## Phase 3 : Exploratory Data Analysis 
+```{r}
+library(tidyverse)
+
+# Monthly revenue trend
+ecom_data |>
+  mutate(month = floor_date(Order_Date, "month")) |>
+  group_by(month) |>
+  summarise(
+    total_revenue = sum(Purchase_Amount),
+    n_orders      = n(),
+    avg_order     = mean(Purchase_Amount)
+  ) |>
+  ggplot(aes(x = month, y = total_revenue)) +
+  geom_line(linewidth = 0.9) +
+  geom_point(size = 2) +
+  scale_y_continuous(labels = scales::comma_format(prefix = "$")) +
+  scale_x_date(date_labels = "%b %Y", date_breaks = "2 months") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  labs(title = "Monthly Revenue Trend", x = NULL, y = "Total Revenue")
+```
+
+> Revenue shows a general **growth trajectory** from mid-2024 through Q4 2025, with Q4 2025 reaching the highest quarterly total ($106,185). Month-to-month volatility is noticeable throughout, suggesting no strong seasonal pattern. A slight contraction is visible in Q2 2025 and Q1 2026, though Q2 2026 data appears to be a partial period, which explains the apparent drop at the end of the series.
+
+
+```{r plot-rating}
+data %>%
+  count(Customer_Rating) %>%
+  mutate(Customer_Rating = factor(Customer_Rating)) %>%
+  ggplot(aes(x = Customer_Rating, y = n, fill = Customer_Rating)) +
+  geom_col(alpha = 0.85) +
+  geom_text(aes(label = n), vjust = -0.3, size = 4) +
+  labs(title = "Customer Rating Distribution",
+       x     = "Rating (1–5)",
+       y     = "Count") +
+  theme_minimal(base_size = 13) +
+  theme(legend.position = "none")
+```
+
+> Customer ratings are distributed relatively evenly across all five levels (1–5), with no single rating dominating. Ratings 3 and 4 are marginally more frequent, pointing to moderate overall customer satisfaction. The absence of a strong skew toward either extreme suggests customers have genuinely mixed experiences on this platform.
+
+## Discount vs Purchase Amount
+
+```{r plot-discount}
+ggplot(data, aes(x = Discount, y = Purchase_Amount, color = Order_Status)) +
+  geom_point(alpha = 0.35, size = 1.2) +
+  geom_smooth(method = "lm", se = FALSE, linewidth = 0.9) +
+  labs(title  = "Discount vs Purchase Amount by Order Status",
+       x      = "Discount",
+       y      = "Purchase Amount",
+       color  = "Status") +
+  theme_minimal(base_size = 13)
+```
+
+> The scatter plot shows that discount level and purchase amount spread broadly across all order statuses (Canceled, Completed, Pending, Returned) without a clear visual separation between groups. The trend lines for each status are nearly parallel and slightly positive, indicating a **weak positive association** between discount and purchase amount that is consistent regardless of order outcome. Discount alone does not meaningfully distinguish completed from non-completed orders.
+
+```{r}
+library(patchwork)
+
+# Revenue & order count by product category
+p1 <- ecom_data |>
+  group_by(Product_Category) |>
+  summarise(total_revenue = sum(Purchase_Amount), .groups = "drop") |>
+  mutate(Product_Category = fct_reorder(Product_Category, total_revenue)) |>
+  ggplot(aes(x = total_revenue, y = Product_Category)) +
+  geom_col() +
+  scale_x_continuous(labels = scales::comma_format(prefix = "$")) +
+  labs(title = "Revenue by Category", x = "Total Revenue", y = NULL)
+
+# Order count by order status
+p2 <- ecom_data |>
+  count(Order_Status) |>
+  mutate(Order_Status = fct_reorder(Order_Status, n)) |>
+  ggplot(aes(x = n, y = Order_Status)) +
+  geom_col() +
+  geom_text(aes(label = n), hjust = -0.2, size = 3) +
+  scale_x_continuous(expand = expansion(mult = c(0, 0.15))) +
+  labs(title = "Orders by Status", x = "Count", y = NULL)
+
+# Average purchase by payment method
+p3 <- ecom_data |>
+  group_by(Payment_Method) |>
+  summarise(avg_purchase = mean(Purchase_Amount), .groups = "drop") |>
+  mutate(Payment_Method = fct_reorder(Payment_Method, avg_purchase)) |>
+  ggplot(aes(x = avg_purchase, y = Payment_Method)) +
+  geom_col() +
+  scale_x_continuous(labels = scales::comma_format(prefix = "$")) +
+  labs(title = "Avg Purchase by Payment Method", x = "Avg Purchase Amount", y = NULL)
+
+
+(p1 | p2) / (p3 )
+```
+
+> **Electronics** leads all product categories in total revenue ($139,904), followed by Books ($113,706) and Beauty ($103,590). Order statuses are nearly evenly distributed across all four outcomes — Canceled (262), Returned (249), Pending (247), and Completed (242) — meaning only ~24% of orders reach successful completion, a significant business concern. Average purchase amounts across payment methods are remarkably similar (~$707–$792), with M-Pesa users spending slightly more than others.
+
+
+```{r}
+# Customer spending patterns by demographics
+p5 <- ecom_data |>
+  mutate(age_group = cut(Age,
+    breaks = c(18, 25, 35, 45, 55, 70),
+    labels = c("18-25", "26-35", "36-45", "46-55", "56-70"),
+    right = TRUE)) |>
+  group_by(age_group) |>
+  summarise(avg_spend = mean(Purchase_Amount), .groups = "drop") |>
+  ggplot(aes(x = age_group, y = avg_spend)) +
+  geom_col() +
+  scale_y_continuous(labels = scales::comma_format(prefix = "$")) +
+  labs(title = "Avg Spend by Age Group", x = "Age Group", y = "Avg Purchase Amount")
+
+# Spending by gender
+p6 <- ecom_data |>
+  group_by(Gender) |>
+  summarise(avg_spend = mean(Purchase_Amount), total_spend = sum(Purchase_Amount), .groups = "drop") |>
+  ggplot(aes(x = Gender, y = avg_spend)) +
+  geom_col() +
+  scale_y_continuous(labels = scales::comma_format(prefix = "$")) +
+  labs(title = "Avg Spend by Gender", x = NULL, y = "Avg Purchase Amount")
+
+
+
+
+(p5) / (p6)
+```
+
+> The **18–25 age group** has the highest average spend ($781), and the 60+ group also spends above average ($776). The 46–60 segment is the largest cohort but records the lowest average spend ($689), suggesting diminishing purchase values in middle-to-late working age. Gender differences in average purchase amount are minimal — male and female customers spend at nearly identical levels, indicating gender is not a significant driver of transaction value on this platform.
+
+## Sales by Day of Week
+
+```{r plot-weekday}
+ecom_data %>%
+  group_by(order_dow) %>%
+  summarise(total_sales = sum(Purchase_Amount), .groups = "drop") %>%
+  ggplot(aes(x = order_dow, y = total_sales, fill = order_dow)) +
+  geom_col(alpha = 0.85) +
+  labs(title = "Total Sales by Day of Week",
+       x     = "Day",
+       y     = "Total Sales") +
+  theme_minimal(base_size = 13) +
+  theme(legend.position = "none")
+```
+
+> Total sales are distributed **relatively evenly across all days of the week** (1 = Sunday through 7 = Saturday), with no single day showing a dominant peak. This suggests customer purchasing behavior is not strongly tied to a particular day, and day-of-week is likely a weak predictor for sales volume — a finding consistent with the near-uniform order counts observed across days.
+
+
+```{r}
+library(reshape2)
+
+# Correlation heatmap
+cor_matrix <- numeric_data |>
+  select(-Customer_Rating) |>   # exclude rating (ordinal, limited range)
+  cor(use = "complete.obs") |>
+  round(2)
+
+melt(cor_matrix) |>
+  ggplot(aes(x = Var1, y = Var2, fill = value)) +
+  geom_tile(color = "white") +
+  geom_text(aes(label = value), size = 3) +
+  scale_fill_gradient2(low = "#d73027", mid = "white", high = "#1a9850",
+                       midpoint = 0, limits = c(-1, 1), name = "Correlation") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  labs(title = "Correlation Heatmap — Numeric Variables", x = NULL, y = NULL)
+```
+
+> `Purchase_Amount` is most strongly correlated with `Product_Price` (r = 0.71) and `Quantity` (r = 0.63), reflecting their direct role as mathematical components of total spend. `Discount` correlates moderately with `Product_Price` (r = 0.65), suggesting higher-priced items tend to attract larger discounts. `Age` and `Shipping_Cost` show weak correlations with all other variables, indicating limited linear relationships with purchase behavior.
+
+
+```{r}
+# Scatter plot: Discount vs Purchase_Amount with trend line
+p_scatter <- ggplot(ecom_data, aes(x = Discount, y = Purchase_Amount)) +
+  geom_point(alpha = 0.3, size = 1.2) +
+  geom_smooth(method = "lm", se = TRUE, color = "steelblue") +
+  scale_y_continuous(labels = scales::comma_format(prefix = "$")) +
+  labs(title = "Discount vs Purchase Amount", x = "Discount ($)", y = "Purchase Amount ($)")
+
+# Average Purchase Amount by Discount bins
+p_bin <- ecom_data |>
+  mutate(discount_bin = cut(Discount,
+    breaks = c(0, 20, 40, 60, 80, 110),
+    labels = c("$0–20", "$20–40", "$40–60", "$60–80", "$80–110"),
+    include.lowest = TRUE)) |>
+  group_by(discount_bin) |>
+  summarise(avg_purchase = mean(Purchase_Amount), n = n(), .groups = "drop") |>
+  ggplot(aes(x = discount_bin, y = avg_purchase)) +
+  geom_col() +
+  geom_text(aes(label = scales::comma(round(avg_purchase))), vjust = -0.4, size = 3) +
+  scale_y_continuous(labels = scales::comma_format(prefix = "$"),
+                     expand = expansion(mult = c(0, 0.15))) +
+  labs(title = "Avg Purchase Amount by Discount Range",
+       x = "Discount Range", y = "Avg Purchase Amount ($)")
+
+p_scatter | p_bin
+```
+
+> The scatter plot shows a **near-flat trend line** between discount and purchase amount, indicating a very weak positive relationship. The binned bar chart reinforces this: average purchase amounts across all discount ranges ($0–$110) are broadly similar, with no consistent increase in spend as discounts grow larger. This suggests discounts on this platform are not strongly incentivizing higher purchase values.
+
+
+
+## **Phase 4 : Feature Engineering and Selection**
+```{r}
+library(tidyverse)
+library(ranger)
+
+# --- Transaction-level feature engineering ---
+ecom_fe <- ecom_data |>
+  mutate(
+    discount_rate = Discount / Product_Price,
+    net_revenue   = Purchase_Amount - Shipping_Cost,
+    is_weekend    = if_else(wday(Order_Date) %in% c(1, 7), 1L, 0L),
+    season        = case_when(
+      order_month %in% c(12, 1, 2) ~ "Winter",
+      order_month %in% c(3, 4, 5)  ~ "Spring",
+      order_month %in% c(6, 7, 8)  ~ "Summer",
+      TRUE                          ~ "Fall"
+    ),
+    price_tier = cut(Product_Price,
+                     breaks = quantile(Product_Price, c(0, 0.33, 0.67, 1)),
+                     labels = c("Low", "Medium", "High"),
+                     include.lowest = TRUE),
+    completed = factor(if_else(Order_Status == "Completed", "Yes", "No"),
+                       levels = c("No", "Yes")),
+    # Age group bins
+    age_group        = cut(Age,
+                           breaks = c(0, 25, 35, 45, 60, Inf),
+                           labels = c("18-25", "26-35", "36-45",
+                                      "46-60", "60+"),
+                           right  = TRUE)
+  )
+
+   
+
+ 
+
+# --- Customer-level features ---
+customer_features <- ecom_data |>
+  group_by(Customer_ID) |>
+  summarise(
+    purchase_frequency = n(),
+    avg_spending       = mean(Purchase_Amount),
+    total_spending     = sum(Purchase_Amount),
+    avg_discount       = mean(Discount),
+    completion_rate    = mean(Order_Status == "Completed"),
+    .groups            = "drop"
+  )
+
+cat("New transaction features added:", ncol(ecom_fe) - ncol(ecom_data), "\n")
+cat("New customer-level features:", ncol(customer_features) - 1, "\n")
+ecom_fe |> select(discount_rate, net_revenue, is_weekend, season, price_tier, completed) |> head(5)
+```
+
+> Six new transaction-level features were engineered: `discount_rate` (discount as a proportion of product price), `net_revenue` (purchase amount minus shipping cost), `is_weekend` (binary flag), `season`, `price_tier` (Low / Medium / High based on price tertiles), and `completed` (the binary classification target). Five customer-level aggregation features were also derived — purchase frequency, average spend, total spend, average discount, and completion rate — for use in the clustering phase.
+
+## **Phase 5 : Machine Learning Models**
+### **Splitting the Dataset**
+```{r train-test-split}
+set.seed(42)
+
+sales_df <- ecom_fe |>
+  select(completed, Product_Price, Quantity, Discount, Shipping_Cost,
+         Age, Gender, discount_rate, order_month, order_quarter, is_weekend,
+         Product_Category, Payment_Method, price_tier, season) |>
+  mutate(across(where(is.character), as.factor),
+         Gender = as.factor(Gender))
+
+
+train_idx  <- createDataPartition(sales_df$completed, p = 0.8, list = FALSE)
+train_data <- sales_df[ train_idx, ]
+test_data  <- sales_df[-train_idx, ]
+
+cat("Train rows:", nrow(train_data),
+    "\nTest rows :", nrow(test_data))
+```
+
+> The dataset was split into **801 training rows (80%)** and **199 test rows (20%)** using stratified partitioning on the `completed` target variable, ensuring that class proportions are preserved in both splits.
+
+### **Check Class Distribution in Training and Testing Sets**
+```{r}
+table(train_data$completed)
+table(test_data$completed)
+
+```
+
+> The target variable is **heavily imbalanced**: in the training set, 607 orders (75.8%) did not complete vs. only 194 (24.2%) that did. The test set mirrors this ratio (151 No vs. 48 Yes). This imbalance is likely to bias models toward predicting the majority class ("No"), inflating overall accuracy while severely limiting sensitivity. Resampling techniques (e.g., SMOTE, up-sampling) should be considered if improving recall for completed orders is a priority.
+
+
+### **Define Train Control for Cross-Validation**
+```{r}
+ctrl <- trainControl(
+  method = "cv",          # Cross-validation
+  number = 10,           # Number of folds
+  classProbs = TRUE,     # Needed for AUC calculation
+  summaryFunction = twoClassSummary,  #ROC,Sensitivity,Specificity
+  savePredictions = "final" # Save predictions for the best model
+)
+```
+
+
+### **Model Training — Logistic Regression Model**
+
+```{r}
+set.seed(42)
+logistic_model <- train(completed~ ., data = train_data, method = "glm", family = "binomial", trControl = ctrl, metric = "ROC")
+
+
+```
+
+# Calculate Odds Ratios Using tab_model Function from sjPlot Package
+```{r}
+library(sjPlot)
+tab_model(logistic_model$finalModel, show.ci = FALSE, show.se = TRUE, show.stat = TRUE, show.p = TRUE, show.aic = TRUE)
+```
+
+> The logistic regression identified **`Shipping_Cost`** (p = 0.009) and **`Age`** (p = 0.047) as the only statistically significant predictors of order completion. Higher shipping costs reduce the odds of completing an order, while older customers are also slightly less likely to complete purchases. Product category, payment method, gender, discount rate, and all temporal features show no significant effects. The model's AIC is 909.7, and the modest reduction from null deviance (886.87) to residual deviance (857.70) indicates only marginal overall fit improvement — the features collectively explain very little of the variation in order completion.
+
+
+### **Model Training — Random Forest**
+```{r}
+rf_model <- train(completed ~ ., data = train_data, method = "rf",  trControl = ctrl, metric = "ROC",
+                   tuneGrid = expand.grid(mtry = c(2, 4, 6, 8, 10)))
+```
+
+
+
+
+```{r} 
+#Plot variable importance for Random Forest
+varImp(rf_model)
+plot(varImp(rf_model), main = "Random Forest : Variable Importance")
+
+```
+
+> **`Product_Price`**, **`Discount`**, and **`Shipping_Cost`** are the top three most important predictors in the Random Forest, each scoring above 98 on the 0–100 scaled importance index. `Age` and `discount_rate` follow closely (~90). Categorical features such as `Gender`, `is_weekend`, `order_quarter`, and `order_month` contribute far less, which aligns with the logistic regression findings and the EDA observation that temporal and demographic variables are weakly associated with order completion.
+
+
+## **Phase 6 : Model Evaluation and Comparison**
+### **Predictions for All Models**
+```{r}
+logistic_preds <- predict(logistic_model, test_data, type = "prob")[, "Yes"]
+rf_preds <- predict(rf_model, test_data, type = "prob")[, "Yes"]
+```
+
+
+### **Confusion Matrices for Each Model**
+```{r}
+# Confusion Matrix for Logistic Regression
+logistic_cm <- confusionMatrix(predict(logistic_model, test_data), test_data$completed,positive = "Yes")
+logistic_cm
+```
+
+> The logistic regression achieves **76.4% accuracy**, but this matches the no-information rate (75.9%) — meaning the model gains virtually nothing over simply predicting "No" for every observation. Sensitivity (recall for completed orders) is only 2.1%, with just 1 out of 48 completed test orders correctly identified. The near-zero Kappa (0.031) confirms very poor discriminative ability. The class imbalance is the primary driver of these results; the model is essentially defaulting to the majority class.
+
+```{r}
+# Confusion Matrix for Random Forest
+rf_cm <- confusionMatrix(predict(rf_model, test_data), test_data$completed,positive = "Yes")
+rf_cm
+```
+
+> The Random Forest performs similarly: **75.9% accuracy** (equal to the no-information rate), sensitivity of only 2.1%, and a Kappa of 0.021. The model correctly identifies just 1 of 48 completed orders in the test set. Both models are effectively learning to predict only the majority class ("No"), and neither offers meaningful discrimination for the "Completed" outcome. Addressing class imbalance before modeling is critical for this classification task.
+
+
+### **ROC Curves and AUC for Each Model**
+```{r}
+# All ROC curves in one plot
+roc_logistic <- roc(test_data$completed, logistic_preds)
+roc_rf <- roc(test_data$completed, rf_preds)
+plot(roc_logistic, col = "blue", main = "ROC Curves for All Models")
+plot(roc_rf, col = "purple", add = TRUE)
+legend("bottomright", legend = c("Logistic Regression", "Random Forest"), col = c("blue", "purple"), lwd = 2)
+
+```
+
+> The ROC curves show that both models perform **at or below random chance** (the diagonal). The logistic regression curve (blue) sits slightly above the diagonal, while the Random Forest (purple) barely reaches it. Neither model has learned decision boundaries meaningful enough to distinguish completed from non-completed orders, reinforcing the critical impact of class imbalance on model performance.
+
+
+### **AUC Comparison**
+
+```{r}
+pROC::auc(roc_logistic)
+pROC::auc(roc_rf)
+
+```
+
+> The logistic regression achieves an AUC of **0.568** — marginally above the 0.50 random baseline. The Random Forest scores **0.495**, which is effectively at random-chance level. These low AUC values confirm that neither model can reliably distinguish completed from non-completed orders in their current form. Addressing class imbalance (e.g., via SMOTE, up-sampling, or class-weight adjustments) would be a necessary next step before these models could be considered for deployment.
+
+
+## **Phase 7: K-means Clustering**
+
+```{r}
+# Customer Segmentation
+seg_mat <- customer_features |>
+  select(avg_spending, total_spending, avg_discount, completion_rate) |>
+  as.matrix() |>
+  scale()
+
+set.seed(42)
+wss <- map_dbl(1:8, ~kmeans(seg_mat, centers = .x, nstart = 25)$tot.withinss)
+
+ggplot(data.frame(k = 1:8, wss = wss), aes(x = k, y = wss)) +
+  geom_line() + geom_point(size = 2) +
+  scale_x_continuous(breaks = 1:8) +
+  labs(title = "Elbow Method — Optimal Number of Segments",
+       x = "Number of Clusters (k)", y = "Total Within-Cluster SS")
+```
+
+> The elbow plot shows a clear reduction in total within-cluster sum of squares as k increases from 1 to 3, after which the rate of improvement flattens noticeably. This **elbow at k = 3** indicates that three clusters is the optimal number of customer segments, balancing compactness with parsimony.
+
+
+```{r}
+# Elbow at k=3; fit and profile segments
+set.seed(7314)
+km <- kmeans(seg_mat, centers = 3, nstart = 25)
+customer_features$segment <- factor(km$cluster)
+
+customer_features |>
+  group_by(segment) |>
+  summarise(
+    n              = n(),
+    avg_spend      = round(mean(avg_spending), 0),
+    avg_total      = round(mean(total_spending), 0),
+    avg_discount   = round(mean(avg_discount), 1),
+    completion_pct = round(mean(completion_rate) * 100, 1),
+    .groups = "drop"
+  )
+```
+
+> Three distinct customer segments emerge from the clustering:
+>
+> - **Segment 2 — "Reliable Buyers" (189 customers):** 100% order completion rate, moderate average spend ($520), and low discounts ($29.2). These are the platform's most dependable customers.
+> - **Segment 1 — "High-Value Browsers" (283 customers):** Highest average spend ($1,475) and highest discounts ($65.1), but a very low completion rate (18.7%). These customers engage with expensive, discounted items but rarely follow through to purchase completion.
+> - **Segment 3 — "Non-Converters" (528 customers):** The largest group with a 0% completion rate, moderate discounts ($29), and the lowest average spend ($420). This segment likely represents window shoppers or customers prone to cancellations and returns.
+
+## **Phase 8 : Business Insights**
+
+## Top Revenue-Generating Categories
+
+```{r top-revenue}
+library(kableExtra)
+ecom_data %>%
+  group_by(Product_Category) %>%
+  summarise(Total_Revenue = round(sum(Purchase_Amount), 2),
+            Orders        = n(),
+            .groups       = "drop") %>%
+  arrange(desc(Total_Revenue)) %>%
+  kable(caption = "Revenue by Product Category") %>%
+  kable_styling(bootstrap_options = c("striped", "hover"), full_width = FALSE)
+```
+
+> **Electronics** is the top revenue-generating category ($139,904 from 165 orders), followed by Books ($113,706 / 166 orders) and Beauty ($103,590 / 148 orders). Groceries generates the least revenue ($90,869 from 126 orders). Notably, Books generates the second-highest revenue despite having the most orders, suggesting it attracts high-value transactions. The revenue spread across categories is moderate — Electronics earns roughly 1.5× more than Groceries — indicating a relatively diversified product mix rather than one dominant category.
+
+
+## Average Rating by Category
+
+```{r avg-rating}
+ecom_data %>%
+  group_by(Product_Category) %>%
+  summarise(Avg_Rating = round(mean(Customer_Rating), 2),
+            .groups    = "drop") %>%
+  arrange(desc(Avg_Rating)) %>%
+  ggplot(aes(x = reorder(Product_Category, Avg_Rating),
+             y = Avg_Rating, fill = Product_Category)) +
+  geom_col(alpha = 0.85) +
+  geom_text(aes(label = Avg_Rating), hjust = -0.2, size = 3.8) +
+  coord_flip() +
+  labs(title = "Average Customer Rating by Product Category",
+       x     = "Category",
+       y     = "Average Rating") +
+  theme_minimal(base_size = 13) +
+  theme(legend.position = "none")
+```
+
+> Average ratings are fairly **consistent across all categories**, ranging narrowly from 2.88 (Fashion and Books) to 3.13 (Electronics). Electronics earns the highest satisfaction score while also generating the most revenue — suggesting customer experience aligns with revenue performance. The small range of just 0.25 points across all categories indicates that customer satisfaction does not vary dramatically by product type, and no category stands out as distinctly better or worse received.
+
+## Best Payment Methods by Average Spend
+
+```{r payment-spend}
+ecom_data %>%
+  group_by(Payment_Method) %>%
+  summarise(
+    Orders    = n(),
+    Avg_Spend = round(mean(Purchase_Amount), 2),
+    .groups   = "drop"
+  ) %>%
+  arrange(desc(Avg_Spend)) %>%
+  kable(caption = "Payment Methods by Average Spend") %>%
+  kable_styling(bootstrap_options = c("striped", "hover"), full_width = FALSE)
+```
+
+> **M-Pesa** users have the highest average purchase amount ($792), followed by Cash on Delivery ($756) and Credit Card ($727). Bank Transfer and PayPal users spend the least (~$707–$708). Despite the ranking, the total spread across all payment methods is modest (~$85), suggesting that payment method choice is not a major driver of transaction size. Order counts are also broadly balanced across methods (192–209 orders each), indicating no single payment channel dominates customer preference.
+
+
+## Quarterly Revenue Summary
+
+```{r quarterly-revenue}
+
+ecom_data %>%
+  group_by(Year = order_year, Quarter = order_quarter) %>%
+  summarise(Revenue = round(sum(Purchase_Amount), 2),
+            Orders  = n(),
+            .groups = "drop") %>%
+  arrange(Year, Quarter) %>%
+  kable(caption = "Quarterly Revenue Summary") %>%
+  kable_styling(bootstrap_options = c("striped", "hover"), full_width = FALSE)
+```
+
+> Revenue grew consistently from Q2 2024 ($44,250) through **Q4 2025 ($106,185)**, the highest quarter on record. A mild dip occurred in Q2 2025, but recovery was strong in Q4 2025. Q2 2026 shows a lower figure ($58,189 / 73 orders) — this is likely a **partial period** rather than a true revenue decline, as order counts are roughly half those of full quarters (~120–131 orders). Overall, the trajectory from 2024 to 2025 reflects meaningful year-over-year growth.
+
+## Age Group Purchase Behaviour
+
+```{r age-group-table}
+
+ecom_fe%>%
+
+  group_by(age_group) %>%
+  summarise(
+    N          = n(),
+    Avg_Spend  = round(mean(Purchase_Amount), 2),
+    Avg_Qty    = round(mean(Quantity), 2),
+    Avg_Rating = round(mean(Customer_Rating), 2),
+    .groups    = "drop"
+  ) %>%
+  kable(caption = "Purchase Behaviour by Age Group") %>%
+  kable_styling(bootstrap_options = c("striped", "hover"), full_width = FALSE)
+```
+
+> The **18–25 age group** records the highest average spend ($781) despite being the smallest cohort (136 customers), while the **46–60 group** is the largest segment (290 customers) but spends the least on average ($689). The 60+ group spends notably above average ($776), second only to 18–25. Average quantity purchased (2.86–3.18) and customer ratings (2.79–3.24) are broadly similar across all age groups, suggesting that age influences spend level more than it does purchasing frequency or satisfaction. Younger and older customers represent the highest-value segments per transaction.
